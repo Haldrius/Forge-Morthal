@@ -1,0 +1,550 @@
+:root { 
+    --bg: #121212; 
+    --card: #1c1c1e; 
+    --text: #e0e0e0; 
+    --accent: #d4af37; 
+    --border: #2c2c2e; 
+    --court: #ff6b6b; 
+    --success: #2ecc71; 
+}
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    margin: 0; 
+    padding: 8px; 
+    padding-bottom: 25px; 
+    -webkit-tap-highlight-color: transparent; 
+}
+h1 { 
+    font-size: 18px; 
+    color: var(--accent); 
+    text-align: center; 
+    margin: 8px 0 12px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+h2 { 
+    font-size: 15px; 
+    color: var(--accent); 
+    margin: 5px 0 12px; 
+    text-align: center; 
+}
+.tabs { 
+    display: flex; 
+    background: var(--card); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+    overflow: hidden; 
+}
+.tab-btn { 
+    background: none; 
+    border: none; 
+    color: #888; 
+    padding: 10px 2px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100%; 
+    font-size: 12px; 
+    text-align: center; 
+}
+.tab-btn.active { 
+    color: var(--accent); 
+    background: #151515; 
+    box-shadow: inset 0 -2px 0 var(--accent); 
+}
+.tab-content { 
+    display: none; 
+}
+.tab-content.active { 
+    display: block; 
+}
+.filter-container { 
+    margin-bottom: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+.filter-scroll { 
+    display: flex; 
+    gap: 5px; 
+    overflow-x: auto; 
+    padding-bottom: 2px; 
+    scrollbar-width: none; 
+    -webkit-overflow-scrolling: touch; 
+}
+.filter-scroll::-webkit-scrollbar { 
+    display: none; 
+}
+.filter-btn { 
+    flex: 0 0 auto; 
+    background: var(--card); 
+    border: 1px solid var(--border); 
+    color: #aaa; 
+    padding: 6px 12px; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    font-size: 12px; 
+    font-weight: bold; 
+}
+.filter-btn.active { 
+    background: var(--accent); 
+    color: #000; 
+    border-color: var(--accent); 
+}
+#sub-filter-row { 
+    display: none; 
+    border-top: 1px dashed var(--border); 
+    padding-top: 6px; 
+}
+.search-box { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 12px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border); 
+    background: var(--card); 
+    color: #fff; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+}
+.table-container { 
+    background: var(--card); 
+    border-radius: 6px; 
+    border: 1px solid var(--border); 
+    overflow: hidden; 
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+    font-size: 13px; 
+}
+th, td { 
+    padding: 8px 10px; 
+    border-bottom: 1px solid var(--border); 
+}
+th { 
+    background: #151515; 
+    color: var(--accent); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-size: 10px; 
+}
+.badge { 
+    background: #2d2d2d; 
+    padding: 2px 5px; 
+    border-radius: 4px; 
+    font-size: 9px; 
+    color: var(--accent); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+.cart-add-btn { 
+    background: var(--accent); 
+    border: none; 
+    color: #121212; 
+    font-size: 13px; 
+    cursor: pointer; 
+    width: 26px; 
+    height: 26px; 
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.cart-qty-badge { 
+    background-color: #332200 !important; 
+    border: 1px solid var(--accent) !important; 
+    color: var(--accent) !important; 
+    font-size: 11px !important; 
+    font-weight: bold !important; 
+    padding: 2px 6px !important; 
+    border-radius: 4px !important; 
+    display: inline-block !important; 
+    cursor: pointer; 
+}
+.card-header-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    height: 26px; 
+}
+.cart-actions-wrapper { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 6px !important; 
+}
+.inline-prices { 
+    display: flex; 
+    gap: 6px; 
+    font-size: 13px; 
+    font-weight: bold; 
+}
+.p-view { 
+    color: #fff; 
+}
+.c-view { 
+    color: var(--court); 
+}
+.ingredients { 
+    font-size: 11px; 
+    color: #aaa; 
+    font-style: italic; 
+}
+.checkbox-container { 
+    display: flex; 
+    gap: 15px; 
+    margin: 10px 0; 
+    background: #121212; 
+    padding: 10px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border); 
+}
+.checkbox-label { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    color: #e0e0e0; 
+    margin: 0; 
+}
+form { 
+    background: var(--card); 
+    padding: 12px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border); 
+    max-width: 500px; 
+    margin: 0 auto 15px; 
+}
+label { 
+    display: block; 
+    margin: 8px 0 4px; 
+    font-weight: bold; 
+    font-size: 12px; 
+    color: #bbb; 
+}
+input, textarea { 
+    width: 100%; 
+    padding: 9px; 
+    border-radius: 5px; 
+    border: 1px solid var(--border); 
+    background: #121212; 
+    color: #fff; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+}
+button.submit { 
+    background: var(--accent); 
+    color: #000; 
+    border: none; 
+    padding: 10px; 
+    width: 100%; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 12px; 
+    font-size: 14px; 
+}
+.order-item { 
+    background: var(--card); 
+    padding: 12px; 
+    border-radius: 6px; 
+    margin-bottom: 10px; 
+    border-left: 3px solid var(--accent); 
+    border: 1px solid var(--border); 
+    position: relative; 
+}
+.delete-btn { 
+    background: none; 
+    border: none; 
+    color: var(--court); 
+    font-weight: bold; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    font-size: 14px; 
+}
+.price-line { 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 3px 0; 
+    font-size: 13px; 
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { display: block; } 
+    thead { display: none; }
+    tr { 
+        padding: 8px 8px; 
+        border-bottom: 1px solid var(--border); 
+        background: var(--card); 
+        margin-bottom: 5px; 
+        border-radius: 6px; 
+        border: 1px solid var(--border); 
+    }
+    td { 
+        padding: 2px 0; 
+        border: none; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    td:first-child { 
+        display: block; 
+        width: 100%; 
+        margin-bottom: 4px; 
+        padding-bottom: 4px; 
+        border-bottom: 1px dashed #2d2d2d; 
+    }
+    td:nth-child(2) { 
+        font-size: 14px; 
+        color: #fff; 
+        font-weight: bold; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%; 
+        border-bottom: 1px dashed #2d2d2d; 
+        padding-bottom: 4px; 
+        margin-bottom: 4px; 
+    }
+    td:nth-child(3), td:nth-child(4) { display: none; }
+    td:last-child { display: block; color: #bbb; }
+}
+/* --- Correctif pour l'Éditeur de Catalogue en Mode Mobile --- */
+.editor-row {
+    display: flex !important;
+    flex-direction: column;
+    background: var(--card);
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.editor-row td {
+    display: block !important;
+    width: 100% !important;
+    padding: 4px 0 !important;
+    border: none !important;
+}
+
+.editor-meta {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--border) !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 8px;
+}
+
+.editor-meta .sub-badge {
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.input-block-row {
+    display: flex;
+    gap: 10px;
+}
+
+.editor-fields label {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 3px;
+    font-weight: bold;
+    display: block;
+}
+
+.editor-fields input {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 6px !important;
+    font-size: 13px !important;
+}
+.editor-row.hidden {
+    display: none !important;
+}
+/* --- Ajustement de la colonne panier en Mode Mobile --- */
+/* --- Correctif Absolu pour le Panier en Mode Mobile --- */
+/* On prépare la ligne pour accueillir un élément positionné de force */
+#table-body tr {
+    position: relative !important;
+}
+
+/* On extrait complètement le panier du flux pour le caler dans le coin supérieur droit */
+.cart-column-pc {
+    display: block !important;
+    position: absolute !important;
+    top: 10px !important;    /* Aligné en haut à la même hauteur que le badge */
+    right: 12px !important;  /* Calé proprement sur le bord droit */
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    z-index: 10;
+}
+
+/* Ajustement de la boîte interne du panier */
+.pc-cart-align {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: auto !important;
+}
+
+
+/* =========================================================================
+   CORRECTIF PC : SQUELETTE ET TABLEAU OPTIMISÉS
+   ========================================================================= */
+@media (min-width: 1024px) {
+    /* Centrer le site proprement et éviter l'étirement infini */
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #0b0b0b;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 15px 0 25px;
+    }
+
+    .tabs {
+        max-width: 600px;
+        margin: 0 auto 25px;
+    }
+
+    /* Gestion des boutons de filtres sur PC (alignés proprement) */
+    .filter-container {
+        background: var(--card);
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        margin-bottom: 15px;
+    }
+
+    .filter-scroll {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .search-box {
+        max-width: 500px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    /* REDRESSAGE DU TABLEAU POUR PC */
+    .table-container {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+
+    table {
+        display: table !important; /* Force le retour au comportement tableau */
+        width: 100% !important;
+    }
+
+    /* On force l'affichage en ligne classique (tr) et cellules (td) */
+    #table-body tr {
+        display: table-row !important;
+        background: transparent;
+        border: none !important;
+        padding: 0 !important;
+        transition: background-color 0.15s ease;
+    }
+
+    /* Effet de survol sur la ligne entière */
+    #table-body tr:hover {
+        background-color: rgba(214, 175, 55, 0.05) !important;
+    }
+
+    /* Une ligne sur deux légèrement plus sombre pour guider le regard */
+    #table-body tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    #table-body td {
+        display: table-cell !important; /* Redevient une cellule de tableau */
+        padding: 10px 12px !important;
+        border-bottom: 1px solid var(--border) !important;
+        vertical-align: middle !important;
+        margin: 0 !important;
+    }
+
+    /* Première colonne (Badge de catégorie + Bouton Panier) */
+    #table-body td:first-child {
+        width: 120px;
+    }
+
+    /* Seconde colonne (Icône + Nom de l'objet) */
+    #table-body td:nth-child(2) {
+        font-weight: bold;
+        color: #fff;
+        display: table-cell !important;
+    }
+
+    /* Cacher la double ligne de prix mobile qui fait doublon sur PC */
+    .inline-prices {
+        display: none !important;
+    }
+
+    /* Troisième et Quatrième colonnes (Réafficher les prix bruts Revente et Coût cachés par le mobile) */
+    #table-body td:nth-child(3), 
+    #table-body td:nth-child(4) {
+        display: table-cell !important;
+        font-size: 13px;
+        width: 100px;
+    }
+
+    #table-body td:nth-child(3) strong {
+        color: var(--accent);
+    }
+
+    .cost-price {
+        color: #ff6b6b;
+    }
+
+    /* Dernière colonne (Recette / Ingrédients) */
+    #table-body td:last-child {
+        display: table-cell !important;
+        border-top: none !important;
+        padding-top: 10px !important;
+        color: #b0b0b0;
+    }
+    #table-body td.cart-column-pc {
+        display: table-cell !important;
+        position: static !important; /* Annule le mode absolu du mobile sur PC */
+        width: 60px !important;
+        text-align: right !important;
+        padding-right: 15px !important;
+        vertical-align: middle !important;
+    }
+    .pc-cart-align {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+    }  
+}
+

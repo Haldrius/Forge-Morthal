@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge de Morthal</title>
+    <!-- Liaison du fichier de style externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>⚒ Forge de Morthal</h1>
+    
+    <div class="tabs">
+        <button class="tab-btn active" id="btn-tarifs">🔍 Tarifs</button>
+        <button class="tab-btn" id="btn-commandes">📝 Commandes</button>
+        <button class="tab-btn" id="btn-admin">⚙️ Config</button>
+    </div>
+
+    <!-- Onglet Tarifs -->
+    <div id="tarifs" class="tab-content active">
+        <div class="filter-container">
+            <div class="filter-scroll" id="main-filter-row">
+                <button class="filter-btn active" data-cat="tous">Tout afficher</button>
+                <button class="filter-btn" data-cat="Matériaux">🔨 Matériaux</button>
+                <button class="filter-btn" data-cat="Arme">⚔️ Armes</button>
+                <button class="filter-btn" data-cat="Armure">🛡️ Armures</button>
+                <button class="filter-btn" data-cat="Couture">🧵 Couture</button>
+                <button class="filter-btn" data-cat="Bijou">💎 Bijoux</button>
+            </div>
+            <div class="filter-scroll" id="sub-filter-row"></div>
+        </div>
+        <input type="text" id="search" class="search-box" placeholder="Rechercher un article...">
+        <div class="table-container">
+            <table>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Onglet Commandes -->
+    <div id="commandes" class="tab-content">
+        <form id="order-form">
+            <h2>Nouvelle Commande</h2>
+            <label for="client">Nom du Client (Optionnel)</label>
+            <input type="text" id="client" placeholder="Client Inconnu">
+            
+            <label for="details">Détails des articles</label>
+            <textarea id="details" rows="3" required placeholder="Ex: 1x Epée en acier..."></textarea>
+            
+            <label for="total-price">Prix total (septims)</label>
+            <input type="number" id="total-price" required placeholder="0">
+            
+            <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-citoyen"> 🏷️ Citoyen (-10%)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-garde"> 🛡️ Garde (-20%)
+                </label>
+            </div>
+            <button type="submit" class="submit">💾 Enregistrer la commande</button>
+        </form>
+        
+        <div style="max-width: 500px; margin: 0 auto;">
+            <h2>📋 Enregistrées</h2>
+            <div id="orders-list"></div>
+        </div>
+    </div>
+
+     <!-- Onglet Configuration (Éditeur de catalogue) -->
+    <div id="admin" class="tab-content">
+        <form id="catalog-form" style="max-width: 95%; margin: 0 auto;">
+            <h2>🛠️ Éditeur du Catalogue</h2>
+            <p class="help-text" style="color: var(--text-muted); font-size: 12px; margin-bottom: 15px; text-align: center;">
+                Modifiez les valeurs ci-dessous, puis cliquez sur Sauvegarder pour appliquer les changements au catalogue actif.
+            </p>
+                    <!-- BARRE DE RECHERCHE DANS L'ÉDITEUR -->
+        <input type="text" id="search-editor" class="search-box" placeholder="Filtrer les articles à modifier (ex: acier, fer...)" style="margin-bottom: 15px;">
+
+            
+            <div class="table-container" style="max-height: 500px; overflow-y: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie / Mat.</th>
+                            <th>Nom de l'article</th>
+                            <th>Prix Revente (sep.)</th>
+                            <th>Coût (sep.)</th>
+                            <th>Ingrédients / Recette</th>
+                        </tr>
+                    </thead>
+                    <tbody id="editor-table-body">
+                        <!-- Rempli dynamiquement par script.js -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <button type="submit" class="submit">💾 Sauvegarder les modifications</button>
+            <!-- NOUVEAU BOUTON D'EXPORTATION -->
+            <button type="button" id="btn-export-code" class="submit" style="background: #2ecc71; color: #000; margin-top: 8px;">📋 Exporter pour catalogue.js</button>
+        </form>
+    </div>
+    <!-- LIAISON DU CATALOGUE (Doit être placé AVANT script.js) -->
+    <script src="catalogue.js"></script>  
+    <!-- Liaison du fichier de script externe -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
