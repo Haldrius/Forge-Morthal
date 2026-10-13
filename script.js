@@ -491,7 +491,6 @@ function renderCatalogEditor() {
         const escapedName = item.nom.replace(/"/g, '&quot;');
         const escapedIng = (item.ing || '').replace(/"/g, '&quot;');
         
-        // On calcule le coût automatique uniquement si l'objet possède une recette
         const aUneRecette = item.ing && item.ing.trim() !== "";
         if (aUneRecette) {
             item.cout = calculerCoutRecette(item.ing);
@@ -503,38 +502,35 @@ function renderCatalogEditor() {
             : 'background-color: #121212; color: #fff; border-color: var(--border); cursor: text;';
         const readonlyAttr = aUneRecette ? 'readonly' : '';
 
+        // NOUVEAUTÉ : On sépare TOUT dans de vraies cellules de tableau <td> indépendantes !
         tr.innerHTML = `
-            <td class="editor-meta">
+            <td class="cell-meta">
                 <span class="badge">${item.cat}</span>
-                <span class="sub-badge">${item.mat}</span>
+                <span class="sub-badge-config">${item.mat}</span>
             </td>
-            <td class="editor-fields">
-                <div class="input-block">
-                    <label>Nom :</label>
-                    <input type="text" class="edit-nom" data-index="${index}" value="${escapedName}">
-                </div>
-                <div class="input-block-row">
-                    <div class="input-block">
-                        <label>Revente (sep.) :</label>
-                        <input type="text" class="edit-revente" data-index="${index}" value="${item.revente}">
-                    </div>
-                    <div class="input-block font-margin">
-                        <label>Coût de fabrication (sep.) :</label>
-                        <input type="number" step="any" class="edit-cout" data-index="${index}" value="${parseFloat(item.cout || 0).toFixed(1)}" ${readonlyAttr} style="${inputStyle}">
-                    </div>
-                </div>
-                <div class="input-block">
-                    <label>Recette / Ingrédients (Format: 2 Nom, 1 Autre...) :</label>
-                    <input type="text" class="edit-ing" data-index="${index}" value="${escapedIng}" placeholder="Ex: 1 Lingot de Fer + 1 Bande de cuir">
-                </div>
+            <td class="cell-nom">
+                <label class="mobile-label">Nom :</label>
+                <input type="text" class="edit-nom" data-index="${index}" value="${escapedName}">
+            </td>
+            <td class="cell-revente">
+                <label class="mobile-label">Revente (sep.) :</label>
+                <input type="text" class="edit-revente" data-index="${index}" value="${item.revente}">
+            </td>
+            <td class="cell-cout">
+                <label class="mobile-label">Coût (sep.) :</label>
+                <input type="number" step="any" class="edit-cout" data-index="${index}" value="${parseFloat(item.cout || 0).toFixed(1)}" ${readonlyAttr} style="${inputStyle}">
+            </td>
+            <td class="cell-ing">
+                <label class="mobile-label">Recette / Ingrédients :</label>
+                <input type="text" class="edit-ing" data-index="${index}" value="${escapedIng}" placeholder="Ex: 1 Lingot de Fer...">
             </td>
         `;
         editorTbody.appendChild(tr);
     });
 
-    // Écouteur pour adapter le champ et recalculer en direct pendant la saisie
     addLiveCostRecalculation();
 }
+
 
 
 
