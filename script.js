@@ -237,8 +237,12 @@ function displayItems(arr) {
         
         let qtyBadgeHtml = '';
         if (currentQty > 0) {
-            qtyBadgeHtml = `<span class="cart-qty-badge" data-name="${escapedName}" data-price="${numericPrice}">${currentQty}</span>`;
-        }
+            qtyBadgeHtml = `
+            <button type="button" class="cart-minus-btn" data-name="${escapedName}" data-price="${numericPrice}">-</button>
+            <input type="number" class="cart-qty-input" data-name="${escapedName}" data-price="${numericPrice}" value="${currentQty}" min="1" style="width: 34px !important; text-align: center; padding: 2px !important; font-size: 11px !important; font-weight: bold; color: var(--accent); background: #332200; border: 1px solid var(--accent); border-radius: 4px; box-sizing: border-box; -moz-appearance: textfield;">
+        `;
+        }   
+
         
         // --- CALCUL DES BADGES ET DU NOM D'AFFICHAGE FR ---
         let matBadgeHtml = '';
@@ -311,16 +315,38 @@ function displayItems(arr) {
     }); // Fin sécurisée de la boucle arr.forEach
 
     // BRANCHEMENT DES ÉCOUTEURS DE CLICS (Une fois le tableau entièrement construit)
+        // Gestion du bouton Plus (Chariot 🛒)
     tbody.querySelectorAll('.cart-add-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             sendToCart(btn.getAttribute('data-name'), btn.getAttribute('data-price'));
         });
     });
-    tbody.querySelectorAll('.cart-qty-badge').forEach(badge => {
-        badge.addEventListener('click', () => {
-            removeFromCart(badge.getAttribute('data-name'), badge.getAttribute('data-price'));
+
+    // Gestion du nouveau bouton Moins (-)
+    tbody.querySelectorAll('.cart-minus-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            removeFromCart(btn.getAttribute('data-name'), btn.getAttribute('data-price'));
         });
     });
+
+    // Gestion de la saisie manuelle directe au clavier !
+    tbody.querySelectorAll('.cart-qty-input').forEach(input => {
+        // Évite que l'utilisateur tape des lettres ou des nombres négatifs
+        input.addEventListener('change', () => {
+            const name = input.getAttribute('data-name');
+            const price = parseFloat(input.getAttribute('data-price')) || 0;
+            let nouvelleQty = parseInt(input.value) || 0;
+            
+            if (nouvelleQty < 1) nouvelleQty = 1;
+            
+            // Mise à jour de la zone de texte de la commande en fonction de la nouvelle quantité
+            mettreAJourQuantitePanier(name, price, nouvelleQty);
+        });
+        
+        // Empêche le clic sur le champ de texte de propager des bugs graphiques
+        input.addEventListener('click', (e) => e.stopPropagation());
+    });
+
 }
 
 // =========================================================================
@@ -738,6 +764,31 @@ function addLiveCostRecalculation() {
             });
         }
     });
+}
+// Fonction pour recalculer le panier quand on change manuellement le chiffre au clavier
+function mettreAJourQuantitePanier(name, price, nouvelleQty) {
+    const detailsField = document.getElementById('details');
+    const text = detailsField.value.trim();
+    if (text === "") return;
+
+    const lines = text.split('\n');
+    let ancienneQty = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].trim().includes("x " + name)) {
+            const parts = lines[i].split('x ');
+            ancienneQty = parseInt(parts[0]) || 0;
+            lines[i] = nouvelleQty + "x " + name;
+            break;
+        }
+    }
+    
+    detailsField.value = lines.join('\n');
+    
+    // Ajustement dynamique du prix total
+    const differenceQty = nouvelleQty - ancienneQty;
+    baseOrderPrice += (differenceQty * price);
+    updateDisplayedPrice();
 }
 
 

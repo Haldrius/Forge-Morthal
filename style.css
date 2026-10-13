@@ -421,6 +421,33 @@ button.submit {
         grid-column: 2;
     }
 }
+/* Style du bouton moins à gauche de la quantité */
+.cart-minus-btn {
+    background-color: #2b2b2b !important;
+    border: 1px solid var(--border) !important;
+    color: var(--court) !important; /* Écrit en rouge discret pour signaler la diminution */
+    font-size: 11px !important;
+    font-weight: bold !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-minus-btn:hover {
+    background-color: #3d3d3d !important;
+    border-color: #555 !important;
+}
+
+/* Supprime les petites flèches natives de Chrome sur les champs de type number */
+.cart-qty-input::-webkit-outer-spin-button,
+.cart-qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* =========================================================================
    AFFICHAGE ET CORRECTION POUR MODE ÉCRAN PC UNIQUEMENT
    ========================================================================= */
