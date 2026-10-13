@@ -10,6 +10,7 @@ let baseOrderPrice = 0;
 // Ordres de tri thématiques pour le catalogue
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
+const resourceOrder = ['petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialisation et branchement des éléments de l'interface
@@ -186,12 +187,29 @@ function applyAllFilters() {
             for (let j = 0; j < weaponOrder.length; j++) { if (nameB.includes(weaponOrder[j])) { indexB = j; break; } }
             return indexA - indexB || nameA.localeCompare(nameB);
         }
-        if (a.cat === 'Armure' && b.cat === 'Armure') {
+                if (a.cat === 'Armure' && b.cat === 'Armure') {
             let armIndexA = armorOrder.length, armIndexB = armorOrder.length;
             for (let k = 0; k < armorOrder.length; k++) { if (nameA.includes(armorOrder[k])) { armIndexA = k; break; } }
             for (let l = 0; l < armorOrder.length; l++) { if (nameB.includes(armorOrder[l])) { armIndexB = l; break; } }
             return armIndexA - armIndexB || nameA.localeCompare(nameB);
         }
+        
+        // NOUVEAU : Tri thématique pour les Matériaux / Ressources
+        if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
+            let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
+            
+            // On cherche la position du mot dans notre liste personnalisée
+            for (let m = 0; m < resourceOrder.length; m++) { 
+                if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } 
+            }
+            for (let n = 0; n < resourceOrder.length; n++) { 
+                if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } 
+            }
+            
+            // Si les deux objets font partie du même groupe (ex: deux peaux différentes), on trie par ordre alphabétique
+            return resIndexA - resIndexB || nameA.localeCompare(nameB);
+        }
+        
         return nameA.localeCompare(nameB);
     });
     displayItems(filtered);
