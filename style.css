@@ -644,5 +644,44 @@ button.submit {
         font-weight: bold;
     }
 }
+/* =========================================================================
+   AJUSTEMENTS SPÉCIFIQUES POUR LA VITRINE PUBLIC
+   ========================================================================= */
+/* =========================================================================
+   AJUSTEMENTS SPÉCIFIQUES POUR LA VITRINE PUBLIC - NETTOYÉ
+   ========================================================================= */
+.vitrine-body {
+    padding-top: 20px;
+}
+
+/* Masquage de la colonne panier et des coûts d'origine */
+.vitrine-table .cart-column-pc, 
+.vitrine-table .c-view { 
+    display: none !important; 
+}
+@media (max-width: 1023px) {
+    /* Masquer le prix brut de la 3e colonne sur mobile car .inline-prices s'en charge déjà */
+    .vitrine-table #table-body td:nth-child(3) {
+        display: none !important;
+    }
+}
+@media (min-width: 1024px) {
+    /* Largeur et alignement à gauche de la colonne CATÉGORIE */
+    .vitrine-table #table-body td:first-child { 
+        width: 18% !important; 
+    }
+    /* Largeur et alignement à gauche de la colonne ARTICLE */
+    .vitrine-table #table-body td:nth-child(2) { 
+        width: 50% !important; 
+        font-size: 15px; 
+    }
+    /* Largeur et alignement à gauche de la colonne PRIX DE VENTE pour s'aligner sous le titre */
+    .vitrine-table #table-body td:nth-child(3) { 
+        width: 32% !important; 
+        text-align: left !important; 
+        padding-left: 10px !important;
+    }
+}
+
 
 

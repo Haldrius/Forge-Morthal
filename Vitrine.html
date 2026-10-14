@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ Tarifs de la Forge de Morthal ⚔️</title>
+    <!-- Chargement du fichier de styles commun -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="vitrine-body">
+
+    <div class="filter-container" style="max-width: 1000px; margin: 20px auto 0;">
+        <h1>⚒️ Forge de Morthal ⚒️</h1>
+        <h2>Vitrine des Armes & Armures</h2>
+
+        <!-- Système de filtres horizontaux public -->
+        <div class="filter-container">
+            <div class="filter-scroll" id="main-filter-row">
+                <button class="filter-btn active" data-cat="tous">Tout afficher</button>
+                <button class="filter-btn" data-cat="Matériaux">💎 Matériaux</button>
+                <button class="filter-btn" data-cat="Arme">⚔️ Armes</button>
+                <button class="filter-btn" data-cat="Armure">🛡️ Armures</button>
+                <button class="filter-btn" data-cat="Bijou">👑 Bijoux</button>
+                <button class="filter-btn" data-cat="Couture">🧵 Couture</button>
+            </div>
+            <div class="filter-scroll" id="sub-filter-row"></div>
+        </div>
+
+        <!-- Barre de recherche -->
+        <input type="text" id="search" class="search-box" placeholder="🔍 Rechercher un équipement...">
+
+        <!-- Tableau des tarifs public -->
+        <div class="table-container">
+            <table class="vitrine-table">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Article</th>
+                        <th>Prix de Vente</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rempli dynamiquement par vitrine.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Chargement des Scripts dans l'ordre -->
+    <script src="catalogue.js"></script>
+    <script src="vitrine.js"></script>
+</body>
+</html>
