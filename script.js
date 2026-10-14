@@ -198,7 +198,7 @@ function applyAllFilters() {
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
         // 1. SI les deux objets sont des Armes ou des Armures, on applique l'ordre des matériaux personnalisé
-        constisEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
+        const isEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
         if (isEquipement(a) && isEquipement(b)) {
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
