@@ -2,8 +2,8 @@
 // 1. VARIABLES D'ÉTAT GLOBALES ET INITIALISATION
 // =========================================================================
 
-let currentMainCategory = 'tous';
-let currentSubMaterial = 'tous';
+let currentMainCategory = 'Matériaux';
+let currentSubMaterial = 'minerais';
 let data = []; // Initialisation vide
 let baseOrderPrice = 0;
 
@@ -15,31 +15,48 @@ const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauv
 const materialOrder = ['acier', 'cuir', 'fer', 'commun', 'peau', 'fourrure'];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialisation et branchement des éléments de l'interface
+    // 1. Initialisation des composants de base
     initTabs();
     initFilters();
     initCatalogForm();
     initOrderForm();
 
-    // Écouteur pour la barre de recherche
+    // 2. Écouteurs pour les barres de recherche
     document.getElementById('search').addEventListener('input', applyAllFilters);
-
-    // Écouteur pour la barre de recherche de l'éditeur
     document.getElementById('search-editor').addEventListener('input', filterEditorRows);
 
-
-    // CHARGEMENT AUTOMATISÉ : Fichier externe ou stockage local
-        // RECHARGEMENT DYNAMIQUE : On force l'utilisation du fichier catalogue.js mis à jour sur GitHub
+    // 3. CHARGEMENT DES DONNÉES
     data = CATALOGUE_INITIAL;
     localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
 
+    // 4. CONFIGURATION DE L'AFFICHAGE PAR DÉFAUT (Image 2)
+    // Désactiver le bouton "Tout afficher"
+    const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
+    if (btnToutAfficher) btnToutAfficher.classList.remove('active');
+
+    // Activer le bouton "Matériaux"
+    const btnMateriaux = document.querySelector('#main-filter-row .filter-btn[data-cat="Matériaux"]');
+    if (btnMateriaux) btnMateriaux.classList.add('active');
+
+    // Générer et afficher la ligne des sous-filtres de Matériaux
+    renderSubFilters('Matériaux');
+
+    // Activer le sous-bouton "Minerais" et désactiver "Tous"
+    const subRow = document.getElementById('sub-filter-row');
+    if (subRow) {
+        const btnTousSub = subRow.querySelector('.filter-btn[data-sub="tous"]');
+        const btnMineraisSub = subRow.querySelector('.filter-btn[data-sub="minerais"]');
+        
+        if (btnTousSub) btnTousSub.classList.remove('active');
+        if (btnMineraisSub) btnMineraisSub.classList.add('active');
+    }
     
-    // Génère l'éditeur visuel avec les données chargées
+    // 5. Rendu et application des filtres
     renderCatalogEditor();
-    
     applyAllFilters();
     loadOrders();
 });
+
 
 
 // =========================================================================
@@ -76,7 +93,17 @@ function initFilters() {
         btn.addEventListener('click', () => {
             const cat = btn.getAttribute('data-cat');
             currentMainCategory = cat;
-            currentSubMaterial = 'tous';
+            
+            // CONFIGURATION DYNAMIQUE DU SOUS-FILTRE PAR DÉFAUT
+            if (cat === 'Matériaux') {
+                currentSubMaterial = 'minerais'; // Deuxième option pour Matériaux
+            } else if (cat === 'Arme' || cat === 'Armure') {
+                currentSubMaterial = 'acier';    // Deuxième option pour Armes et Armures
+            } else if (cat === 'Bijou') {
+                currentSubMaterial = 'colliers'; // Deuxième option pour Bijoux
+            } else {
+                currentSubMaterial = 'tous';     // Cas par défaut ("Tout afficher" ou "Couture")
+            }
             
             mainFilterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -151,8 +178,18 @@ function renderSubFilters(cat) {
 
     const subFilterButtons = subRow.querySelectorAll('.filter-btn');
     subFilterButtons.forEach(subBtn => {
+        const subValue = subBtn.getAttribute('data-sub');
+        
+        // Si le bouton correspond à la sous-catégorie active configurée, on l'allume
+        if (subValue === currentSubMaterial) {
+            subBtn.classList.add('active');
+        } else {
+            subBtn.classList.remove('active');
+        }
+
+        // Écouteur de clic classique si l'utilisateur change manuellement
         subBtn.addEventListener('click', () => {
-            currentSubMaterial = subBtn.getAttribute('data-sub');
+            currentSubMaterial = subValue;
             subFilterButtons.forEach(b => b.classList.remove('active'));
             subBtn.classList.add('active');
             applyAllFilters();
