@@ -271,7 +271,7 @@ function displayItems(arr) {
             costValue = formatCout + ' sep.';
         }
         const mobilePriceRow = `<div class="inline-prices"><span class="p-view">${item.revente}${suffix}</span> / <span class="c-view">${costValue}</span></div>`;
-        const escapedName = item.nom.replace(/'/g, "\\'");
+        const escapedName = item.nom.replace(/'/g, "&#39;");
         const numericPrice = (typeof item.revente === 'number') ? item.revente : 0;
         const currentQty = qtyMap[item.nom] || 0;
         
