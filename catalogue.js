@@ -39,6 +39,8 @@ const CATALOGUE_INITIAL = [
     { "cat": "Matériaux", "mat": "outils", "nom": "Pioche", "revente": 10, "cout": 0, "ing": "1 Lingot de fer" },
     { "cat": "Matériaux", "mat": "outils", "nom": "Hache de bûcheron", "revente": 10, "cout": 0, "ing": "1 Lingot de fer" },
     { "cat": "Matériaux", "mat": "outils", "nom": "Clé", "revente": 25, "cout": 20, "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir" },
+    { "cat": "Matériaux", "mat": "outils", "nom": "Kit d'armure", "revente": 10, "cout": 0, "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre" },
+    { "cat": "Matériaux", "mat": "outils", "nom": "Kit d'arme", "revente": 10, "cout": 0, "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre" },
     { "cat": "Arme", "mat": "fer", "nom": "Arc en Fer", "revente": 20, "cout": 7.1, "ing": "1 Petits Bois + 2 Bandes de Cuir + Cuir" },
     { "cat": "Arme", "mat": "fer", "nom": "Dague en Fer", "revente": 20, "cout": 6.8, "ing": "1 Lingot de Fer + 1 Bandes de cuir" },
     { "cat": "Arme", "mat": "fer", "nom": "Espadon en Fer", "revente": 60, "cout": 23.2, "ing": "4 Lingots de Fer + 2 Bandes de Cuir" },
