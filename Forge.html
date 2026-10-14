@@ -72,13 +72,16 @@
     <div id="admin" class="tab-content">
         <form id="catalog-form" style="max-width: 95%; margin: 0 auto;">
             <h2>🛠️ Éditeur du Catalogue</h2>
+            <!-- Petite boîte de texte épurée pour la clé GitHub -->
+            <div class="cle-github-container" style="max-width: 100px; margin: 0 auto 15px; display: flex; align-items: center; gap: 10px;">
+                <label for="gh-token" style="font-weight: bold; color: var(--accent); font-size: 13px; white-space: nowrap; margin: 0;">Clé :</label>
+                <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx" style="flex: 1; padding: 8px; background: #121212; color: #fff; border: 1px solid var(--border); border-radius: 5px; font-size: 13px;">
+            </div>
             <p class="help-text" style="color: var(--text-muted); font-size: 12px; margin-bottom: 15px; text-align: center;">
                 Modifiez les valeurs ci-dessous, puis cliquez sur Sauvegarder pour appliquer les changements au catalogue actif.
             </p>
                     <!-- BARRE DE RECHERCHE DANS L'ÉDITEUR -->
         <input type="text" id="search-editor" class="search-box" placeholder="Filtrer les articles à modifier (ex: acier, fer...)" style="margin-bottom: 15px;">
-
-            
             <div class="table-container" style="max-height: 500px; overflow-y: auto;">
                 <table>
                     <thead>

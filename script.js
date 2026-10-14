@@ -15,7 +15,7 @@ const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauv
 const materialOrder = ['acier', 'cuir', 'fer', 'commun', 'peau', 'fourrure'];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialisation des composants de base
+    // 1. Initialisation des composants graphiques de base
     initTabs();
     initFilters();
     initCatalogForm();
@@ -25,11 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', applyAllFilters);
     document.getElementById('search-editor').addEventListener('input', filterEditorRows);
 
-    // 3. CHARGEMENT DES DONNÉES
+    // 3. CHARGEMENT DYNAMIQUE DES DONNÉES (Force l'utilisation de catalogue.js)
+    // À chaque actualisation, on charge la version fraîche écrite dans catalogue.js
     data = CATALOGUE_INITIAL;
+    
+    // On met à jour le localStorage pour que l'éditeur visuel soit sur la même longueur d'onde
     localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
 
-    // 4. CONFIGURATION DE L'AFFICHAGE PAR DÉFAUT (Image 2)
+    // 4. CONFIGURATION DE L'AFFICHAGE PAR DÉFAUT (Matériaux > Minerais)
     // Désactiver le bouton "Tout afficher"
     const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
     if (btnToutAfficher) btnToutAfficher.classList.remove('active');
@@ -51,11 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnMineraisSub) btnMineraisSub.classList.add('active');
     }
     
-    // 5. Rendu et application des filtres
+    // 5. Rendu de l'éditeur, application des filtres et historique des commandes
     renderCatalogEditor();
     applyAllFilters();
     loadOrders();
 });
+
+
 
 
 
@@ -628,8 +633,10 @@ function renderCatalogEditor() {
         // NOUVEAUTÉ : On sépare TOUT dans de vraies cellules de tableau <td> indépendantes !
         tr.innerHTML = `
             <td class="cell-meta">
-                <span class="badge">${item.cat}</span>
-                <span class="sub-badge-config">${item.mat}</span>
+                <div class="cell-meta-wrapper">
+                    <span class="badge">${item.cat}</span>
+                    <span class="sub-badge-config">${item.mat}</span>
+                </div>
             </td>
             <td class="cell-nom">
                 <label class="mobile-label">Nom :</label>
@@ -648,6 +655,7 @@ function renderCatalogEditor() {
                 <input type="text" class="edit-ing" data-index="${index}" value="${escapedIng}" placeholder="Ex: 1 Lingot de Fer...">
             </td>
         `;
+
         editorTbody.appendChild(tr);
     });
 
@@ -659,34 +667,26 @@ function renderCatalogEditor() {
 
 
 function initCatalogForm() {
-    // Gestion de la sauvegarde du formulaire d'édition visuel
     const catalogForm = document.getElementById('catalog-form');
     if (!catalogForm) return;
-        // Gestion du bouton d'exportation pour le fichier catalogue.js
+
+    // Gestion du bouton d'exportation pour le fichier catalogue.js
     const exportBtn = document.getElementById('btn-export-code');
     if (exportBtn) {
         exportBtn.addEventListener('click', () => {
-            // On prépare le texte exact à mettre dans le fichier
             const fileHeader = "// =========================================================================\n// CATALOGUE DES ARTICLES - FORGE DE MORTHAL\n// =========================================================================\n\nconst CATALOGUE_INITIAL = ";
             const fileFooter = ";\n";
-            
-            // On transforme les données actuelles en texte JSON bien aligné (4 espaces)
             const jsonText = JSON.stringify(data, null, 4);
             const completeCode = fileHeader + jsonText + fileFooter;
             
-            // Copie automatique dans le presse-papiers de Windows !
             navigator.clipboard.writeText(completeCode).then(() => {
-                alert("📋 Le code de votre catalogue a été copié dans votre presse-papiers !\n\nOuvrez simplement le fichier 'catalogue.js' dans VS Code, faites Ctrl+A puis Ctrl+V pour tout écraser et sauvegardez.");
-            }).catch(err => {
-                // Secours si le navigateur bloque la copie automatique
-                console.log(completeCode);
-                alert("Le blocage de sécurité du navigateur a empêché la copie automatique. Le code a été affiché dans la console (F12).");
+                alert("📋 Le code de votre catalogue a été copié dans votre presse-papiers !");
             });
         });
     }
 
-
-    catalogForm.addEventListener('submit', (e) => {
+    // SAUVEGARDE ET SYNCHRONISATION GITHUB EN LIGNE
+    catalogForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const rows = document.querySelectorAll('#editor-table-body tr');
@@ -697,11 +697,8 @@ function initCatalogForm() {
             const reventeInput = row.querySelector('.edit-revente');
             const coutInput = row.querySelector('.edit-cout');
             const ingInput = row.querySelector('.edit-ing');
-
-            // On conserve la catégorie et le matériau d'origine de l'objet
             const originalItem = data[index];
 
-            // Traitement du prix de revente (gestion du texte "À définir", "—" ou numérique)
             let reventeValue = reventeInput.value.trim();
             if (reventeValue.toLowerCase() !== 'à définir' && reventeValue !== '—' && reventeValue !== '') {
                 const parsed = parseFloat(reventeValue);
@@ -718,16 +715,79 @@ function initCatalogForm() {
             });
         });
 
-        // Mise à jour et sauvegarde permanente
+        // 1. Sauvegarde locale immédiate
         data = updatedData;
         localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
-        
-        alert("⚔️ Le catalogue de la forge a été mis à jour avec succès !");
-        
-        // Rafraîchissement des tarifs publics
         applyAllFilters();
+
+        // 2. Vérification de la clé GitHub
+        const tokenInput = document.getElementById('gh-token');
+        const token = tokenInput ? tokenInput.value.trim() : '';
+
+        if (!token) {
+            alert("⚔️ Le catalogue a été mis à jour localement sur votre navigateur !\n(Pour le synchroniser sur GitHub, entrez votre clé).");
+            return;
+        }
+
+        // Configuration de ciblage automatique de votre dépôt
+                // Configuration de ciblage automatique de votre dépôt
+                const owner = "Haldrius";
+        const repo = "Forge-Morthal";
+        const path = "catalogue.js";
+        const finalFileContent = "// =========================================================================\n// CATALOGUE DES ARTICLES - FORGE DE MORTHAL\n// =========================================================================\n\nconst CATALOGUE_INITIAL = " + JSON.stringify(data, null, 4) + ";\n";
+
+        try {
+            // CORRECTION DE L'URL : api.github.com/repos/ au lieu de github.com/repos/
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+            
+            // A. Récupération du SHA du fichier actuel sur GitHub
+            const getResponse = await fetch(apiUrl, {
+                method: "GET",
+                headers: {
+                    "Authorization": `token ${token}`,
+                    "Accept": "application/vnd.github.v3+json"
+                }
+            });
+
+            if (!getResponse.ok) {
+                throw new Error("Impossible d'accéder au fichier sur GitHub. Vérifiez votre clé.");
+            }
+
+            const fileData = await getResponse.json();
+            const currentSha = fileData.sha;
+
+            // B. Envoi de la mise à jour (PUT) sur l'API
+            const putResponse = await fetch(apiUrl, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `token ${token}`,
+                    "Content-Type": "application/json",
+                    "Accept": "application/vnd.github.v3+json"
+                },
+                body: JSON.stringify({
+                    message: "⚔️ Mise à jour du catalogue depuis l'interface d'administration",
+                    content: btoa(unescape(encodeURIComponent(finalFileContent))), // Encodage Base64
+                    sha: currentSha
+                })
+            });
+
+            if (putResponse.ok) {
+                alert("🚀 Succès ! Mise à jour des données effectuées");
+                if (tokenInput) tokenInput.value = ""; // Efface la clé par sécurité
+            } else {
+                const errorData = await putResponse.json();
+                alert(`❌ Erreur API GitHub : ${errorData.message}`);
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert(`💥 Échec de la synchronisation en ligne : ${error.message}`);
+        }
+
     });
+
 }
+
 // Fonction pour filtrer en temps réel UNIQUEMENT sur le nom de l'article
 function filterEditorRows() {
     const query = document.getElementById('search-editor').value.toLowerCase().trim();

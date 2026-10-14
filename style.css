@@ -559,34 +559,83 @@ button.submit {
         gap: 6px;
     }
 
-    /* =========================================================================
-       REDRESSAGE DE L'ÉDITEUR DE CATALOGUE (CONFIG) SUR PC
+        /* =========================================================================
+        /* =========================================================================
+       ÉDITEUR DE CATALOGUE (CONFIG) SUR PC - ALIGNEMENT PARFAIT DÉFINITIF
        ========================================================================= */
-    #editor-table-body tr.editor-row {
+    
+    /* 1. On applique le modèle Table-Fixed sur tous les conteneurs de tableaux de l'éditeur */
+    #admin table,
+    #catalog-form table,
+    .tab-content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important; /* Force le navigateur à respecter nos largeurs au pixel près */
+        border-collapse: collapse !important;
+    }
+
+    /* 2. On garantit le comportement natif des lignes */
+    table thead { display: table-header-group !important; }
+    #editor-table-body { display: table-row-group !important; }
+    
+    tr.editor-row,
+    table thead tr {
         display: table-row !important;
         background: transparent;
     }
-    #editor-table-body tr.editor-row:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.02);
-    }
-    #editor-table-body td {
+
+    /* 3. Définition des largeurs strictes par colonne pour l'en-tête (th) ET les cellules d'inputs (td) */
+    /* Colonne 1 : Catégorie / Mat. */
+    th:nth-child(1), td.cell-meta, td:nth-child(1) { width: 18% !important; }
+    
+    /* Colonne 2 : Nom de l'article */
+    th:nth-child(2), td.cell-nom, td:nth-child(2) { width: 22% !important; }
+    
+    /* Colonne 3 : Prix Revente */
+    th:nth-child(3), td.cell-revente, td:nth-child(3) { width: 12% !important; }
+    
+    /* Colonne 4 : Coût */
+    th:nth-child(4), td.cell-cout, td:nth-child(4) { width: 12% !important; }
+    
+    /* Colonne 5 : Ingrédients / Recette */
+    th:nth-child(5), td.cell-ing, td:nth-child(5) { width: 36% !important; }
+
+    /* 4. Nettoyage et espacement homogène des cellules */
+    #editor-table-body td, th {
         display: table-cell !important;
-        padding: 8px !important;
+        padding: 10px 8px !important;
+        box-sizing: border-box !important;
         border-bottom: 1px solid var(--border) !important;
         vertical-align: middle !important;
     }
+
+    #editor-table-body tr.editor-row:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Ajustement des champs inputs pour remplir l'espace sans déborder */
+    .editor-row input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 8px !important;
+    }
+
     .mobile-label, .pc-hide { 
         display: none !important; 
     }
+
+    /* Alignement en ligne propre des badges de la première colonne */
     .cell-meta { 
-        display: flex !important; 
-        border: none !important; 
-        margin: 0; 
+        display: table-cell !important;
+    }
+    
+    .cell-meta-wrapper {
+        display: flex !important;
         gap: 6px;
         align-items: center;
-        flex-wrap: nowrap !important; /* Aligne sur une seule ligne sur PC */
+        flex-wrap: nowrap !important;
     }
-
 
     .sub-badge-config {
         font-size: 11px;
@@ -594,11 +643,6 @@ button.submit {
         text-transform: uppercase;
         font-weight: bold;
     }
-    
-    /* On agrandit la largeur de la colonne méta pour laisser respirer les longs textes */
-    .cell-meta { width: 180px !important; }
-    .cell-nom input { width: 220px !important; }
-    .cell-revente input { width: 90px !important; }
-    .cell-cout input { width: 90px !important; }
-    .cell-ing input { width: 440px !important; }
 }
+
+
