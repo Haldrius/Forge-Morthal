@@ -693,18 +693,25 @@ function initCatalogForm() {
 }
 // Fonction pour filtrer en temps réel UNIQUEMENT sur le nom de l'article
 function filterEditorRows() {
-    const query = document.getElementById('search-editor').value.toLowerCase();
+    const query = document.getElementById('search-editor').value.toLowerCase().trim();
     const rows = document.querySelectorAll('.editor-row');
 
     rows.forEach(row => {
-        // On récupère uniquement la valeur textuelle du champ "Nom"
-        const nomValue = row.querySelector('.edit-nom').value.toLowerCase();
+        // Ciblage ultra-précis de l'input de nom, peu importe la cellule td
+        const nomInput = row.querySelector('input.edit-nom');
 
-        // Si la recherche correspond au nom de l'article
-        if (nomValue.includes(query)) {
-            row.classList.remove('hidden'); // On affiche la carte
-        } else {
-            row.classList.add('hidden');    // On cache la carte
+        if (nomInput) {
+            const nomValue = nomInput.value.toLowerCase();
+
+            // Si la recherche correspond au nom de l'article
+            if (nomValue.includes(query)) {
+                // On restaure l'affichage par défaut (table-row sur PC / grid sur Mobile)
+                row.style.setProperty('display', '', 'important'); 
+                row.classList.remove('hidden'); // Sécurité pour le mobile
+            } else {
+                // On force la disparition absolue de la ligne (écrase le CSS PC et Mobile)
+                row.style.setProperty('display', 'none', 'important');
+            }
         }
     });
 }
