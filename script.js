@@ -10,7 +10,7 @@ let baseOrderPrice = 0;
 // Ordres de tri thématiques pour le catalogue
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
-const resourceOrder = ['petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
+const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 // Ordre de tri prioritaire pour les matériaux des armes et armures
 const materialOrder = ['acier', 'cuir', 'fer', 'commun', 'peau', 'fourrure'];
 
@@ -146,7 +146,7 @@ function renderSubFilters(cat) {
         subBtn.addEventListener('click', () => {
             currentSubMaterial = subBtn.getAttribute('data-sub');
             subFilterButtons.forEach(b => b.classList.remove('active'));
-            subBtn.add('active');
+            subBtn.classList.add('active');
             applyAllFilters();
         });
     });
@@ -734,7 +734,7 @@ function calculerCoutRecette(ingText) {
             const mots = t.split(/\s+/);
             const motsNettoyes = mots.map(mot => {
                 // LISTE DES MOTS QUI FINISSENT PAR 'S' MAIS NE SONT PAS DES PLURIELS
-                const exceptions = ['rubis', 'bois', 'vif-argent'];
+                const exceptions = ['rubis', 'bois', 'vif-argent', 'minerai'];
                 
                 if (exceptions.includes(mot)) {
                     return mot; // On ne touche pas à ces mots !
