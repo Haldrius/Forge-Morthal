@@ -383,7 +383,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Arc en Acier",
-        "revente": 65,
+        "revente": 70,
         "cout": 17.4,
         "ing": "2 Lingots d'acier + 8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
