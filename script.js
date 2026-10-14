@@ -108,9 +108,25 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="diadèmes">👑 Diadèmes</button>
             <button class="filter-btn" data-sub="gemmes">✨ Gemmes</button>
         `;
-    } else if (cat === 'Arme' || cat === 'Armure') {
+     } else if (cat === 'Arme') {
         subRow.style.display = 'flex';
-        // Ordre strict : Acier, Cuir, Fer, Commun, Peau, Fourrure, puis le reste (Orichalque/Orc, Bosmer, Altmer, Dwemer, Ébonite, Verre, Falmer)
+        // Liste réordonnée des matériaux pour les Armes (Acier, Fer, Commun...)
+        subRow.innerHTML = `
+            <button class="filter-btn active" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="acier">Acier</button>
+            <button class="filter-btn" data-sub="fer">Fer</button>
+            <button class="filter-btn" data-sub="commun">Commun</button>
+            <button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button>
+            <button class="filter-btn" data-sub="dwemer">Dwemer</button>
+            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
+            <button class="filter-btn" data-sub="altmer">Altmer</button>
+            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
+            <button class="filter-btn" data-sub="verre">Verre</button>
+            <button class="filter-btn" data-sub="falmer">Falmer</button>
+        `;
+    } else if (cat === 'Armure') {
+        subRow.style.display = 'flex';
+        // Liste réordonnée des matériaux pour les Armures
         subRow.innerHTML = `
             <button class="filter-btn active" data-sub="tous">Tous</button>
             <button class="filter-btn" data-sub="acier">Acier</button>
@@ -120,12 +136,12 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
             <button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button>
+            <button class="filter-btn" data-sub="dwemer">Dwemer</button>
             <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="altmer">Altmer</button>
-            <button class="filter-btn" data-sub="dwemer">Dwemer</button>
-            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
+            <button class="filter-btn" data-sub="malachite">Malachite</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
-            <button class="filter-btn" data-sub="falmer">Falmer</button>
+            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
     } else { 
         subRow.style.display = 'none'; 
@@ -190,21 +206,28 @@ function applyAllFilters() {
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
         // 1. SI les deux objets sont des Armes ou des Armures, on applique l'ordre des matériaux personnalisé
+        // 1. SI les deux objets sont des Armes ou des Armures
         const isEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
         if (isEquipement(a) && isEquipement(b)) {
+            
+            // NOUVEAU : Si on affiche "Tout", on sépare d'abord les Armes des Armures
+            if (a.cat !== b.cat) {
+                return a.cat.localeCompare(b.cat); // Range les Armes ensemble, puis les Armures
+            }
+
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
 
-            // Si le matériau n'est pas dans la liste prioritaire, on le place à la fin (-1 devient une grande valeur)
+            // Si le matériau n'est pas trouvé, sécurité à la fin
             if (indexMatA === -1) indexMatA = materialOrder.length + 100;
             if (indexMatB === -1) indexMatB = materialOrder.length + 100;
 
-            // Si les matériaux sont différents, on trie selon l'ordre demandé
+            // Si les matériaux sont différents, tri selon la progression (materialOrder)
             if (indexMatA !== indexMatB) {
                 return indexMatA - indexMatB;
             }
 
-            // Si le matériau est le même (ex: deux objets en Acier), on trie par type d'arme/armure
+            // Si le matériau est identique, tri par type spécifique (ex: Dague avant Épée)
             if (a.cat === 'Arme' && b.cat === 'Arme') {
                 let indexTypeA = weaponOrder.length, indexTypeB = weaponOrder.length;
                 for (let i = 0; i < weaponOrder.length; i++) { if (nameA.includes(weaponOrder[i])) { indexTypeA = i; break; } }
@@ -217,9 +240,6 @@ function applyAllFilters() {
                 for (let l = 0; l < armorOrder.length; l++) { if (nameB.includes(armorOrder[l])) { indexTypeB = l; break; } }
                 return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
             }
-            
-            // Si l'un est une arme et l'autre une armure au sein d'un même matériau, tri par catégorie
-            return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
         }
 
         // 2. Tri thématique existant pour les Matériaux / Ressources brutes
