@@ -11,6 +11,8 @@ let baseOrderPrice = 0;
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
 const resourceOrder = ['petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
+// Ordre de tri prioritaire pour les matériaux des armes et armures
+const materialOrder = ['acier', 'cuir', 'fer', 'commun', 'peau', 'fourrure'];
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialisation et branchement des éléments de l'interface
@@ -116,12 +118,23 @@ function renderSubFilters(cat) {
         `;
     } else if (cat === 'Arme' || cat === 'Armure') {
         subRow.style.display = 'flex';
-        let h = '<button class="filter-btn active" data-sub="tous">Tous</button><button class="filter-btn" data-sub="commun">Commun</button>';
-        if (cat === 'Armure') { 
-            h += '<button class="filter-btn" data-sub="peau">Peau</button><button class="filter-btn" data-sub="fourrure">Fourrure</button><button class="filter-btn" data-sub="cuir">Cuir</button>'; 
-        }
-        h += '<button class="filter-btn" data-sub="fer">Fer</button><button class="filter-btn" data-sub="acier">Acier</button><button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button><button class="filter-btn" data-sub="bosmer">Bosmer</button><button class="filter-btn" data-sub="altmer">Altmer</button><button class="filter-btn" data-sub="dwemer">Dwemer</button><button class="filter-btn" data-sub="ébonite">Ébonite</button><button class="filter-btn" data-sub="verre">Verre</button><button class="filter-btn" data-sub="falmer">Falmer</button>';
-        subRow.innerHTML = h;
+        // Ordre strict : Acier, Cuir, Fer, Commun, Peau, Fourrure, puis le reste (Orichalque/Orc, Bosmer, Altmer, Dwemer, Ébonite, Verre, Falmer)
+        subRow.innerHTML = `
+            <button class="filter-btn active" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="acier">Acier</button>
+            <button class="filter-btn" data-sub="cuir">Cuir</button>
+            <button class="filter-btn" data-sub="fer">Fer</button>
+            <button class="filter-btn" data-sub="commun">Commun</button>
+            <button class="filter-btn" data-sub="peau">Peau</button>
+            <button class="filter-btn" data-sub="fourrure">Fourrure</button>
+            <button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button>
+            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
+            <button class="filter-btn" data-sub="altmer">Altmer</button>
+            <button class="filter-btn" data-sub="dwemer">Dwemer</button>
+            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
+            <button class="filter-btn" data-sub="verre">Verre</button>
+            <button class="filter-btn" data-sub="falmer">Falmer</button>
+        `;
     } else { 
         subRow.style.display = 'none'; 
         subRow.innerHTML = ''; 
@@ -133,11 +146,12 @@ function renderSubFilters(cat) {
         subBtn.addEventListener('click', () => {
             currentSubMaterial = subBtn.getAttribute('data-sub');
             subFilterButtons.forEach(b => b.classList.remove('active'));
-            subBtn.classList.add('active');
+            subBtn.add('active');
             applyAllFilters();
         });
     });
 }
+
 // =========================================================================
 // 3. LOGIQUE D'ICÔNES, FILTRES DE RECHERCHE ET RENDU DU TABLEAU
 // =========================================================================
@@ -179,39 +193,55 @@ function applyAllFilters() {
         }
     }
     
-    filtered.sort((a, b) => {
+        filtered.sort((a, b) => {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
-        if (a.cat === 'Arme' && b.cat === 'Arme') {
-            let indexA = weaponOrder.length, indexB = weaponOrder.length;
-            for (let i = 0; i < weaponOrder.length; i++) { if (nameA.includes(weaponOrder[i])) { indexA = i; break; } }
-            for (let j = 0; j < weaponOrder.length; j++) { if (nameB.includes(weaponOrder[j])) { indexB = j; break; } }
-            return indexA - indexB || nameA.localeCompare(nameB);
+        const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
+
+        // 1. SI les deux objets sont des Armes ou des Armures, on applique l'ordre des matériaux personnalisé
+        constisEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
+        if (isEquipement(a) && isEquipement(b)) {
+            let indexMatA = materialOrder.indexOf(matA);
+            let indexMatB = materialOrder.indexOf(matB);
+
+            // Si le matériau n'est pas dans la liste prioritaire, on le place à la fin (-1 devient une grande valeur)
+            if (indexMatA === -1) indexMatA = materialOrder.length + 100;
+            if (indexMatB === -1) indexMatB = materialOrder.length + 100;
+
+            // Si les matériaux sont différents, on trie selon l'ordre demandé
+            if (indexMatA !== indexMatB) {
+                return indexMatA - indexMatB;
+            }
+
+            // Si le matériau est le même (ex: deux objets en Acier), on trie par type d'arme/armure
+            if (a.cat === 'Arme' && b.cat === 'Arme') {
+                let indexTypeA = weaponOrder.length, indexTypeB = weaponOrder.length;
+                for (let i = 0; i < weaponOrder.length; i++) { if (nameA.includes(weaponOrder[i])) { indexTypeA = i; break; } }
+                for (let j = 0; j < weaponOrder.length; j++) { if (nameB.includes(weaponOrder[j])) { indexTypeB = j; break; } }
+                return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
+            }
+            if (a.cat === 'Armure' && b.cat === 'Armure') {
+                let indexTypeA = armorOrder.length, indexTypeB = armorOrder.length;
+                for (let k = 0; k < armorOrder.length; k++) { if (nameA.includes(armorOrder[k])) { indexTypeA = k; break; } }
+                for (let l = 0; l < armorOrder.length; l++) { if (nameB.includes(armorOrder[l])) { indexTypeB = l; break; } }
+                return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
+            }
+            
+            // Si l'un est une arme et l'autre une armure au sein d'un même matériau, tri par catégorie
+            return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
         }
-                if (a.cat === 'Armure' && b.cat === 'Armure') {
-            let armIndexA = armorOrder.length, armIndexB = armorOrder.length;
-            for (let k = 0; k < armorOrder.length; k++) { if (nameA.includes(armorOrder[k])) { armIndexA = k; break; } }
-            for (let l = 0; l < armorOrder.length; l++) { if (nameB.includes(armorOrder[l])) { armIndexB = l; break; } }
-            return armIndexA - armIndexB || nameA.localeCompare(nameB);
-        }
-        
-        // NOUVEAU : Tri thématique pour les Matériaux / Ressources
+
+        // 2. Tri thématique existant pour les Matériaux / Ressources brutes
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
-            
-            // On cherche la position du mot dans notre liste personnalisée
-            for (let m = 0; m < resourceOrder.length; m++) { 
-                if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } 
-            }
-            for (let n = 0; n < resourceOrder.length; n++) { 
-                if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } 
-            }
-            
-            // Si les deux objets font partie du même groupe (ex: deux peaux différentes), on trie par ordre alphabétique
+            for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
+            for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
             return resIndexA - resIndexB || nameA.localeCompare(nameB);
         }
         
-        return nameA.localeCompare(nameB);
+        // Par défaut pour le reste (Bijoux, Couture...)
+        return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
     });
+
     displayItems(filtered);
 }
 
