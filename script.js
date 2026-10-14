@@ -29,18 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // CHARGEMENT AUTOMATISÉ : Fichier externe ou stockage local
-    const savedCatalog = localStorage.getItem('forge_raw_catalog');
-    if (savedCatalog) {
-        try {
-            data = JSON.parse(savedCatalog);
-        } catch (err) {
-            console.error("Erreur de lecture du catalogue local, chargement du catalogue par défaut", err);
-            data = CATALOGUE_INITIAL;
-        }
-    } else {
-        // Premier démarrage : on utilise le catalogue propre du fichier catalogue.js
-        data = CATALOGUE_INITIAL;
-    }
+        // RECHARGEMENT DYNAMIQUE : On force l'utilisation du fichier catalogue.js mis à jour sur GitHub
+    data = CATALOGUE_INITIAL;
+    localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
+
     
     // Génère l'éditeur visuel avec les données chargées
     renderCatalogEditor();
