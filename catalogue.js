@@ -7,7 +7,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Minerai de fer",
-        "revente": 0.5,
+        "revente": 0.6,
         "cout": 0.3,
         "ing": ""
     },
