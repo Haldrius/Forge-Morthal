@@ -11,8 +11,11 @@ let baseOrderPrice = 0;
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
 const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
-// Ordre de tri prioritaire pour les matériaux des armes et armures
-const materialOrder = ['acier', 'cuir', 'fer', 'commun', 'peau', 'fourrure'];
+const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
+const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
+// Ordre de tri prioritaire unifié pour les sous-catégories (Armes & Armures)
+const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'dwemer', 'orichalque', 'bosmer', 'altmer', 'verre', 'ébonite'];
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialisation des composants graphiques de base
@@ -140,41 +143,38 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="diadèmes">👑 Diadèmes</button>
             <button class="filter-btn" data-sub="gemmes">✨ Gemmes</button>
         `;
-     } else if (cat === 'Arme') {
+         } else if (cat === 'Arme') {
         subRow.style.display = 'flex';
-        // Liste réordonnée des matériaux pour les Armes (Acier, Fer, Commun...)
         subRow.innerHTML = `
-            <button class="filter-btn active" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="tous">Tous</button>
             <button class="filter-btn" data-sub="acier">Acier</button>
             <button class="filter-btn" data-sub="fer">Fer</button>
             <button class="filter-btn" data-sub="commun">Commun</button>
-            <button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button>
             <button class="filter-btn" data-sub="dwemer">Dwemer</button>
+            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="altmer">Altmer</button>
-            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
-            <button class="filter-btn" data-sub="falmer">Falmer</button>
+            <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
     } else if (cat === 'Armure') {
         subRow.style.display = 'flex';
-        // Liste réordonnée des matériaux pour les Armures
         subRow.innerHTML = `
-            <button class="filter-btn active" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="tous">Tous</button>
             <button class="filter-btn" data-sub="acier">Acier</button>
-            <button class="filter-btn" data-sub="cuir">Cuir</button>
             <button class="filter-btn" data-sub="fer">Fer</button>
             <button class="filter-btn" data-sub="commun">Commun</button>
+            <button class="filter-btn" data-sub="cuir">Cuir</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
-            <button class="filter-btn" data-sub="orichalque">Orc / Orichalque</button>
             <button class="filter-btn" data-sub="dwemer">Dwemer</button>
+            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="altmer">Altmer</button>
-            <button class="filter-btn" data-sub="malachite">Malachite</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
+
     } else { 
         subRow.style.display = 'none'; 
         subRow.innerHTML = ''; 
@@ -285,12 +285,33 @@ function applyAllFilters() {
         }
 
         // 2. Tri thématique existant pour les Matériaux / Ressources brutes
+                // 2. Tri thématique pour les Matériaux / Minerais / Lingots / Ressources
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
+            // A. Si ce sont des minerais
+            if (a.mat === 'minerais' && b.mat === 'minerais') {
+                let indexA = oreOrder.indexOf(nameA);
+                let indexB = oreOrder.indexOf(nameB);
+                if (indexA === -1) indexA = oreOrder.length + 1;
+                if (indexB === -1) indexB = oreOrder.length + 1;
+                return indexA - indexB;
+            }
+            
+            // B. Si ce sont des lingots
+            if (a.mat === 'lingot' && b.mat === 'lingot') {
+                let indexA = ingotOrder.indexOf(nameA);
+                let indexB = ingotOrder.indexOf(nameB);
+                if (indexA === -1) indexA = ingotOrder.length + 1;
+                if (indexB === -1) indexB = ingotOrder.length + 1;
+                return indexA - indexB;
+            }
+
+            // C. Reste des ressources brutes et outils (Logique d'origine)
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
             for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
             return resIndexA - resIndexB || nameA.localeCompare(nameB);
         }
+
         
         // Par défaut pour le reste (Bijoux, Couture...)
         return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);

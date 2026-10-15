@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚔️ Tarifs de la Forge de Morthal ⚔️</title>
-    <!-- Chargement du fichier de styles commun -->
+    <title>⚔ Tarifs de la Forge de Morthal ⚔</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="vitrine-body">
 
-    <div class="filter-container" style="max-width: 1000px; margin: 20px auto 0;">
-        <h1>⚒️ Forge de Morthal ⚒️</h1>
-        <h2>Vitrine des Armes & Armures</h2>
+    <!-- Bloc HTML pour l'affichage de vos bannières sur PC -->
+    <div class="banner-morthal banner-left"></div>
+    <div class="banner-morthal banner-right"></div>
 
-        <!-- Système de filtres horizontaux public -->
-        <div class="filter-container">
-            <div class="filter-scroll" id="main-filter-row">
-                <button class="filter-btn active" data-cat="tous">Tout afficher</button>
-                <button class="filter-btn" data-cat="Matériaux">💎 Matériaux</button>
-                <button class="filter-btn" data-cat="Arme">⚔️ Armes</button>
-                <button class="filter-btn" data-cat="Armure">🛡️ Armures</button>
-                <button class="filter-btn" data-cat="Bijou">👑 Bijoux</button>
-                <button class="filter-btn" data-cat="Couture">🧵 Couture</button>
-            </div>
-            <div class="filter-scroll" id="sub-filter-row"></div>
+    <h1>⚒ Forge de Morthal ⚒</h1>
+
+    <!-- 1. BLOC DES FILTRES (Séparé) -->
+    <div class="filter-container">
+        <div id="main-filter-row" class="filter-scroll">
+            <button class="filter-btn active" data-cat="tous">Tout afficher</button>
+            <button class="filter-btn" data-cat="Matériaux">💎 Matériaux</button>
+            <button class="filter-btn" data-cat="Arme">⚔ Armes</button>
+            <button class="filter-btn" data-cat="Armure">🛡 Armures</button>
+            <button class="filter-btn" data-cat="Bijou">👑 Bijoux</button>
+            <button class="filter-btn" data-cat="Couture">🧵 Couture</button>
         </div>
-
-        <!-- Barre de recherche -->
-        <input type="text" id="search" class="search-box" placeholder="🔍 Rechercher un équipement...">
-
-        <!-- Tableau des tarifs public -->
-        <div class="table-container">
-            <table class="vitrine-table">
-                <thead>
-                    <tr>
-                        <th>Catégorie</th>
-                        <th>Article</th>
-                        <th>Prix de Vente</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <!-- Rempli dynamiquement par vitrine.js -->
-                </tbody>
-            </table>
+        <div id="sub-filter-row" class="filter-scroll">
+            <!-- Rempli dynamiquement en JavaScript -->
         </div>
     </div>
 
-    <!-- Chargement des Scripts dans l'ordre -->
+    <!-- 2. LA BARRE DE RECHERCHE (Isolée pour laisser passer le fond noir) -->
+    <input type="text" id="search" class="search-box" placeholder="🔍 Rechercher un équipement...">
+
+    <!-- 3. BLOC DU TABLEAU DE LA VITRINE (Isolé) -->
+    <div class="table-container">
+        <table class="vitrine-table">
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Article</th>
+                    <th>Prix de Vente</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rempli dynamiquement par vitrine.js -->
+            </tbody>
+        </table>
+    </div>
+
     <script src="catalogue.js"></script>
     <script src="vitrine.js"></script>
 </body>
