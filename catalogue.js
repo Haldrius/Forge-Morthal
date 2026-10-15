@@ -830,7 +830,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Espadon dorée en Ébonite",
+        "nom": "Espadon doré en Ébonite",
         "revente": "À définir",
         "cout": 100006.3,
         "ing": "5 Ébonite + 1 Or + 3 Bandes cuir"
