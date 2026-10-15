@@ -1221,7 +1221,7 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
-        "mat": "Dwemer",
+        "mat": "dwemer",
         "nom": "Casque Dwemer",
         "revente": 100,
         "cout": 23.2,
@@ -1233,11 +1233,11 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure Dwemer",
         "revente": 100,
         "cout": 23.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
-        "mat": "Dwemer",
+        "mat": "dwemer",
         "nom": "Gants Dwemer",
         "revente": 100,
         "cout": 23.2,
@@ -1245,7 +1245,7 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
-        "mat": "Dwemer",
+        "mat": "dwemer",
         "nom": "Bottes Dwemer",
         "revente": 100,
         "cout": 23.2,
