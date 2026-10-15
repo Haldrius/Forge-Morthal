@@ -745,7 +745,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Arc d'ébonite",
         "revente": "À définir",
         "cout": 60000,
-        "ing": "3 Ébonite"
+        "ing": "3 Lingots d' Ébonite"
     },
     {
         "cat": "Arme",
@@ -753,7 +753,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague d'ébonite",
         "revente": "À définir",
         "cout": 20002,
-        "ing": "1 Ébonite + 1 Bande de cuir"
+        "ing": "1 Lingot d' Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -761,7 +761,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon d'ébonite",
         "revente": "À définir",
         "cout": 100006,
-        "ing": "5 Ébonite + 3 Bandes de cuir"
+        "ing": "5 Lingots d' Ébonite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -769,7 +769,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Flèche d'ébonite x20",
         "revente": "À définir",
         "cout": 20000.1,
-        "ing": "1 Ébonite + 1 Petit bois"
+        "ing": "1 Lingot d'Ébonite + 1 Petit bois"
     },
     {
         "cat": "Arme",
@@ -777,7 +777,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'armes d'ébonite",
         "revente": "À définir",
         "cout": 100004,
-        "ing": "5 Ébonite + 2 Bandes de cuir"
+        "ing": "5 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -785,7 +785,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'ébonite",
         "revente": "À définir",
         "cout": 40004,
-        "ing": "2 Ébonite + 2 Bandes de cuir"
+        "ing": "2 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -793,7 +793,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Marteau d'ébonite",
         "revente": "À définir",
         "cout": 100006,
-        "ing": "5 Ébonite + 3 Bandes de cuir"
+        "ing": "5 Lingots d'Ébonite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -801,7 +801,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse d'ébonite",
         "revente": "À définir",
         "cout": 60002,
-        "ing": "3 Ébonite + 1 Bande de cuir"
+        "ing": "3 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -809,7 +809,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée d'ébonite",
         "revente": "À définir",
         "cout": 40002,
-        "ing": "2 Ébonite + 1 Bande de cuir"
+        "ing": "2 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -817,7 +817,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
         "cout": 100004.3,
-        "ing": "5 Ébonite + 1 Or + 2 Bandes de cuir"
+        "ing": "5 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -825,7 +825,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague en Ébonite dorée",
         "revente": "À définir",
         "cout": 20002.3,
-        "ing": "1 Ébonite + 1 Or + 1 Bande de cuir"
+        "ing": "1 Lingot d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -833,7 +833,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon en Ébonite dorée",
         "revente": "À définir",
         "cout": 100006.3,
-        "ing": "5 Ébonite + 1 Or + 3 Bandes de cuir"
+        "ing": "5 Lingots d'Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -841,7 +841,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
         "cout": 60002.3,
-        "ing": "3 Ébonite + 1 Or + 1 Bande de cuir"
+        "ing": "3 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -849,7 +849,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée en Ébonite dorée",
         "revente": "À définir",
         "cout": 40002.3,
-        "ing": "2 Ébonite + 1 Or + 1 Bande de cuir"
+        "ing": "2 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -857,7 +857,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
         "cout": 40004.3,
-        "ing": "2 Ébonite + 1 Or + 2 Bandes de cuir"
+        "ing": "2 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
