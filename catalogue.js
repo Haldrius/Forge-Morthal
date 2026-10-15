@@ -63,7 +63,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Ébonite brute",
-        "revente": 25000,
+        "revente": 20000,
         "cout": 20000,
         "ing": ""
     },
@@ -295,7 +295,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Kit d'armure",
-        "revente": 10,
+        "revente": 5,
         "cout": 1.7,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
@@ -303,7 +303,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Kit d'arme",
-        "revente": 10,
+        "revente": 5,
         "cout": 1.7,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
