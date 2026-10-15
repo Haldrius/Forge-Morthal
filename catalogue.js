@@ -499,7 +499,7 @@ const CATALOGUE_INITIAL = [
         "cout": 11.6,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
-    {
+    /*{
         "cat": "Arme",
         "mat": "bosmer",
         "nom": "Arc Bosmer",
@@ -738,7 +738,7 @@ const CATALOGUE_INITIAL = [
         "revente": "À définir",
         "cout": 22.4,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 1 Bande de cuir"
-    },
+    },*/    
     {
         "cat": "Arme",
         "mat": "ébonite",
@@ -1259,7 +1259,7 @@ const CATALOGUE_INITIAL = [
         "cout": 23.2,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
-    {
+   /* {
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Casque en Altmer Elfique",
@@ -1362,7 +1362,7 @@ const CATALOGUE_INITIAL = [
         "revente": 600,
         "cout": 38.1,
         "ing": "1 Lingot fer + 2 Pierre de lune + 1 Corindon + 1 Cuir + 2 Bandes de cuir"
-    },
+    },*/
     {
         "cat": "Armure",
         "mat": "verre",
@@ -1515,7 +1515,7 @@ const CATALOGUE_INITIAL = [
         "cout": 80002,
         "ing": "4 Ébonite + 1 Bande de cuir"
     },
-    {
+    /*{
         "cat": "Armure",
         "mat": "orichalque",
         "nom": "Casque en Orichalque",
@@ -1586,7 +1586,7 @@ const CATALOGUE_INITIAL = [
         "revente": "À définir",
         "cout": 17.8,
         "ing": "1 Lingot d'orichalque + 2 Cuir + 2 Bandes de cuir"
-    },
+    },*/
     {
         "cat": "Couture",
         "mat": "tissu",
