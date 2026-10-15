@@ -184,7 +184,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Charbon en Briquette",
         "revente": 6,
-        "cout": 3,
+        "cout": 1.5,
         "ing": ""
     },
     {
@@ -192,7 +192,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Coke de Charbon",
         "revente": 8,
-        "cout": 4,
+        "cout": 3,
         "ing": ""
     },
     {
