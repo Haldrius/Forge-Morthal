@@ -69,8 +69,8 @@ function getPreciseIcon(name) {
     if (n.includes('bague')) return '💍';
     if (n.includes('lingot')) return '🧱'; 
     if (n.includes('minerai')) return '💎'; 
-    if (n.includes('brut')) return '💎'; 
-    if (n.includes('bois')) return '🌲'; 
+    if (n.includes('brut')) return '💎';
+    if (n.includes('bois')) return '🌲';
     if (n.includes('charbon')) return '🔥';
     if (['améthyste', 'rubis', 'diamant', 'grenat', 'saphir', 'émeraude'].some(gem => n.includes(gem))) return '💎';
     if (n.includes('pioche') || n.includes('hache')) return '🛠️'; 

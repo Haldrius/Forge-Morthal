@@ -104,13 +104,13 @@ function initFilters() {
             
             // CONFIGURATION DYNAMIQUE DU SOUS-FILTRE PAR DÉFAUT
             if (cat === 'Matériaux') {
-                currentSubMaterial = 'minerais'; // Deuxième option pour Matériaux
+                currentSubMaterial = 'minerais';// Deuxième option pour Matériaux
             } else if (cat === 'Arme' || cat === 'Armure') {
-                currentSubMaterial = 'acier';    // Deuxième option pour Armes et Armures
+                currentSubMaterial = 'acier';   // Deuxième option pour Armes et Armures
             } else if (cat === 'Bijou') {
-                currentSubMaterial = 'colliers'; // Deuxième option pour Bijoux
+                currentSubMaterial = 'colliers';// Deuxième option pour Bijoux
             } else {
-                currentSubMaterial = 'tous';     // Cas par défaut ("Tout afficher" ou "Couture")
+                currentSubMaterial = 'tous';    // Cas par défaut ("Tout afficher" ou "Couture")
             }
             
             mainFilterButtons.forEach(b => b.classList.remove('active'));
@@ -176,8 +176,8 @@ function renderSubFilters(cat) {
         `;
 
     } else { 
-        subRow.style.display = 'none'; 
-        subRow.innerHTML = ''; 
+        subRow.style.display = 'none';
+        subRow.innerHTML = '';
         return;
     }
 
@@ -208,39 +208,40 @@ function renderSubFilters(cat) {
 
 function getPreciseIcon(name) {
     const n = name.toLowerCase();
-    if (n.includes('dague')) return '🗡️'; 
+    if (n.includes('dague')) return '🗡️';
     if (n.includes('espadon') || n.includes('épée') || n.includes('sword')) return '⚔️';
-    if (n.includes('arc')) return '🏹'; 
-    if (n.includes('flèche')) return '🎯'; 
+    if (n.includes('arc')) return '🏹';
+    if (n.includes('flèche')) return '🎯';
     if (n.includes('bouclier')) return '🛡️';
-    if (n.includes('casque') || n.includes('tête')) return '💂'; 
+    if (n.includes('casque') || n.includes('tête')) return '💂';
     if (n.includes('armure') || n.includes('torse')) return '👕';
-    if (n.includes('gants') || n.includes('gantelets')) return '🧤'; 
+    if (n.includes('gants') || n.includes('gantelets')) return '🧤';
     if (n.includes('bottes')) return '🥾';
-    if (n.includes('diadème')) return '👑'; 
-    if (n.includes('collier')) return '📿'; 
+    if (n.includes('diadème')) return '👑';
+    if (n.includes('collier')) return '📿';
     if (n.includes('bague')) return '💍';
-    if (n.includes('lingot')) return '🧱'; 
-    if (n.includes('minerai')) return '💎'; 
-    if (n.includes('brut')) return '💎'; 
+    if (n.includes('lingot')) return '🧱';
+    if (n.includes('minerai')) return '💎';
+    if (n.includes('brut')) return '💎';
+    if (n.includes('bois')) return '🌲';
     if (n.includes('charbon')) return '🔥';
     if (['améthyste', 'rubis', 'diamant', 'grenat', 'saphir', 'émeraude'].some(gem => n.includes(gem))) return '💎';
-    if (n.includes('pioche') || n.includes('hache')) return '🛠️'; 
+    if (n.includes('pioche') || n.includes('hache')) return '🛠️';
     if (n.includes('clé')) return '🔑';
     return '⚒️';
 }
 
 function applyAllFilters() {
-    const q = document.getElementById('search').value.toLowerCase(); 
+    const q = document.getElementById('search').value.toLowerCase();
     const filtered = [];
     
     for (let i = 0; i < data.length; i++) {
-        const item = data[i]; 
+        const item = data[i];
         const matchMain = (currentMainCategory === 'tous' || item.cat === currentMainCategory);
         const matchSub = (currentSubMaterial === 'tous' || item.mat === currentSubMaterial);
         const matchSearch = (item.nom.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q));
         if (matchMain && matchSub && matchSearch) { 
-            filtered.push(item); 
+            filtered.push(item);
         }
     }
     
@@ -825,7 +826,7 @@ function filterEditorRows() {
             // Si la recherche correspond au nom de l'article
             if (nomValue.includes(query)) {
                 // On restaure l'affichage par défaut (table-row sur PC / grid sur Mobile)
-                row.style.setProperty('display', '', 'important'); 
+                row.style.setProperty('display', '', 'important');
                 row.classList.remove('hidden'); // Sécurité pour le mobile
             } else {
                 // On force la disparition absolue de la ligne (écrase le CSS PC et Mobile)
