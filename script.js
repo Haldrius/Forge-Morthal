@@ -566,7 +566,7 @@ function updateDisplayedPrice() {
     if (c.checked) { f = Math.round(baseOrderPrice * 0.9); }
     if (g.checked) { f = Math.round(baseOrderPrice * 0.8); }
 
-    p.value = f;
+    p.value = parseFloat((f) || 0);
     applyAllFilters();
 }
 
@@ -802,7 +802,7 @@ function initCatalogForm() {
 
             if (putResponse.ok) {
                 alert("🚀 Succès ! Mise à jour des données effectuées");
-                //if (tokenInput) tokenInput.value = ""; // Efface la clé par sécurité
+                //  if (tokenInput) tokenInput.value = ""; // Efface la clé par sécurité
             } else {
                 const errorData = await putResponse.json();
                 alert(`❌ Erreur API GitHub : ${errorData.message}`);
@@ -980,7 +980,7 @@ function mettreAJourQuantitePanier(name, price, nouvelleQty) {
     
     // Ajustement dynamique du prix total
     const differenceQty = nouvelleQty - ancienneQty;
-    baseOrderPrice += (differenceQty * price);
+    baseOrderPrice += parseFloat((differenceQty * price) || 0);
     updateDisplayedPrice();
 }
 
