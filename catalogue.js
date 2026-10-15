@@ -457,7 +457,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Arc Commun",
         "revente": 90,
         "cout": 16.4,
-        "ing": "3 Lingots acier + 1 Bande cuir"
+        "ing": "3 Lingots acier + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -465,7 +465,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague Commun",
         "revente": 40,
         "cout": 11.6,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -473,7 +473,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'arme Commun",
         "revente": 70,
         "cout": 23.2,
-        "ing": "3 Lingots fer + 1 Lingot de Corindon + 2 Bandes cuir"
+        "ing": "3 Lingots fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -481,7 +481,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache de guerre Commun",
         "revente": 35,
         "cout": 13.6,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -489,7 +489,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse Commun",
         "revente": 40,
         "cout": 11.6,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -497,7 +497,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée Commun",
         "revente": 35,
         "cout": 11.6,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -513,7 +513,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague Bosmer",
         "revente": 600,
         "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -521,7 +521,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée Bosmer",
         "revente": 600,
         "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -537,7 +537,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague Altmer",
         "revente": 900,
         "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -569,7 +569,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache de guerre Altmer",
         "revente": 900,
         "cout": 135.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -577,7 +577,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Marteau Altmer",
         "revente": 2000,
         "cout": 155.6,
-        "ing": "2 Lingots fer + 1 Lingot vif-argent + 2 Pierre de lune + 3 Bandes cuir"
+        "ing": "2 Lingots fer + 1 Lingot vif-argent + 2 Pierre de lune + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -585,7 +585,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse Altmer",
         "revente": 1000,
         "cout": 146.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 2 Pierre de lune + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 2 Pierre de lune + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -593,7 +593,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée Altmer",
         "revente": 1000,
         "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -609,7 +609,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague Dwemer",
         "revente": 500,
         "cout": 11.9,
-        "ing": "2 Lingots fer + 1 Lingot dwemer + 1 Bande cuir"
+        "ing": "2 Lingots fer + 1 Lingot dwemer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -617,7 +617,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon Dwemer",
         "revente": 500,
         "cout": 25.8,
-        "ing": "2 Lingots fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes cuir"
+        "ing": "2 Lingots fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -641,7 +641,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache de guerre Dwemer",
         "revente": 500,
         "cout": 13.9,
-        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -649,7 +649,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Marteau Dwemer",
         "revente": 500,
         "cout": 21,
-        "ing": "1 Lingot fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes cuir"
+        "ing": "1 Lingot fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -657,7 +657,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse Dwemer",
         "revente": 500,
         "cout": 12.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots dwemer + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots dwemer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -665,7 +665,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée Dwemer",
         "revente": 500,
         "cout": 11.9,
-        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -681,7 +681,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague Orc",
         "revente": "À définir",
         "cout": 14.6,
-        "ing": "1 Lingot fer + 1 Lingot d'orichalque + 1 Bande cuir"
+        "ing": "1 Lingot fer + 1 Lingot d'orichalque + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -753,7 +753,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague d'ébonite",
         "revente": "À définir",
         "cout": 20002,
-        "ing": "1 Ébonite + 1 Bande cuir"
+        "ing": "1 Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -761,7 +761,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon d'ébonite",
         "revente": "À définir",
         "cout": 100006,
-        "ing": "5 Ébonite + 3 Bandes cuir"
+        "ing": "5 Ébonite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -785,7 +785,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'ébonite",
         "revente": "À définir",
         "cout": 40004,
-        "ing": "2 Ébonite + 2 Bandes cuir"
+        "ing": "2 Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -793,7 +793,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Marteau d'ébonite",
         "revente": "À définir",
         "cout": 100006,
-        "ing": "5 Ébonite + 3 Bandes cuir"
+        "ing": "5 Ébonite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -801,7 +801,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse d'ébonite",
         "revente": "À définir",
         "cout": 60002,
-        "ing": "3 Ébonite + 1 Bande cuir"
+        "ing": "3 Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -809,7 +809,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée d'ébonite",
         "revente": "À définir",
         "cout": 40002,
-        "ing": "2 Ébonite + 1 Bande cuir"
+        "ing": "2 Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -817,7 +817,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
         "cout": 100004.3,
-        "ing": "5 Ébonite + 1 Or + 2 Bandes cuir"
+        "ing": "5 Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -825,7 +825,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague en Ébonite dorée",
         "revente": "À définir",
         "cout": 20002.3,
-        "ing": "1 Ébonite + 1 Or + 1 Bande cuir"
+        "ing": "1 Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -833,7 +833,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon en Ébonite dorée",
         "revente": "À définir",
         "cout": 100006.3,
-        "ing": "5 Ébonite + 1 Or + 3 Bandes cuir"
+        "ing": "5 Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -841,7 +841,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
         "cout": 60002.3,
-        "ing": "3 Ébonite + 1 Or + 1 Bande cuir"
+        "ing": "3 Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -849,7 +849,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée en Ébonite dorée",
         "revente": "À définir",
         "cout": 40002.3,
-        "ing": "2 Ébonite + 1 Or + 1 Bande cuir"
+        "ing": "2 Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -857,7 +857,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
         "cout": 40004.3,
-        "ing": "2 Ébonite + 1 Or + 2 Bandes cuir"
+        "ing": "2 Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -873,7 +873,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Dague de verre",
         "revente": 4500,
         "cout": 415,
-        "ing": "1 Pierre de lune + 1 Malachite + 1 Bande cuir"
+        "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -881,7 +881,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Espadon de verre",
         "revente": 9000,
         "cout": 832,
-        "ing": "2 Pierre de lune + 2 Malachite + 3 Bandes cuir"
+        "ing": "2 Pierre de lune + 2 Malachite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -905,7 +905,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache de verre",
         "revente": 4500,
         "cout": 417,
-        "ing": "1 Pierre de lune + 1 Malachite + 2 Bandes cuir"
+        "ing": "1 Pierre de lune + 1 Malachite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -913,7 +913,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Marteau de verre",
         "revente": 10000,
         "cout": 1232,
-        "ing": "2 Pierre de lune + 3 Malachite + 3 Bandes cuir"
+        "ing": "2 Pierre de lune + 3 Malachite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -921,7 +921,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Masse de verre",
         "revente": 7000,
         "cout": 815,
-        "ing": "1 Pierre de lune + 2 Malachite + 1 Bande cuir"
+        "ing": "1 Pierre de lune + 2 Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -929,7 +929,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée de verre",
         "revente": 7500,
         "cout": 415,
-        "ing": "1 Pierre de lune + 1 Malachite + 1 Bande cuir"
+        "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -953,7 +953,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Hache Falmer",
         "revente": "—",
         "cout": 6,
-        "ing": "1 Chitine + 2 Bandes cuir"
+        "ing": "1 Chitine + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -961,7 +961,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Épée Falmer",
         "revente": "—",
         "cout": 4,
-        "ing": "1 Chitine + 1 Bande cuir"
+        "ing": "1 Chitine + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -969,7 +969,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Peau",
         "revente": 30,
         "cout": 8,
-        "ing": "2 Cuir + 1 Bande cuir"
+        "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -977,7 +977,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Peau",
         "revente": 45,
         "cout": 18,
-        "ing": "4 Cuir + 3 Bandes cuir"
+        "ing": "4 Cuir + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1025,7 +1025,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Fourrure",
         "revente": 20,
         "cout": 8,
-        "ing": "2 Cuir + 1 Bande cuir"
+        "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1033,7 +1033,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Fourrure",
         "revente": 35,
         "cout": 21,
-        "ing": "5 Cuir + 3 Bandes cuir"
+        "ing": "5 Cuir + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1041,7 +1041,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Gantelets en Fourrure",
         "revente": 20,
         "cout": 7,
-        "ing": "1 Cuir + 2 Bandes cuir"
+        "ing": "1 Cuir + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1073,7 +1073,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Cuir",
         "revente": 35,
         "cout": 8,
-        "ing": "2 Cuir + 1 Bande cuir"
+        "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1081,7 +1081,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Cuir",
         "revente": 50,
         "cout": 18,
-        "ing": "4 Cuir + 3 Bandes cuir"
+        "ing": "4 Cuir + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1089,7 +1089,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Gantelets en Cuir",
         "revente": 35,
         "cout": 7,
-        "ing": "1 Cuir + 2 Bandes cuir"
+        "ing": "1 Cuir + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1185,7 +1185,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Bouclier en Fer",
         "revente": 60,
         "cout": 21.2,
-        "ing": "4 Lingots fer + 1 Bande cuir"
+        "ing": "4 Lingots fer + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1221,6 +1221,38 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
+        "mat": "Dwemer",
+        "nom": "Casque Dwemer",
+        "revente": 100,
+        "cout": 23.2,
+        "ing": "1 Lingot fer + 1 Lingot d'acier + 2 Lingots Dwemer + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "Dwemer",
+        "nom": "Armure Dwemer",
+        "revente": 100,
+        "cout": 23.2,
+        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "Dwemer",
+        "nom": "Gants Dwemer",
+        "revente": 100,
+        "cout": 23.2,
+        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot Dwemer + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "Dwemer",
+        "nom": "Bottes Dwemer",
+        "revente": 100,
+        "cout": 23.2,
+        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots Dwemer + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
         "mat": "acier",
         "nom": "Bouclier en Acier",
         "revente": 100,
@@ -1233,7 +1265,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Altmer Elfique",
         "revente": 500,
         "cout": 35.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande cuir"
+        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1257,7 +1289,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Bottes en Altmer Elfique",
         "revente": 500,
         "cout": 37.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1265,7 +1297,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Bouclier en Altmer Elfique",
         "revente": 1000,
         "cout": 60.8,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 4 Pierre de lune + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1273,7 +1305,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Bosmer Léger",
         "revente": 500,
         "cout": 35.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande cuir"
+        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1281,7 +1313,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Bosmer Léger",
         "revente": 1000,
         "cout": 65.8,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 1 Cuir + 3 Bandes cuir"
+        "ing": "1 Lingot fer + 4 Pierre de lune + 1 Cuir + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1289,7 +1321,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Gants en Bosmer Léger",
         "revente": 500,
         "cout": 24.8,
-        "ing": "1 Lingot fer + 1 Pierre de lune + 1 Cuir + 2 Bandes cuir"
+        "ing": "1 Lingot fer + 1 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1369,7 +1401,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Verre Vvanderfell",
         "revente": 15000,
         "cout": 818,
-        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande cuir + 2 Malachite"
+        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
     },
     {
         "cat": "Armure",
@@ -1377,7 +1409,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Verre Vvanderfell",
         "revente": 25000,
         "cout": 1635,
-        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes cuir + 4 Malachite"
+        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
     },
     {
         "cat": "Armure",
@@ -1385,7 +1417,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Gantelets en Verre Vvanderfell",
         "revente": 15000,
         "cout": 420,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes cuir + 1 Malachite"
+        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
     },
     {
         "cat": "Armure",
@@ -1409,7 +1441,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Casque en Malachite",
         "revente": 15000,
         "cout": 818,
-        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande cuir + 2 Malachite"
+        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
     },
     {
         "cat": "Armure",
@@ -1417,7 +1449,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Armure en Malachite",
         "revente": 25000,
         "cout": 1635,
-        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes cuir + 4 Malachite"
+        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
     },
     {
         "cat": "Armure",
@@ -1425,7 +1457,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Gants en Malachite",
         "revente": 15000,
         "cout": 420,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes cuir + 1 Malachite"
+        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
     },
     {
         "cat": "Armure",
@@ -1481,7 +1513,7 @@ const CATALOGUE_INITIAL = [
         "nom": "Bouclier en Ébonite",
         "revente": "À définir",
         "cout": 80002,
-        "ing": "4 Ébonite + 1 Bande cuir"
+        "ing": "4 Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
