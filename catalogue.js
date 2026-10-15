@@ -1219,7 +1219,7 @@ const CATALOGUE_INITIAL = [
         "cout": 23.2,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
-    {
+    /*{
         "cat": "Armure",
         "mat": "dwemer",
         "nom": "Casque Dwemer",
@@ -1253,13 +1253,13 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
-        "mat": "acier",
-        "nom": "Bouclier en Acier",
+        "mat": "dwemer",
+        "nom": "Bouclier Dwemer",
         "revente": 100,
         "cout": 23.2,
-        "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots Dwemer + 1 Bandes de cuir"
     },
-   /* {
+    {
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Casque en Altmer Elfique",
