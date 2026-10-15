@@ -1229,11 +1229,11 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
-        "mat": "Dwemer",
+        "mat": "dwemer",
         "nom": "Armure Dwemer",
         "revente": 100,
         "cout": 23.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes de cuir"
+        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes cuir"
     },
     {
         "cat": "Armure",
