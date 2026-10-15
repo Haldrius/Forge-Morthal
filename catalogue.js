@@ -814,7 +814,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony Battleaxe",
+        "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
         "cout": 100004.3,
         "ing": "5 Ébonite + 1 Or + 2 Bandes cuir"
@@ -822,7 +822,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony Dagger",
+        "nom": "Dague en Ébonite dorée",
         "revente": "À définir",
         "cout": 20002.3,
         "ing": "1 Ébonite + 1 Or + 1 Bande cuir"
@@ -838,7 +838,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony Mace",
+        "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
         "cout": 60002.3,
         "ing": "3 Ébonite + 1 Or + 1 Bande cuir"
@@ -854,7 +854,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony War Axe",
+        "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
         "cout": 40004.3,
         "ing": "2 Ébonite + 1 Or + 2 Bandes cuir"
