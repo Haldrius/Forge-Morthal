@@ -1119,7 +1119,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "commun",
         "nom": "Armure en Maille Commune",
-        "revente": 55,
+        "revente": 75,
         "cout": 30,
         "ing": "5 Lingots de fer + 3 Bandes de cuir"
     },
