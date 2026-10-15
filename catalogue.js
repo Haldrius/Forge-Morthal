@@ -830,7 +830,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony Greatsword",
+        "nom": "Espadon dorée en Ébonite",
         "revente": "À définir",
         "cout": 100006.3,
         "ing": "5 Ébonite + 1 Or + 3 Bandes cuir"
@@ -846,7 +846,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Arme",
         "mat": "ébonite",
-        "nom": "Gilded Ebony Sword",
+        "nom": "Épée dorée en Ébonite",
         "revente": "À définir",
         "cout": 40002.3,
         "ing": "2 Ébonite + 1 Or + 1 Bande cuir"
@@ -1864,7 +1864,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème MALACHITE + SAPHIR",
         "revente": 1500,
-        "cout": 4848,
+        "cout": 4812,
         "ing": "2 Lingots de Malachite + 1 Saphir"
     },
     {
@@ -1872,7 +1872,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème MALACHITE + EMERAUDE",
         "revente": 1000,
-        "cout": 4848,
+        "cout": 4812,
         "ing": "2 Lingots de Malachite + 1 Émeraude"
     }
 ];
