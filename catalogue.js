@@ -144,7 +144,7 @@ const CATALOGUE_INITIAL = [
         "mat": "lingot",
         "nom": "Lingot Dwemer",
         "revente": 400,
-        "cout": 0.3,
+        "cout": 100,
         "ing": ""
     },
     {
@@ -1224,7 +1224,7 @@ const CATALOGUE_INITIAL = [
         "mat": "dwemer",
         "nom": "Casque Dwemer",
         "revente": 100,
-        "cout": 23.2,
+        "cout": 14.2,
         "ing": "1 Lingot fer + 1 Lingot d'acier + 2 Lingots Dwemer + 2 Bandes de cuir"
     },
     {
@@ -1232,7 +1232,7 @@ const CATALOGUE_INITIAL = [
         "mat": "dwemer",
         "nom": "Armure Dwemer",
         "revente": 100,
-        "cout": 23.2,
+        "cout": 16.5,
         "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes de cuir"
     },
     {
@@ -1240,7 +1240,7 @@ const CATALOGUE_INITIAL = [
         "mat": "dwemer",
         "nom": "Gants Dwemer",
         "revente": 100,
-        "cout": 23.2,
+        "cout": 13.9,
         "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot Dwemer + 2 Bandes de cuir"
     },
     {
@@ -1248,7 +1248,7 @@ const CATALOGUE_INITIAL = [
         "mat": "dwemer",
         "nom": "Bottes Dwemer",
         "revente": 100,
-        "cout": 23.2,
+        "cout": 14.2,
         "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots Dwemer + 2 Bandes de cuir"
     },
     {
