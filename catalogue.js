@@ -63,8 +63,8 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Ébonite brute",
-        "revente": 5000,
-        "cout": 4000,
+        "revente": 20000,
+        "cout": 20000,
         "ing": ""
     },
     {
