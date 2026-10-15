@@ -627,6 +627,10 @@ function deleteOrder(idx) {
 // =========================================================================
 // 4. ÉDITEUR VISUEL DU CATALOGUE ET STOCKAGE LOCALSTORAGE
 // =========================================================================
+// NOUVEAU : Récupération et pré-remplissage automatique du Token GitHub
+const savedToken = localStorage.getItem('forge_gh_token') || '';
+const tokenInput = document.getElementById('gh-token');
+if (tokenInput && savedToken) { tokenInput.value = savedToken; }
 
 // Cette fonction va remplir le tableau de modification dans l'onglet Config
 function renderCatalogEditor() {
@@ -746,6 +750,8 @@ function initCatalogForm() {
         // 2. Vérification de la clé GitHub
         const tokenInput = document.getElementById('gh-token');
         const token = tokenInput ? tokenInput.value.trim() : '';
+        // NOUVEAU : Si un token est entré, on le mémorise pour les prochaines fois
+        if (token) { localStorage.setItem('forge_gh_token', token); }
 
         if (!token) {
             alert("⚔️ Le catalogue a été mis à jour localement sur votre navigateur !\n(Pour le synchroniser sur GitHub, entrez votre clé).");
@@ -753,8 +759,8 @@ function initCatalogForm() {
         }
 
         // Configuration de ciblage automatique de votre dépôt
-                // Configuration de ciblage automatique de votre dépôt
-                const owner = "Haldrius";
+        // Configuration de ciblage automatique de votre dépôt
+        const owner = "Haldrius";
         const repo = "Forge-Morthal";
         const path = "catalogue.js";
         const finalFileContent = "// =========================================================================\n// CATALOGUE DES ARTICLES - FORGE DE MORTHAL\n// =========================================================================\n\nconst CATALOGUE_INITIAL = " + JSON.stringify(data, null, 4) + ";\n";
@@ -796,7 +802,7 @@ function initCatalogForm() {
 
             if (putResponse.ok) {
                 alert("🚀 Succès ! Mise à jour des données effectuées");
-                if (tokenInput) tokenInput.value = ""; // Efface la clé par sécurité
+                //if (tokenInput) tokenInput.value = ""; // Efface la clé par sécurité
             } else {
                 const errorData = await putResponse.json();
                 alert(`❌ Erreur API GitHub : ${errorData.message}`);
