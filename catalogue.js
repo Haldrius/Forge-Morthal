@@ -151,17 +151,17 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Ébonite",
-        "revente": 9000,
-        "cout": 8008,
-        "ing": "2 Ébonite brute + 2 Coke"
+        "revente": 50000,
+        "cout": 40002,
+        "ing": "2 Ébonite brute + 2 Coke de Charbon"
     },
     {
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot de Malachite",
         "revente": 5500,
-        "cout": 2424,
-        "ing": "6 Malachite brut + 6 Coke"
+        "cout": 2406,
+        "ing": "6 Malachite brut + 6 Coke de Charbon"
     },
     {
         "cat": "Matériaux",
@@ -744,7 +744,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Arc d'ébonite",
         "revente": "À définir",
-        "cout": 12000,
+        "cout": 60000,
         "ing": "3 Ébonite"
     },
     {
@@ -752,7 +752,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Dague d'ébonite",
         "revente": "À définir",
-        "cout": 4002,
+        "cout": 20002,
         "ing": "1 Ébonite + 1 Bande cuir"
     },
     {
@@ -760,7 +760,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Espadon d'ébonite",
         "revente": "À définir",
-        "cout": 20006,
+        "cout": 100006,
         "ing": "5 Ébonite + 3 Bandes cuir"
     },
     {
@@ -768,7 +768,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Flèche d'ébonite x20",
         "revente": "À définir",
-        "cout": 4000.1,
+        "cout": 20000.1,
         "ing": "1 Ébonite + 1 Petit bois"
     },
     {
@@ -776,7 +776,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'armes d'ébonite",
         "revente": "À définir",
-        "cout": 20004,
+        "cout": 100004,
         "ing": "5 Ébonite + 2 Bandes cuir"
     },
     {
@@ -784,7 +784,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'ébonite",
         "revente": "À définir",
-        "cout": 8004,
+        "cout": 40004,
         "ing": "2 Ébonite + 2 Bandes cuir"
     },
     {
@@ -792,7 +792,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Marteau d'ébonite",
         "revente": "À définir",
-        "cout": 20006,
+        "cout": 100006,
         "ing": "5 Ébonite + 3 Bandes cuir"
     },
     {
@@ -800,7 +800,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Masse d'ébonite",
         "revente": "À définir",
-        "cout": 12002,
+        "cout": 60002,
         "ing": "3 Ébonite + 1 Bande cuir"
     },
     {
@@ -808,7 +808,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Épée d'ébonite",
         "revente": "À définir",
-        "cout": 8002,
+        "cout": 40002,
         "ing": "2 Ébonite + 1 Bande cuir"
     },
     {
@@ -816,7 +816,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony Battleaxe",
         "revente": "À définir",
-        "cout": 20004.3,
+        "cout": 100004.3,
         "ing": "5 Ébonite + 1 Or + 2 Bandes cuir"
     },
     {
@@ -824,7 +824,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony Dagger",
         "revente": "À définir",
-        "cout": 4002.3,
+        "cout": 20002.3,
         "ing": "1 Ébonite + 1 Or + 1 Bande cuir"
     },
     {
@@ -832,7 +832,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony Greatsword",
         "revente": "À définir",
-        "cout": 20006.3,
+        "cout": 100006.3,
         "ing": "5 Ébonite + 1 Or + 3 Bandes cuir"
     },
     {
@@ -840,7 +840,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony Mace",
         "revente": "À définir",
-        "cout": 12002.3,
+        "cout": 60002.3,
         "ing": "3 Ébonite + 1 Or + 1 Bande cuir"
     },
     {
@@ -848,7 +848,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony Sword",
         "revente": "À définir",
-        "cout": 8002.3,
+        "cout": 40002.3,
         "ing": "2 Ébonite + 1 Or + 1 Bande cuir"
     },
     {
@@ -856,7 +856,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gilded Ebony War Axe",
         "revente": "À définir",
-        "cout": 8004.3,
+        "cout": 40004.3,
         "ing": "2 Ébonite + 1 Or + 2 Bandes cuir"
     },
     {
@@ -1448,7 +1448,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Casque en Ébonite",
         "revente": "À définir",
-        "cout": 12004,
+        "cout": 60004,
         "ing": "3 Ébonite + 2 Bandes cuir"
     },
     {
@@ -1456,7 +1456,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Armure en Ébonite",
         "revente": "À définir",
-        "cout": 20006,
+        "cout": 100006,
         "ing": "5 Ébonite + 3 Bandes cuir"
     },
     {
@@ -1464,7 +1464,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Gantelets en Ébonite",
         "revente": "À définir",
-        "cout": 8004,
+        "cout": 40004,
         "ing": "2 Ébonite + 2 Bandes cuir"
     },
     {
@@ -1472,7 +1472,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Bottes en Ébonite",
         "revente": "À définir",
-        "cout": 12004,
+        "cout": 60004,
         "ing": "3 Ébonite + 2 Bandes cuir"
     },
     {
@@ -1480,7 +1480,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Bouclier en Ébonite",
         "revente": "À définir",
-        "cout": 16002,
+        "cout": 80002,
         "ing": "4 Ébonite + 1 Bande cuir"
     },
     {
