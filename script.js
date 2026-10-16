@@ -356,9 +356,11 @@ function displayItems(arr) {
         const icon = getPreciseIcon(item.nom);
         const suffix = (typeof item.revente === 'number') ? ' sep.' : '';
         let costValue = '0 sep.';
+        let costValue = '0 sep.';
         if (item.cout) {
-            const formatCout = (item.cout % 1 !== 0) ? item.cout.toFixed(2) : item.cout;
-            costValue = formatCout + ' sep.';
+            // Rend le nombre propre : supprime les zéros inutiles, garde les décimales si elles existent
+            const cleanCost = Number(parseFloat(item.cout).toFixed(2)); 
+            costValue = cleanCost + ' sep.';
         }
         const mobilePriceRow = `<div class="inline-prices"><span class="p-view">${item.revente}${suffix}</span> / <span class="c-view">${costValue}</span></div>`;
         const escapedName = item.nom.replace(/'/g, "&#39;");
@@ -680,7 +682,7 @@ function renderCatalogEditor() {
             </td>
             <td class="cell-cout">
                 <label class="mobile-label">Coût (sep.) :</label>
-                <input type="number" step="any" class="edit-cout" data-index="${index}" value="${parseFloat(item.cout || 0).toFixed(2)}" ${readonlyAttr} style="${inputStyle}">
+                <input type="number" step="any" class="edit-cout" data-index="${index}" value="${Number(parseFloat(item.cout || 0).toFixed(2))}" ${readonlyAttr} style="${inputStyle}">
             </td>
             <td class="cell-ing">
                 <label class="mobile-label">Recette / Ingrédients :</label>
@@ -957,7 +959,8 @@ function addLiveCostRecalculation() {
                     coutInput.style.cursor = "not-allowed";
                     
                     const nouveauCout = calculerCoutRecette(recetteTexte);
-                    coutInput.value = nouveauCout.toFixed(2);
+                    // Convertit en nombre pour éliminer les .00 ou les zéros de fin superflus
+                    coutInput.value = Number(nouveauCout.toFixed(2)); 
                 }
             });
         }
