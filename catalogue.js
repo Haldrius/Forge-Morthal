@@ -666,8 +666,8 @@ const CATALOGUE_INITIAL = [
         "revente": 500,
         "cout": 11.9,
         "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 1 Bande de cuir"
-    },
-    {*/
+    },*/
+    {
         "cat": "Arme",
         "mat": "orichalque",
         "nom": "Arc Orc",
