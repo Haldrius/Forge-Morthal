@@ -875,6 +875,7 @@ function calculerCoutRecette(ingText) {
         
         // --- NORMALISATION INTELLIGENTE AVEC EXCEPTIONS ---
         const normaliserTexte = (texte) => {
+            if (!texte) return "";
             let t = texte.toLowerCase();
             
             // On retire les liaisons courantes
@@ -897,20 +898,27 @@ function calculerCoutRecette(ingText) {
                 return mot;
             });
             
-            return motsNettoyes.join('').trim();
+            // CORRECTION : Forcer le toLowerCase() sur la chaîne finale pour éliminer les majuscules des noms du catalogue
+            return motsNettoyes.join('').trim().toLowerCase();
         };
 
         const nomRechercheNormalise = normaliserTexte(nomComposant);
 
-        // RECHERCHE ULTRA-TOLÉRANTE (Correspondance exacte OU inclusion mutuelle)
-        const itemTrouve = data.find(item => {
-            const nomCatalogNormalise = normaliserTexte(item.nom);
-            
-            return nomCatalogNormalise === nomRechercheNormalise || 
-                   nomCatalogNormalise.includes(nomRechercheNormalise) || 
-                   nomRechercheNormalise.includes(nomCatalogNormalise);
-        });
+        // RECHERCHE HIÉRARCHISÉE
+        // 1. Priorité absolue à une correspondance exacte parfaite
+        let itemTrouve = data.find(item => normaliserTexte(item.nom) === nomRechercheNormalise);
+
+        // 2. Si rien n'est trouvé, on cherche si un nom du catalogue contient le mot demandé
+        if (!itemTrouve) {
+            itemTrouve = data.find(item => normaliserTexte(item.nom).includes(nomRechercheNormalise));
+        }
+
+        // 3. En dernier recours, l'inverse
+        if (!itemTrouve) {
+            itemTrouve = data.find(item => nomRechercheNormalise.includes(normaliserTexte(item.nom)));
+        }
         
+        // APPLICATION DU COÛT SI L'ARTICLE EST TROUVÉ
         if (itemTrouve) {
             if (itemTrouve.ing && itemTrouve.ing.trim() !== "") {
                 totalCout += qte * calculerCoutRecette(itemTrouve.ing);
