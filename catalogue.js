@@ -931,7 +931,7 @@ const CATALOGUE_INITIAL = [
         "cout": 415,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
-    {
+    /*{
         "cat": "Arme",
         "mat": "falmer",
         "nom": "Arc Falmer",
@@ -962,7 +962,7 @@ const CATALOGUE_INITIAL = [
         "revente": "—",
         "cout": 4,
         "ing": "1 Chitine + 1 Bande de cuir"
-    },
+    },*/
     {
         "cat": "Armure",
         "mat": "peau",
@@ -1362,7 +1362,7 @@ const CATALOGUE_INITIAL = [
         "revente": 600,
         "cout": 38.1,
         "ing": "1 Lingot fer + 2 Pierre de lune + 1 Corindon + 1 Cuir + 2 Bandes de cuir"
-    },*/
+    },
     {
         "cat": "Armure",
         "mat": "verre",
@@ -1434,43 +1434,43 @@ const CATALOGUE_INITIAL = [
         "revente": 25000,
         "cout": 1617,
         "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Malachite"
-    },
+    },*/
     {
         "cat": "Armure",
-        "mat": "malachite",
-        "nom": "Casque en Malachite",
+        "mat": "verre",
+        "nom": "Casque en Verre",
         "revente": 15000,
         "cout": 818,
         "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
     },
     {
         "cat": "Armure",
-        "mat": "malachite",
-        "nom": "Armure en Malachite",
+        "mat": "verre",
+        "nom": "Armure en Verre",
         "revente": 25000,
         "cout": 1635,
         "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
     },
     {
         "cat": "Armure",
-        "mat": "malachite",
-        "nom": "Gants en Malachite",
+        "mat": "verre",
+        "nom": "Gants en Verre",
         "revente": 15000,
         "cout": 420,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
     },
     {
         "cat": "Armure",
-        "mat": "malachite",
-        "nom": "Bottes en Malachite",
+        "mat": "verre",
+        "nom": "Bottes en Verre",
         "revente": 15000,
         "cout": 820,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Malachite"
     },
     {
         "cat": "Armure",
-        "mat": "malachite",
-        "nom": "Bouclier en Malachite",
+        "mat": "verre",
+        "nom": "Bouclier en Verre",
         "revente": 25000,
         "cout": 1617,
         "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Malachite"
