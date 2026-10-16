@@ -40,7 +40,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Minerai d'orichalque",
         "revente": 10,
-        "cout": 3,
+        "cout": 6,
         "ing": ""
     },
     {
