@@ -96,8 +96,8 @@ const CATALOGUE_INITIAL = [
         "mat": "lingot",
         "nom": "Lingot de Corindon",
         "revente": 12,
-        "cout": 5.1,
-        "ing": "6 Corindon brut + 6 Charbon Pauvre"
+        "cout": 6.8,
+        "ing": "8 Corindon brut + 8 Charbon Pauvre"
     },
     {
         "cat": "Matériaux",
@@ -648,7 +648,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
-        "cout": 200014.4,
+        "cout": 200014.35,
         "ing": "5 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -656,7 +656,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Dague en Ébonite dorée",
         "revente": "À définir",
-        "cout": 40004.3,
+        "cout": 40004.35,
         "ing": "1 Lingot d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -664,7 +664,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Espadon en Ébonite dorée",
         "revente": "À définir",
-        "cout": 200016.4,
+        "cout": 200016.35,
         "ing": "5 Lingots d'Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
@@ -672,7 +672,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
-        "cout": 120008.4,
+        "cout": 120008.35,
         "ing": "3 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -680,7 +680,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Épée en Ébonite dorée",
         "revente": "À définir",
-        "cout": 80006.4,
+        "cout": 80006.35,
         "ing": "2 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -688,7 +688,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
-        "cout": 80008.4,
+        "cout": 80008.35,
         "ing": "2 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -912,7 +912,7 @@ const CATALOGUE_INITIAL = [
         "mat": "cuir",
         "nom": "Armure en Cuir Bouilli",
         "revente": 100,
-        "cout": 26.4,
+        "cout": 26.35,
         "ing": "1 Armure en cuir + 4 Bandes de cuir + 1 Fer"
     },
     {
