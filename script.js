@@ -357,7 +357,7 @@ function displayItems(arr) {
         const suffix = (typeof item.revente === 'number') ? ' sep.' : '';
         let costValue = '0 sep.';
         if (item.cout) {
-            const formatCout = (item.cout % 1 !== 0) ? item.cout.toFixed(1) : item.cout;
+            const formatCout = (item.cout % 1 !== 0) ? item.cout.toFixed(2) : item.cout;
             costValue = formatCout + ' sep.';
         }
         const mobilePriceRow = `<div class="inline-prices"><span class="p-view">${item.revente}${suffix}</span> / <span class="c-view">${costValue}</span></div>`;
