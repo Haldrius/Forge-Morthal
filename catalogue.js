@@ -8,7 +8,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Minerai de fer",
         "revente": 0.6,
-        "cout": 0.3,
+        "cout": 0.35,
         "ing": ""
     },
     {
@@ -16,7 +16,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Corindon brut",
         "revente": 0.6,
-        "cout": 0.3,
+        "cout": 0.35,
         "ing": ""
     },
     {
@@ -499,174 +499,6 @@ const CATALOGUE_INITIAL = [
         "cout": 11.6,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
-    /*{
-        "cat": "Arme",
-        "mat": "bosmer",
-        "nom": "Arc Bosmer",
-        "revente": 850,
-        "cout": 140,
-        "ing": "1 Lingot vif-argent + 2 Pierre de lune"
-    },
-    {
-        "cat": "Arme",
-        "mat": "bosmer",
-        "nom": "Dague Bosmer",
-        "revente": 600,
-        "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "bosmer",
-        "nom": "Épée Bosmer",
-        "revente": 600,
-        "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Arc Altmer",
-        "revente": 1000,
-        "cout": 140,
-        "ing": "1 Lingot vif-argent + 2 Pierre de lune"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Dague Altmer",
-        "revente": 900,
-        "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Espadon Altmer",
-        "revente": 1500,
-        "cout": 155.6,
-        "ing": "2 Lingots fer + 1 Lingot vif-argent + 2 Pierre de lune + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Flèche Altmer x80",
-        "revente": 400,
-        "cout": 13.1,
-        "ing": "1 Pierre de lune + 1 Petit bois"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Hache d'arme Altmer",
-        "revente": 1500,
-        "cout": 153.6,
-        "ing": "2 Lingots fer + 1 Lingot vif-argent + 2 Pierre de lune + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Hache de guerre Altmer",
-        "revente": 900,
-        "cout": 135.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Marteau Altmer",
-        "revente": 2000,
-        "cout": 155.6,
-        "ing": "2 Lingots fer + 1 Lingot vif-argent + 2 Pierre de lune + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Masse Altmer",
-        "revente": 1000,
-        "cout": 146.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 2 Pierre de lune + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "altmer",
-        "nom": "Épée Altmer",
-        "revente": 1000,
-        "cout": 133.8,
-        "ing": "1 Lingot fer + 1 Lingot vif-argent + 1 Pierre de lune + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Arc Dwemer",
-        "revente": 500,
-        "cout": 5.4,
-        "ing": "1 Lingot fer + 2 Lingots dwemer"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Dague Dwemer",
-        "revente": 500,
-        "cout": 11.9,
-        "ing": "2 Lingots fer + 1 Lingot dwemer + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Espadon Dwemer",
-        "revente": 500,
-        "cout": 25.8,
-        "ing": "2 Lingots fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Flèche Dwemer x80",
-        "revente": 200,
-        "cout": 0.4,
-        "ing": "1 Lingot dwemer + 1 Petit bois"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Hache d'arme Dwemer",
-        "revente": 500,
-        "cout": 19,
-        "ing": "1 Lingot fer + 2 Lingots acier + 2 Lingots dwemer + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Hache de guerre Dwemer",
-        "revente": 500,
-        "cout": 13.9,
-        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Marteau Dwemer",
-        "revente": 500,
-        "cout": 21,
-        "ing": "1 Lingot fer + 2 Lingots acier + 2 Lingots dwemer + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Masse Dwemer",
-        "revente": 500,
-        "cout": 12.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots dwemer + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "dwemer",
-        "nom": "Épée Dwemer",
-        "revente": 500,
-        "cout": 11.9,
-        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 1 Bande de cuir"
-    },*/
     {
         "cat": "Arme",
         "mat": "orichalque",
@@ -738,13 +570,13 @@ const CATALOGUE_INITIAL = [
         "revente": "À définir",
         "cout": 22.4,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 1 Bande de cuir"
-    },    
+    },
     {
         "cat": "Arme",
         "mat": "ébonite",
         "nom": "Arc d'ébonite",
         "revente": "À définir",
-        "cout": 60000,
+        "cout": 120006,
         "ing": "3 Lingots d' Ébonite"
     },
     {
@@ -752,7 +584,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Dague d'ébonite",
         "revente": "À définir",
-        "cout": 20002,
+        "cout": 40004,
         "ing": "1 Lingot d' Ébonite + 1 Bande de cuir"
     },
     {
@@ -760,7 +592,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Espadon d'ébonite",
         "revente": "À définir",
-        "cout": 100006,
+        "cout": 200016,
         "ing": "5 Lingots d' Ébonite + 3 Bandes de cuir"
     },
     {
@@ -768,7 +600,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Flèche d'ébonite x20",
         "revente": "À définir",
-        "cout": 20000.1,
+        "cout": 40002.1,
         "ing": "1 Lingot d'Ébonite + 1 Petit bois"
     },
     {
@@ -776,7 +608,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'armes d'ébonite",
         "revente": "À définir",
-        "cout": 100004,
+        "cout": 200014,
         "ing": "5 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
@@ -784,7 +616,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'ébonite",
         "revente": "À définir",
-        "cout": 40004,
+        "cout": 80008,
         "ing": "2 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
@@ -792,7 +624,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Marteau d'ébonite",
         "revente": "À définir",
-        "cout": 100006,
+        "cout": 200016,
         "ing": "5 Lingots d'Ébonite + 3 Bandes de cuir"
     },
     {
@@ -800,7 +632,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Masse d'ébonite",
         "revente": "À définir",
-        "cout": 60002,
+        "cout": 120008,
         "ing": "3 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
@@ -808,7 +640,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Épée d'ébonite",
         "revente": "À définir",
-        "cout": 40002,
+        "cout": 80006,
         "ing": "2 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
@@ -816,7 +648,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
-        "cout": 100004.3,
+        "cout": 200014.3,
         "ing": "5 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -824,7 +656,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Dague en Ébonite dorée",
         "revente": "À définir",
-        "cout": 20002.3,
+        "cout": 40004.3,
         "ing": "1 Lingot d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -832,7 +664,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Espadon en Ébonite dorée",
         "revente": "À définir",
-        "cout": 100006.3,
+        "cout": 200016.3,
         "ing": "5 Lingots d'Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
@@ -840,7 +672,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
-        "cout": 60002.3,
+        "cout": 120008.3,
         "ing": "3 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -848,7 +680,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Épée en Ébonite dorée",
         "revente": "À définir",
-        "cout": 40002.3,
+        "cout": 80006.3,
         "ing": "2 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -856,7 +688,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
-        "cout": 40004.3,
+        "cout": 80008.3,
         "ing": "2 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -931,38 +763,6 @@ const CATALOGUE_INITIAL = [
         "cout": 415,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
-    /*{
-        "cat": "Arme",
-        "mat": "falmer",
-        "nom": "Arc Falmer",
-        "revente": "—",
-        "cout": 6.8,
-        "ing": "1 Lingot fer + 1 Chitine"
-    },
-    {
-        "cat": "Arme",
-        "mat": "falmer",
-        "nom": "Flèche de Falmer x20",
-        "revente": "—",
-        "cout": 2.1,
-        "ing": "1 Chitine + 1 Petit bois"
-    },
-    {
-        "cat": "Arme",
-        "mat": "falmer",
-        "nom": "Hache Falmer",
-        "revente": "—",
-        "cout": 6,
-        "ing": "1 Chitine + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "falmer",
-        "nom": "Épée Falmer",
-        "revente": "—",
-        "cout": 4,
-        "ing": "1 Chitine + 1 Bande de cuir"
-    },*/
     {
         "cat": "Armure",
         "mat": "peau",
@@ -1219,222 +1019,6 @@ const CATALOGUE_INITIAL = [
         "cout": 23.2,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
-    /*{
-        "cat": "Armure",
-        "mat": "dwemer",
-        "nom": "Casque Dwemer",
-        "revente": 100,
-        "cout": 14.2,
-        "ing": "1 Lingot fer + 1 Lingot d'acier + 2 Lingots Dwemer + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "dwemer",
-        "nom": "Armure Dwemer",
-        "revente": 100,
-        "cout": 16.5,
-        "ing": "1 Lingot fer + 1 Lingot acier + 3 Lingots Dwemer + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "dwemer",
-        "nom": "Gants Dwemer",
-        "revente": 100,
-        "cout": 13.9,
-        "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot Dwemer + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "dwemer",
-        "nom": "Bottes Dwemer",
-        "revente": 100,
-        "cout": 14.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots Dwemer + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "dwemer",
-        "nom": "Bouclier Dwemer",
-        "revente": 100,
-        "cout": 23.2,
-        "ing": "1 Lingot fer + 1 Lingot acier + 2 Lingots Dwemer + 1 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "altmer",
-        "nom": "Casque en Altmer Elfique",
-        "revente": 500,
-        "cout": 35.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "altmer",
-        "nom": "Armure en Altmer Elfique",
-        "revente": 1000,
-        "cout": 65.8,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 1 Cuir + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "altmer",
-        "nom": "Gantelets en Altmer Elfique",
-        "revente": 500,
-        "cout": 24.8,
-        "ing": "1 Lingot fer + 1 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "altmer",
-        "nom": "Bottes en Altmer Elfique",
-        "revente": 500,
-        "cout": 37.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "altmer",
-        "nom": "Bouclier en Altmer Elfique",
-        "revente": 1000,
-        "cout": 60.8,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Casque en Bosmer Léger",
-        "revente": 500,
-        "cout": 35.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 1 Bande de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Armure en Bosmer Léger",
-        "revente": 1000,
-        "cout": 65.8,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 1 Cuir + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Gants en Bosmer Léger",
-        "revente": 500,
-        "cout": 24.8,
-        "ing": "1 Lingot fer + 1 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Bottes en Bosmer Léger",
-        "revente": 500,
-        "cout": 37.8,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Casque en Bosmer Lourd",
-        "revente": 600,
-        "cout": 36.1,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Corindon + 1 Cuir + 1 Bande de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Armure en Bosmer Lourd",
-        "revente": 1200,
-        "cout": 66.1,
-        "ing": "1 Lingot fer + 4 Pierre de lune + 1 Corindon + 1 Cuir + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Gants en Bosmer Lourd",
-        "revente": 600,
-        "cout": 25.1,
-        "ing": "1 Lingot fer + 1 Pierre de lune + 1 Corindon + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "bosmer",
-        "nom": "Bottes en Bosmer Lourd",
-        "revente": 600,
-        "cout": 38.1,
-        "ing": "1 Lingot fer + 2 Pierre de lune + 1 Corindon + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Casque en Bosmer Wild Hunt",
-        "revente": 14000,
-        "cout": 818,
-        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande + 2 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Armure en Bosmer Wild Hunt",
-        "revente": 24000,
-        "cout": 1635,
-        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes + 4 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Gantelets en Bosmer Wild Hunt",
-        "revente": 14000,
-        "cout": 420,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes + 1 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Bottes en Bosmer Wild Hunt",
-        "revente": 14000,
-        "cout": 820,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes + 2 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Casque en Verre Vvanderfell",
-        "revente": 15000,
-        "cout": 818,
-        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Armure en Verre Vvanderfell",
-        "revente": 25000,
-        "cout": 1635,
-        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Gantelets en Verre Vvanderfell",
-        "revente": 15000,
-        "cout": 420,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Bottes en Verre Vvanderfell",
-        "revente": 15000,
-        "cout": 820,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Malachite"
-    },
-    {
-        "cat": "Armure",
-        "mat": "verre",
-        "nom": "Bouclier en Verre Vvanderfell",
-        "revente": 25000,
-        "cout": 1617,
-        "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Malachite"
-    },*/
     {
         "cat": "Armure",
         "mat": "verre",
@@ -1515,78 +1099,6 @@ const CATALOGUE_INITIAL = [
         "cout": 80002,
         "ing": "4 Ébonite + 1 Bande de cuir"
     },
-    /*{
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Casque en Orichalque",
-        "revente": "À définir",
-        "cout": 24.4,
-        "ing": "1 Lingot fer + 2 Lingots d'orichalque + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Armure en Orichalque",
-        "revente": "À définir",
-        "cout": 42,
-        "ing": "1 Lingot fer + 4 Lingots d'orichalque + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Gants en Orichalque",
-        "revente": "À définir",
-        "cout": 24.4,
-        "ing": "1 Lingot fer + 2 Lingots d'Orichalque + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Bottes en Orichalque",
-        "revente": "À définir",
-        "cout": 32.2,
-        "ing": "1 Lingot fer + 3 Lingots d'Orichalque + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Bouclier en Orichalque",
-        "revente": "À définir",
-        "cout": 30.2,
-        "ing": "1 Lingot fer + 3 Lingots d'Orichalque + 1 Bande de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Casque en Orcish Hide",
-        "revente": "À définir",
-        "cout": 15.8,
-        "ing": "1 Lingot d'orichalque + 2 Cuir + 1 Bande de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Armure en Orcish Hide",
-        "revente": "À définir",
-        "cout": 25.8,
-        "ing": "1 Lingot d'orichalque + 4 Cuir + 3 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Gantelets en Orcish Hide",
-        "revente": "À définir",
-        "cout": 14.8,
-        "ing": "1 Lingot d'orichalque + 1 Cuir + 2 Bandes de cuir"
-    },
-    {
-        "cat": "Armure",
-        "mat": "orichalque",
-        "nom": "Bottes en Orcish Hide",
-        "revente": "À définir",
-        "cout": 17.8,
-        "ing": "1 Lingot d'orichalque + 2 Cuir + 2 Bandes de cuir"
-    },*/
     {
         "cat": "Couture",
         "mat": "tissu",
