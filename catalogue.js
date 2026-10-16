@@ -667,7 +667,7 @@ const CATALOGUE_INITIAL = [
         "cout": 11.9,
         "ing": "1 Lingot fer + 1 Lingot acier + 1 Lingot dwemer + 1 Bande de cuir"
     },
-    {
+    {*/
         "cat": "Arme",
         "mat": "orichalque",
         "nom": "Arc Orc",
@@ -738,7 +738,7 @@ const CATALOGUE_INITIAL = [
         "revente": "À définir",
         "cout": 22.4,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 1 Bande de cuir"
-    },*/    
+    },    
     {
         "cat": "Arme",
         "mat": "ébonite",
