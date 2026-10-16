@@ -356,7 +356,6 @@ function displayItems(arr) {
         const icon = getPreciseIcon(item.nom);
         const suffix = (typeof item.revente === 'number') ? ' sep.' : '';
         let costValue = '0 sep.';
-        let costValue = '0 sep.';
         if (item.cout) {
             // Rend le nombre propre : supprime les zéros inutiles, garde les décimales si elles existent
             const cleanCost = Number(parseFloat(item.cout).toFixed(2)); 
