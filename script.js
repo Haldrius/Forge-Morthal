@@ -680,7 +680,7 @@ function renderCatalogEditor() {
             </td>
             <td class="cell-cout">
                 <label class="mobile-label">Coût (sep.) :</label>
-                <input type="number" step="any" class="edit-cout" data-index="${index}" value="${parseFloat(item.cout || 0).toFixed(1)}" ${readonlyAttr} style="${inputStyle}">
+                <input type="number" step="any" class="edit-cout" data-index="${index}" value="${parseFloat(item.cout || 0).toFixed(2)}" ${readonlyAttr} style="${inputStyle}">
             </td>
             <td class="cell-ing">
                 <label class="mobile-label">Recette / Ingrédients :</label>
@@ -957,7 +957,7 @@ function addLiveCostRecalculation() {
                     coutInput.style.cursor = "not-allowed";
                     
                     const nouveauCout = calculerCoutRecette(recetteTexte);
-                    coutInput.value = nouveauCout.toFixed(1);
+                    coutInput.value = nouveauCout.toFixed(2);
                 }
             });
         }
