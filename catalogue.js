@@ -8,7 +8,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Minerai de fer",
         "revente": 0.6,
-        "cout": 0.35,
+        "cout": 0.3,
         "ing": ""
     },
     {
@@ -16,7 +16,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Corindon brut",
         "revente": 0.6,
-        "cout": 0.35,
+        "cout": 0.3,
         "ing": ""
     },
     {
@@ -80,7 +80,7 @@ const CATALOGUE_INITIAL = [
         "mat": "lingot",
         "nom": "Lingot de Fer",
         "revente": 10,
-        "cout": 4.8,
+        "cout": 5.1,
         "ing": "6 Minerai de fer + 6 Charbon Pauvre"
     },
     {
@@ -88,7 +88,7 @@ const CATALOGUE_INITIAL = [
         "mat": "lingot",
         "nom": "Lingot d'Acier",
         "revente": 15,
-        "cout": 4.8,
+        "cout": 5.1,
         "ing": "3 Corindon brut + 3 Minerai de fer + 6 Charbon"
     },
     {
@@ -96,7 +96,7 @@ const CATALOGUE_INITIAL = [
         "mat": "lingot",
         "nom": "Lingot de Corindon",
         "revente": 12,
-        "cout": 4.8,
+        "cout": 5.1,
         "ing": "6 Corindon brut + 6 Charbon Pauvre"
     },
     {
@@ -272,7 +272,7 @@ const CATALOGUE_INITIAL = [
         "mat": "outils",
         "nom": "Pioche",
         "revente": 10,
-        "cout": 4.8,
+        "cout": 5.1,
         "ing": "1 Lingot de fer"
     },
     {
@@ -280,7 +280,7 @@ const CATALOGUE_INITIAL = [
         "mat": "outils",
         "nom": "Hache de bûcheron",
         "revente": 10,
-        "cout": 4.8,
+        "cout": 5.1,
         "ing": "1 Lingot de fer"
     },
     {
@@ -288,7 +288,7 @@ const CATALOGUE_INITIAL = [
         "mat": "outils",
         "nom": "Clé",
         "revente": 25,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
     },
     {
@@ -296,7 +296,7 @@ const CATALOGUE_INITIAL = [
         "mat": "outils",
         "nom": "Kit d'armure",
         "revente": 5,
-        "cout": 1.7,
+        "cout": 1.9,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
     {
@@ -304,7 +304,7 @@ const CATALOGUE_INITIAL = [
         "mat": "outils",
         "nom": "Kit d'arme",
         "revente": 5,
-        "cout": 1.7,
+        "cout": 1.9,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
     {
@@ -320,7 +320,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Dague en Fer",
         "revente": 20,
-        "cout": 6.8,
+        "cout": 7.1,
         "ing": "1 Lingot de Fer + 1 Bandes de cuir"
     },
     {
@@ -328,7 +328,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Espadon en Fer",
         "revente": 60,
-        "cout": 23.2,
+        "cout": 24.4,
         "ing": "4 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -336,7 +336,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Flèche en Fer x80",
         "revente": 10,
-        "cout": 4.9,
+        "cout": 5.2,
         "ing": "Petit Bois + 1 Lingot de Fer"
     },
     {
@@ -344,7 +344,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Hache d'arme en Fer",
         "revente": 60,
-        "cout": 23.2,
+        "cout": 24.4,
         "ing": "4 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -352,7 +352,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Hache en Fer",
         "revente": 35,
-        "cout": 13.6,
+        "cout": 14.2,
         "ing": "2 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -360,7 +360,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Marteau en Fer",
         "revente": 70,
-        "cout": 25.2,
+        "cout": 26.4,
         "ing": "4 Lingots de Fer + 3 Bandes de Cuir"
     },
     {
@@ -368,7 +368,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Masse en Fer",
         "revente": 40,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "3 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -376,7 +376,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Épée en Fer",
         "revente": 35,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "2 Lingots de Fer + 1 Bandes de cuir"
     },
     {
@@ -384,7 +384,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Arc en Acier",
         "revente": 70,
-        "cout": 17.4,
+        "cout": 18,
         "ing": "2 Lingots d'acier + 8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
     {
@@ -392,7 +392,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Dague en Acier",
         "revente": 50,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "1 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -400,7 +400,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Espadon en Acier",
         "revente": 100,
-        "cout": 34.8,
+        "cout": 36.6,
         "ing": "4 Lingot d'Acier + 3 Bandes de Cuir + 2 Lingot de Fer"
     },
     {
@@ -408,7 +408,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Flèche en Acier x80",
         "revente": 20,
-        "cout": 4.9,
+        "cout": 5.2,
         "ing": "Petit Bois + 1 Lingot d'Acier"
     },
     {
@@ -416,7 +416,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Hache en Acier",
         "revente": 70,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "2 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -424,7 +424,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Hache de guerre en Acier",
         "revente": 100,
-        "cout": 28,
+        "cout": 29.5,
         "ing": "4 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -432,7 +432,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Marteau en Acier",
         "revente": 110,
-        "cout": 30,
+        "cout": 31.5,
         "ing": "4 Lingot d'Acier + 3 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -440,7 +440,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Masse en Acier",
         "revente": 75,
-        "cout": 21.2,
+        "cout": 22.4,
         "ing": "3 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -448,7 +448,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Épée en Acier",
         "revente": 70,
-        "cout": 16.4,
+        "cout": 17.3,
         "ing": "2 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -456,7 +456,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Arc Commun",
         "revente": 90,
-        "cout": 16.4,
+        "cout": 17.3,
         "ing": "3 Lingots acier + 1 Bande de cuir"
     },
     {
@@ -464,7 +464,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Dague Commun",
         "revente": 40,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -472,7 +472,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Hache d'arme Commun",
         "revente": 70,
-        "cout": 23.2,
+        "cout": 24.4,
         "ing": "3 Lingots fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
@@ -480,7 +480,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Hache de guerre Commun",
         "revente": 35,
-        "cout": 13.6,
+        "cout": 14.2,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
@@ -488,7 +488,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Masse Commun",
         "revente": 40,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -496,7 +496,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Épée Commun",
         "revente": 35,
-        "cout": 11.6,
+        "cout": 12.2,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -504,7 +504,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Arc Orc",
         "revente": "À définir",
-        "cout": 20.4,
+        "cout": 20.7,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque"
     },
     {
@@ -512,7 +512,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Dague Orc",
         "revente": "À définir",
-        "cout": 14.6,
+        "cout": 14.9,
         "ing": "1 Lingot fer + 1 Lingot d'orichalque + 1 Bande de cuir"
     },
     {
@@ -520,7 +520,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Espadon Orc",
         "revente": "À définir",
-        "cout": 46.8,
+        "cout": 47.4,
         "ing": "2 Lingots fer + 4 Lingots d'orichalque + 3 Bandes de cuir"
     },
     {
@@ -536,7 +536,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Hache d'arme Orc",
         "revente": "À définir",
-        "cout": 40,
+        "cout": 40.3,
         "ing": "1 Lingot fer + 4 Lingots d'orichalque + 2 Bandes de cuir"
     },
     {
@@ -544,7 +544,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Hache de guerre Orc",
         "revente": "À définir",
-        "cout": 24.4,
+        "cout": 24.7,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 2 Bandes de cuir"
     },
     {
@@ -552,7 +552,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Marteau Orc",
         "revente": "À définir",
-        "cout": 42,
+        "cout": 42.3,
         "ing": "1 Lingot fer + 4 Lingots d'orichalque + 3 Bandes de cuir"
     },
     {
@@ -560,7 +560,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Masse Orc",
         "revente": "À définir",
-        "cout": 30.2,
+        "cout": 30.5,
         "ing": "1 Lingot fer + 3 Lingots d'orichalque + 1 Bande de cuir"
     },
     {
@@ -568,7 +568,7 @@ const CATALOGUE_INITIAL = [
         "mat": "orichalque",
         "nom": "Épée Orc",
         "revente": "À définir",
-        "cout": 22.4,
+        "cout": 22.7,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 1 Bande de cuir"
     },
     {
@@ -648,7 +648,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "À définir",
-        "cout": 200014.3,
+        "cout": 200014.4,
         "ing": "5 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -664,7 +664,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Espadon en Ébonite dorée",
         "revente": "À définir",
-        "cout": 200016.3,
+        "cout": 200016.4,
         "ing": "5 Lingots d'Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
@@ -672,7 +672,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Masse en Ébonite dorée",
         "revente": "À définir",
-        "cout": 120008.3,
+        "cout": 120008.4,
         "ing": "3 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -680,7 +680,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Épée en Ébonite dorée",
         "revente": "À définir",
-        "cout": 80006.3,
+        "cout": 80006.4,
         "ing": "2 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -688,7 +688,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ébonite",
         "nom": "Hache en Ébonite dorée",
         "revente": "À définir",
-        "cout": 80008.3,
+        "cout": 80008.4,
         "ing": "2 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -808,7 +808,7 @@ const CATALOGUE_INITIAL = [
         "mat": "peau",
         "nom": "Armure Cloutée",
         "revente": 100,
-        "cout": 22.8,
+        "cout": 23.1,
         "ing": "1 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -816,7 +816,7 @@ const CATALOGUE_INITIAL = [
         "mat": "peau",
         "nom": "Armure à Écailles",
         "revente": 100,
-        "cout": 32.4,
+        "cout": 33.3,
         "ing": "3 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -912,7 +912,7 @@ const CATALOGUE_INITIAL = [
         "mat": "cuir",
         "nom": "Armure en Cuir Bouilli",
         "revente": 100,
-        "cout": 26.3,
+        "cout": 26.4,
         "ing": "1 Armure en cuir + 4 Bandes de cuir + 1 Fer"
     },
     {
@@ -920,7 +920,7 @@ const CATALOGUE_INITIAL = [
         "mat": "commun",
         "nom": "Armure en Maille Commune",
         "revente": 75,
-        "cout": 30,
+        "cout": 31.5,
         "ing": "5 Lingots de fer + 3 Bandes de cuir"
     },
     {
@@ -952,7 +952,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Casque en Fer",
         "revente": 50,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "3 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -960,7 +960,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Armure en Fer",
         "revente": 75,
-        "cout": 30,
+        "cout": 31.5,
         "ing": "5 Lingots fer + 3 Bandes de cuir"
     },
     {
@@ -968,7 +968,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Gants en Fer",
         "revente": 50,
-        "cout": 13.6,
+        "cout": 14.2,
         "ing": "2 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -976,7 +976,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Bottes en Fer",
         "revente": 50,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "3 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -984,7 +984,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Bouclier en Fer",
         "revente": 60,
-        "cout": 21.2,
+        "cout": 22.4,
         "ing": "4 Lingots fer + 1 Bande de cuir"
     },
     {
@@ -992,7 +992,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Casque en Acier",
         "revente": 70,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "1 Lingot fer + 2 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1000,7 +1000,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Armure en Acier",
         "revente": 120,
-        "cout": 30,
+        "cout": 31.5,
         "ing": "1 Lingot fer + 4 Lingots acier + 3 Bandes de cuir"
     },
     {
@@ -1008,7 +1008,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Gants en Acier",
         "revente": 70,
-        "cout": 18.4,
+        "cout": 19.3,
         "ing": "1 Lingot fer + 2 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1016,7 +1016,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Bottes en Acier",
         "revente": 70,
-        "cout": 23.2,
+        "cout": 24.4,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1376,7 +1376,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème CORINDON",
         "revente": 30,
-        "cout": 9.6,
+        "cout": 10.2,
         "ing": "2 Lingots de Corindon"
     },
     {
@@ -1384,7 +1384,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème CORINDON + RUBIS",
         "revente": 60,
-        "cout": 9.6,
+        "cout": 10.2,
         "ing": "2 Lingots de Corindon + 1 Rubis"
     },
     {
@@ -1392,7 +1392,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème CORINDON + SAPHIR",
         "revente": 80,
-        "cout": 9.6,
+        "cout": 10.2,
         "ing": "2 Lingots de Corindon + 1 Saphir"
     },
     {
@@ -1400,7 +1400,7 @@ const CATALOGUE_INITIAL = [
         "mat": "diadèmes",
         "nom": "Diadème CORINDON + PIERRE DE LUNE",
         "revente": 500,
-        "cout": 22.6,
+        "cout": 23.2,
         "ing": "2 Lingots de Corindon + 1 Pierre de lune"
     },
     {
