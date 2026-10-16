@@ -11,7 +11,7 @@ const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minera
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
 // Ordre de tri prioritaire unifié pour les sous-catégories (Armes & Armures)
 //const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'dwemer', 'orichalque', 'bosmer', 'altmer', 'verre', 'ébonite'];
-const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'verre', 'ébonite'];
+const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', applyAllFilters);
@@ -105,11 +105,11 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="acier">Acier</button>
             <button class="filter-btn" data-sub="fer">Fer</button>
             <button class="filter-btn" data-sub="commun">Commun</button>
+            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
         /*<button class="filter-btn" data-sub="dwemer">Dwemer</button>
-            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="altmer">Altmer</button>*/
     } else if (cat === 'Armure') {
@@ -122,11 +122,11 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="cuir">Cuir</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
+            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
         /*<button class="filter-btn" data-sub="dwemer">Dwemer</button>
-            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="altmer">Altmer</button>*/
 
