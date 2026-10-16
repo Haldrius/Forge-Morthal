@@ -170,12 +170,12 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="cuir">Cuir</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
-            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
         /*
-        <button class="filter-btn" data-sub="dwemer">Dwemer</button>
+        <button class="filter-btn" data-sub="dwemer">Dwemer</button> 
+        <button class="filter-btn" data-sub="orichalque">Orsimer</button>
         <button class="filter-btn" data-sub="bosmer">Bosmer</button>
         <button class="filter-btn" data-sub="altmer">Altmer</button>
         */
