@@ -1021,6 +1021,14 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Armure",
+        "mat": "acier",
+        "nom": "Bouclier en Acier",
+        "revente": 100,
+        "cout": 22.4,
+        "ing": "1 Lingots fer + 3 Lingots d'acier + 1 Bande de cuir"
+    },
+    {
+        "cat": "Armure",
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": 15000,

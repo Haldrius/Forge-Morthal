@@ -572,8 +572,17 @@ function addOrder(e) {
         orderForm.reset();
     }
     
+    // ─── CORRECTIF ICI : Vider manuellement le champ invisible des détails du panier ───
+    if (detailsField) detailsField.value = "";
+    // ─────────────────────────────────────────────────────────────────────────────────
+
     baseOrderPrice = 0;
     baseOrderCost = 0;
+    
+    // ─── CORRECTIF ICI : Forcer le rafraîchissement visuel de la vitrine des tarifs ───
+    applyAllFilters();
+    // ─────────────────────────────────────────────────────────────────────────────────
+    
     loadOrders();
 }
 
