@@ -1174,6 +1174,14 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Couture",
         "mat": "tissu",
+        "nom": "Cape en Lin",
+        "revente": 15,
+        "cout": 15.8,
+        "ing": "2 Lin"
+    },
+    {
+        "cat": "Couture",
+        "mat": "tissu",
         "nom": "Masquue Simple",
         "revente": 10,
         "cout": 3,
