@@ -269,6 +269,14 @@ const CATALOGUE_INITIAL = [
     },
     {
         "cat": "Matériaux",
+        "mat": "ressources",
+        "nom": "Lin",
+        "revente": 10,
+        "cout": 3,
+        "ing": ""
+    },
+    {
+        "cat": "Matériaux",
         "mat": "outils",
         "nom": "Pioche",
         "revente": 10,
@@ -1162,6 +1170,22 @@ const CATALOGUE_INITIAL = [
         "revente": 150,
         "cout": 15.8,
         "ing": "1 Peau de Smilodon des vallées+ 1 Lingot d'or"
+    },
+    {
+        "cat": "Couture",
+        "mat": "tissu",
+        "nom": "Masquue Simple",
+        "revente": 10,
+        "cout": 15.8,
+        "ing": "1 Lin"
+    },
+    {
+        "cat": "Couture",
+        "mat": "tissu",
+        "nom": "Masquue Complet",
+        "revente": 15,
+        "cout": 15.8,
+        "ing": "2 Lin"
     },
     {
         "cat": "Couture",
