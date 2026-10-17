@@ -61,8 +61,19 @@
             <label for="details">Détails des articles</label>
             <textarea id="details" rows="3" required placeholder="Ex: 1x Epée en acier..."></textarea>
             
-            <label for="total-price">Prix total (septims)</label>
-            <input type="number" id="total-price" required placeholder="0">
+            <label>Montants de la commande (septims)</label>
+            <div class="order-amounts-row">
+        <div class="amount-field-group">
+            <label for="total-price">Prix total :</label>
+            <input type="number" id="total-price" value="0">
+        </div>
+    
+        <div class="amount-field-group">
+            <label for="total-cost" class="cost-label-text">Coût total :</label>
+            <input type="number" id="total-cost" value="0" readonly class="disabled-cost-input">
+        </div>
+    </div>
+
             
             <div class="checkbox-container">
                 <label class="checkbox-label">

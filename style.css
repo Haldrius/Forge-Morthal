@@ -41,6 +41,7 @@ h2, h3, .order-item strong, #orders-list strong {
     margin: 5px 0 12px; 
     text-align: center; 
 }
+
 /* =========================================================================
    2. ONGLETS, FILTRES ET FORMULAIRES
    ========================================================================= */
@@ -81,7 +82,7 @@ h2, h3, .order-item strong, #orders-list strong {
 }
 
 .filter-container { 
-    margin-bottom: 10px; /* Retour à 10px, l'alignement HTML fait maintenant tout le travail */
+    margin-bottom: 10px; 
     display: flex; 
     flex-direction: column; 
     gap: 6px; 
@@ -168,14 +169,14 @@ th {
 }
 
 .badge { 
-    background: #2d2d2d !important; /* Retour au fond gris discret d'origine du Fichier 1 */
+    background: #2d2d2d !important;
     padding: 2px 6px; 
     border-radius: 4px; 
     font-size: 9px; 
-    color: var(--accent-light) !important; /* Le vert vif est appliqué uniquement sur le texte */
+    color: var(--accent-light) !important; 
     font-weight: bold; 
     text-transform: uppercase; 
-    border: none !important; /* Supprime la bordure grise inutile */
+    border: none !important; 
 }
 
 .badge.mat-badge {
@@ -212,7 +213,7 @@ th {
 
 button.submit, button[type="submit"], #catalog-form button { 
     background: var(--accent) !important; 
-    color: #ffffff !important; /* Texte en blanc pur corrigé ! */
+    color: #ffffff !important; 
     border: 1px solid var(--accent-light) !important; 
     padding: 10px; 
     width: 100%; 
@@ -227,7 +228,6 @@ button.submit, button[type="submit"], #catalog-form button {
 button.submit:hover, button[type="submit"]:hover {
     background: #008f39 !important;
 }
-
 .order-item { 
     background: var(--card); 
     padding: 12px; 
@@ -331,7 +331,7 @@ input, textarea {
     font-size: 14px; 
 }
 /* =========================================================================
-   4. RESPONSIVE ET COMPORTEMENT MOBILE / PC
+   4. RESPONSIVE ET COMPORTEMENT MOBILE / TABLETTE (max-width: 1023px)
    ========================================================================= */
 @media (max-width: 1023px) {
     table, thead, tbody, th, td, tr { display: block; } 
@@ -372,40 +372,7 @@ input, textarea {
     }
     #table-body td:nth-child(3), #table-body td:nth-child(4) { display: none; }
     #table-body td:last-child { display: block; color: #bbb; }
-}
 
-.badges-wrapper { display: flex; gap: 5px; align-items: center; }
-#table-body tr { position: relative !important; }
-
-.cart-column-pc {
-    display: block !important;
-    position: absolute !important;
-    top: 10px !important;
-    right: 12px !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-    z-index: 10;
-}
-
-.pc-cart-align { display: flex !important; align-items: center !important; gap: 6px !important; height: auto !important; }
-
-.editor-row.hidden { display: none !important; }
-.mobile-label { font-size: 11px; color: #888; margin-bottom: 4px; font-weight: bold; display: block; }
-
-.editor-row input {
-    width: 100% !important;
-    box-sizing: border-box;
-    padding: 8px !important;
-    font-size: 13px !important;
-    background-color: #121212;
-    color: #fff;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-}
-
-@media (max-width: 1023px) {
     .editor-row {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
@@ -424,23 +391,38 @@ input, textarea {
     .cell-cout { grid-column: 2; }
 }
 
-.cart-minus-btn {
-    background-color: #2b2b2b !important;
-    border: 1px solid var(--border) !important;
-    color: var(--court) !important; 
-    font-size: 11px !important;
-    font-weight: bold !important;
-    padding: 2px 6px !important;
-    border-radius: 4px !important;
-    cursor: pointer;
-    height: 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.cart-minus-btn:hover { background-color: #3d3d3d !important; border-color: #555 !important; }
-.cart-qty-input::-webkit-outer-spin-button, .cart-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.badges-wrapper { display: flex; gap: 5px; align-items: center; }
+#table-body tr { position: relative !important; }
 
+.cart-column-pc {
+    display: block !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 12px !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    z-index: 10;
+}
+
+.pc-cart-align { display: flex !important; align-items: center !important; gap: 6px !important; height: auto !important; }
+.editor-row.hidden { display: none !important; }
+.mobile-label { font-size: 11px; color: #888; margin-bottom: 4px; font-weight: bold; display: block; }
+
+.editor-row input {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 8px !important;
+    font-size: 13px !important;
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+/* =========================================================================
+   5. COMPORTEMENT ÉCRAN LARGE PC (min-width: 1024px)
+   ========================================================================= */
 @media (min-width: 1024px) {
     body { max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #0b0b0b; }
     h1 { font-size: 24px; margin: 15px 0 25px; }
@@ -476,12 +458,49 @@ input, textarea {
 
     #editor-table-body td, th { display: table-cell !important; padding: 10px 8px !important; box-sizing: border-box !important; border-bottom: 1px solid var(--border) !important; vertical-align: middle !important; }
     #editor-table-body tr.editor-row:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
-    .editor-row input { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding: 8px !important; }
     .mobile-label, .pc-hide { display: none !important; }
     .cell-meta { display: table-cell !important; }
     .cell-meta-wrapper { display: flex !important; gap: 6px; align-items: center; flex-wrap: nowrap !important; }
     .sub-badge-config { font-size: 11px; color: var(--accent-light) !important; text-transform: uppercase; font-weight: bold; }
 }
+
+.cart-minus-btn {
+    background-color: #2b2b2b !important;
+    border: 1px solid var(--border) !important;
+    color: var(--court) !important; 
+    font-size: 11px !important;
+    font-weight: bold !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-minus-btn:hover { background-color: #3d3d3d !important; border-color: #555 !important; }
+.cart-qty-input::-webkit-outer-spin-button, .cart-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* Styles de l'éditeur déportés (remplace le style inline injecté par JS) */
+.edit-cout { background-color: #121212; color: #fff; border-color: var(--border); cursor: text; }
+.disabled-cost-input { background-color: #1a1a1a !important; color: #888 !important; border-color: #222 !important; cursor: not-allowed !important; }
+
+/* Badge de quantité épuré (Fond transparent d'origine) */
+.cart-qty-input {
+    width: 34px !important;
+    text-align: center;
+    padding: 2px !important;
+    font-size: 11px !important;
+    font-weight: bold;
+    color: var(--accent-light) !important;
+    background: transparent !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-appearance: textfield;
+}
+
+/* Vitrine et bannières Morthal */
 .vitrine-table .cart-column-pc, .vitrine-table .c-view { display: none !important; }
 @media (max-width: 1023px) { .vitrine-table #table-body td:nth-child(3) { display: none !important; } }
 @media (min-width: 1024px) {
@@ -489,46 +508,34 @@ input, textarea {
     .vitrine-table #table-body td:nth-child(2) { width: 50% !important; font-size: 15px; }
     .vitrine-table #table-body td:nth-child(3) { width: 32% !important; text-align: left !important; padding-left: 10px !important; }
 }
-.banner-morthal {
-    display: none;
-    position: fixed;
-    top: 20px;
-    width: 160px; /* Largeur de la bannière */
-    height: 320px; /* Hauteur de la bannière */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
-    pointer-events: none; /* Permet de cliquer à travers si besoin */
-}
+
+.banner-morthal { display: none; position: fixed; top: 20px; width: 160px; height: 320px; background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 1; pointer-events: none; }
 @media (min-width: 1600px) {
-    .banner-morthal {
-        display: block; /* Visible uniquement sur grand écran */
-        position: fixed;
-        top: 40px;      /* Légèrement descendu pour ne pas coller au haut du navigateur */
-        width: 200px;   /* Élargi pour donner de la place à l'image entière */
-        height: 85vh;   /* Hauteur ajustée */
-        background-size: contain; /* CORRIGÉ : L'image s'affiche à 100% sans aucun zoom */
-        background-repeat: no-repeat;
-        background-position: center top;
-        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.8)); /* CORRIGÉ : Ombre qui épouse la forme de la bannière */
-        z-index: 1;
-        pointer-events  : none;
-    }
-    
-    .banner-left {
-        left: 25px; /* Ajustement de l'espace à gauche */
-        background-image: url('Bannière.png'); /* Prise en compte de votre nom de fichier */
-    }
-    
-    .banner-right {
-        right: 25px; /* Ajustement de l'espace à droite */
-        background-image: url('Bannière.png'); /* Prise en compte de votre nom de fichier */
-    }
-    
-    /* Sécurité pour centrer le site proprement au milieu */
-    body {
-        max-width: 1200px !important;
-        position: relative;
+    .banner-morthal { display: block; position: fixed; top: 40px; width: 200px; height: 85vh; background-size: contain; background-repeat: no-repeat; background-position: center top; filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.8)); z-index: 1; pointer-events: none; }
+    .banner-left { left: 25px; background-image: url('Bannière.png'); }
+    .banner-right { right: 25px; background-image: url('Bannière.png'); }
+    body { max-width: 1200px !important; position: relative; }
+}
+/* Alignement en ligne des montants de la commande */
+.order-amounts-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.amount-field-group {
+    flex: 1;
+}
+
+.cost-label-text {
+    color: var(--court) !important;
+}
+
+/* Adaptation pour les petits écrans mobiles */
+@media (max-width: 1023px) {
+    .order-amounts-row {
+        flex-direction: column;
+        gap: 6px;
     }
 }
