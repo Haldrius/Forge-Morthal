@@ -743,7 +743,7 @@ function initCatalogForm() {
         const finalFileContent = "// =========================================================================\n// CATALOGUE DES ARTICLES - FORGE DE MORTHAL\n// =========================================================================\n\nconst CATALOGUE_INITIAL = " + JSON.stringify(data, null, 4) + ";\n";
 
         try {
-            const apiUrl = `https://github.com{owner}/${repo}/contents/${path}`;
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
             const getResponse = await fetch(apiUrl, {
                 method: "GET",
                 headers: { "Authorization": `token ${token}`, "Accept": "application/vnd.github.v3+json" }
