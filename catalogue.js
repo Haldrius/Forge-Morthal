@@ -8,7 +8,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Minerai de fer",
         "revente": 0.6,
-        "cout": 0.35,
+        "cout": 0.4,
         "ing": ""
     },
     {
@@ -16,7 +16,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Corindon brut",
         "revente": 0.6,
-        "cout": 0.35,
+        "cout": 0.4,
         "ing": ""
     },
     {
@@ -1176,7 +1176,7 @@ const CATALOGUE_INITIAL = [
         "mat": "tissu",
         "nom": "Cape en Lin",
         "revente": 15,
-        "cout": 15.8,
+        "cout": 6,
         "ing": "2 Lin"
     },
     {
