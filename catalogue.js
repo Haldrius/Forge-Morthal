@@ -295,7 +295,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Kit d'armure",
-        "revente": 7,
+        "revente": 8,
         "cout": 1.9,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
@@ -303,7 +303,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Kit d'arme",
-        "revente": 7,
+        "revente": 8,
         "cout": 1.9,
         "ing": "2 Corindon brut + 2 Minerai de fer + 1 Charbon Pauvre"
     },
@@ -1024,7 +1024,7 @@ const CATALOGUE_INITIAL = [
         "mat": "acier",
         "nom": "Bouclier en Acier",
         "revente": 100,
-        "cout": 22.4,
+        "cout": 31.4,
         "ing": "1 Lingots fer + 3 Lingots d'acier + 1 Bande de cuir"
     },
     {
