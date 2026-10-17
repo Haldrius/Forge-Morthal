@@ -271,7 +271,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "ressources",
         "nom": "Lin",
-        "revente": 10,
+        "revente": 8,
         "cout": 3,
         "ing": ""
     },
@@ -1176,7 +1176,7 @@ const CATALOGUE_INITIAL = [
         "mat": "tissu",
         "nom": "Masquue Simple",
         "revente": 10,
-        "cout": 15.8,
+        "cout": 3,
         "ing": "1 Lin"
     },
     {
@@ -1184,7 +1184,7 @@ const CATALOGUE_INITIAL = [
         "mat": "tissu",
         "nom": "Masquue Complet",
         "revente": 15,
-        "cout": 15.8,
+        "cout": 6,
         "ing": "2 Lin"
     },
     {
