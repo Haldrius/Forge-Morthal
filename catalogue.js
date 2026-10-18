@@ -976,7 +976,7 @@ const CATALOGUE_INITIAL = [
         "mat": "fer",
         "nom": "Armure en Fer à Bandes",
         "revente": 100,
-        "cout": 47.6,
+        "cout": 47.8,
         "ing": "5 Lingots fer +  1 Lingot de Corindon + 3 Bandes de cuir"
     },
     {
