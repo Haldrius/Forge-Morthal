@@ -935,7 +935,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "commun",
         "nom": "Armure Commune",
-        "revente": 50,
+        "revente": 40,
         "cout": 18,
         "ing": "3 Bandes de cuir + 4 Cuirs"
     },
@@ -943,7 +943,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "commun",
         "nom": "Gants Communs",
-        "revente": 55,
+        "revente": 25,
         "cout": 7,
         "ing": "2 Bandes de cuir + 1 Cuir"
     },
@@ -951,7 +951,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "commun",
         "nom": "Bottes Communes",
-        "revente": 55,
+        "revente": 25,
         "cout": 10,
         "ing": "2 Bandes de cuir + 2 Cuir"
     },
