@@ -775,7 +775,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Casque en Peau",
-        "revente": 30,
+        "revente": 20,
         "cout": 8,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
@@ -783,7 +783,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure en Peau",
-        "revente": 45,
+        "revente": 40,
         "cout": 18,
         "ing": "4 Cuir + 3 Bandes de cuir"
     },
@@ -791,7 +791,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Gantelets en Peau",
-        "revente": 30,
+        "revente": 20,
         "cout": 7,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
@@ -799,7 +799,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Bottes en Peau",
-        "revente": 30,
+        "revente": 25,
         "cout": 10,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -807,7 +807,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Bouclier en Peau",
-        "revente": 50,
+        "revente": 40,
         "cout": 16,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
@@ -815,7 +815,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure Cloutée",
-        "revente": 90,
+        "revente": 60,
         "cout": 24.6,
         "ing": "1 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
@@ -823,7 +823,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure à Écailles",
-        "revente": 100,
+        "revente": 80,
         "cout": 37.8,
         "ing": "3 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
@@ -839,7 +839,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Armure en Fourrure",
-        "revente": 35,
+        "revente": 45,
         "cout": 21,
         "ing": "5 Cuir + 3 Bandes de cuir"
     },
@@ -855,7 +855,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Bottes en Fourrure",
-        "revente": 20,
+        "revente": 25,
         "cout": 10,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -863,7 +863,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Bouclier en Fourrure",
-        "revente": 35,
+        "revente": 40,
         "cout": 16,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
@@ -911,7 +911,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Bouclier en Cuir",
-        "revente": 60,
+        "revente": 50,
         "cout": 16,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
@@ -927,7 +927,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "commun",
         "nom": "Armure en Maille Commune",
-        "revente": 75,
+        "revente": 90,
         "cout": 39,
         "ing": "5 Lingots de fer + 3 Bandes de cuir"
     },
@@ -967,7 +967,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fer",
         "nom": "Armure en Fer",
-        "revente": 75,
+        "revente": 80,
         "cout": 39,
         "ing": "5 Lingots fer + 3 Bandes de cuir"
     },
