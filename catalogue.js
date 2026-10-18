@@ -391,7 +391,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Arc en Acier",
-        "revente": 70,
+        "revente": 55,
         "cout": 24.6,
         "ing": "2 Lingots d'acier + 8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
@@ -399,7 +399,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Dague en Acier",
-        "revente": 50,
+        "revente": 40,
         "cout": 15.8,
         "ing": "1 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
@@ -415,7 +415,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Flèche en Acier x80",
-        "revente": 15,
+        "revente": 20,
         "cout": 8.5,
         "ing": "Petit Bois + 1 Lingot d'Acier"
     },
@@ -423,7 +423,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Hache en Acier",
-        "revente": 70,
+        "revente": 60,
         "cout": 26.2,
         "ing": "2 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
@@ -431,7 +431,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Hache de guerre en Acier",
-        "revente": 100,
+        "revente": 85,
         "cout": 43,
         "ing": "4 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
@@ -439,7 +439,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Marteau en Acier",
-        "revente": 110,
+        "revente": 100,
         "cout": 45,
         "ing": "4 Lingot d'Acier + 3 Bandes de Cuir + 1 Lingot de Fer"
     },
@@ -447,7 +447,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "acier",
         "nom": "Masse en Acier",
-        "revente": 75,
+        "revente": 70,
         "cout": 32.6,
         "ing": "3 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
