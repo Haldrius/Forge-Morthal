@@ -168,7 +168,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Charbon Pauvre",
         "revente": 1,
-        "cout": 0.5,
+        "cout": 0.7,
         "ing": ""
     },
     {
@@ -176,7 +176,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Charbon",
         "revente": 2,
-        "cout": 1,
+        "cout": 1.4,
         "ing": ""
     },
     {
@@ -184,7 +184,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Charbon en Briquette",
         "revente": 6,
-        "cout": 1.5,
+        "cout": 2.1,
         "ing": ""
     },
     {
@@ -192,7 +192,7 @@ const CATALOGUE_INITIAL = [
         "mat": "ressources",
         "nom": "Coke de Charbon",
         "revente": 8,
-        "cout": 3,
+        "cout": 4.2,
         "ing": ""
     },
     {
@@ -815,7 +815,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure Cloutée",
-        "revente": 100,
+        "revente": 90,
         "cout": 23.4,
         "ing": "1 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
