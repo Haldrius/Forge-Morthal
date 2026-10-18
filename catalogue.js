@@ -295,7 +295,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Clé",
-        "revente": 25,
+        "revente": 40,
         "cout": 17.4,
         "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
     },
