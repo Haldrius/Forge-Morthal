@@ -871,9 +871,9 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Col en Fourrure",
-        "revente": 30,
-        "cout": 16,
-        "ing": "4 Cuir + 2 Bandes de cuir"
+        "revente": 20,
+        "cout": 8,
+        "ing": "2 Cuir + 1 Bandes de cuir"
     },
     {
         "cat": "Armure",
