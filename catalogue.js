@@ -1118,14 +1118,6 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Collier fourrure",
-        "revente": 50,
-        "cout": 8,
-        "ing": "1 Bande de cuir + 2 Cuirs"
-    },
-    {
-        "cat": "Couture",
-        "mat": "tissu",
         "nom": "Ensemble Voleur",
         "revente": 60,
         "cout": 0,
