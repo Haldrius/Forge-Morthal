@@ -72,7 +72,7 @@ const CATALOGUE_INITIAL = [
         "mat": "minerais",
         "nom": "Malachite brute",
         "revente": 1500,
-        "cout": 400,
+        "cout": 650,
         "ing": ""
     },
     {
