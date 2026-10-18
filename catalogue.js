@@ -879,7 +879,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Casque en Cuir",
-        "revente": 35,
+        "revente": 30,
         "cout": 8,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
@@ -967,15 +967,23 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "fer",
         "nom": "Armure en Fer",
-        "revente": 80,
+        "revente": 90,
         "cout": 39,
         "ing": "5 Lingots fer + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
         "mat": "fer",
+        "nom": "Armure en Fer à Bandes",
+        "revente": 100,
+        "cout": 47.6,
+        "ing": "5 Lingots fer +  1 Lingot de Corindon + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "fer",
         "nom": "Gants en Fer",
-        "revente": 50,
+        "revente": 40,
         "cout": 17.2,
         "ing": "2 Lingots fer + 2 Bandes de cuir"
     },
@@ -1023,7 +1031,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "acier",
         "nom": "Bottes en Acier",
-        "revente": 70,
+        "revente": 80,
         "cout": 43,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
