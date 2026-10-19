@@ -359,7 +359,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "fer",
         "nom": "Hache en Fer",
-        "revente": 35,
+        "revente": 40,
         "cout": 17.2,
         "ing": "2 Lingots de Fer + 2 Bandes de Cuir"
     },
@@ -375,7 +375,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "fer",
         "nom": "Masse en Fer",
-        "revente": 40,
+        "revente": 50,
         "cout": 23.8,
         "ing": "3 Lingots de Fer + 2 Bandes de Cuir"
     },
@@ -383,7 +383,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Arme",
         "mat": "fer",
         "nom": "Épée en Fer",
-        "revente": 35,
+        "revente": 40,
         "cout": 15.2,
         "ing": "2 Lingots de Fer + 1 Bandes de cuir"
     },
