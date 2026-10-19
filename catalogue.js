@@ -111,7 +111,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Or",
-        "revente": 17,
+        "revente": 20,
         "cout": 13.2,
         "ing": "6 Minerai d'or + 6 Charbon"
     },
