@@ -13,48 +13,76 @@ const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'or
 
 const BANNIERES_ARMURES = {
     acier: [
-        { fichier: "Armure en Acier Nordique1.jpg", titre: "Acier Nordique I" },
-        { fichier: "Armure en Acier Nordique2.jpg", titre: "Acier Nordique II" },
-        { fichier: "Armure en Acier Laminé.jpg", titre: "Acier Laminé" },
-        { fichier: "Armure en Plaques d'Acier.jpg", titre: "Plaques d'Acier" }
+        { fichier: "Acier-Armure1.jpg", titre: "Acier Nordique I" },
+        { fichier: "Acier-Armure2.jpg", titre: "Acier Nordique II" },
+        { fichier: "Acier-Armure3.jpg", titre: "Acier Nordique III" },
+        { fichier: "Acier-Armure4.jpg", titre: "Acier Nordique IV" },
+        { fichier: "Acier-Armure à Capuche1.jpg", titre: "Acier à Capuche I" },
+        { fichier: "Acier-Armure à Capuche2.jpg", titre: "Acier à Capuche II" },
+        { fichier: "Acier-Armure Nordique.jpg", titre: "Acier Nordique" },
+        { fichier: "Acier-Armure Robuste.jpg", titre: "Plaques Robuste" },
+        { fichier: "Acier-Armure Tabard.jpg", titre: "Acier & Tabard" }
     ],
     fer: [
-        { fichier: "Armure en Fer Nordique.jpg", titre: "Fer Nordique" },
-        { fichier: "Armure en Fer Nordique à Bandes.jpg", titre: "Fer Nordique à Bandes" },
-        { fichier: "Armure en Fer Robuste.jpg", titre: "Fer Robuste" },
-        { fichier: "Armure en Fer Robuste à Bandes.jpg", titre: "Fer Robuste à Bandes" },
-        { fichier: "Armure en Fer Runique.jpg", titre: "Fer Runique" },
-        { fichier: "Armure en Fer Runique à Bandes.jpg", titre: "Fer Runique à Bandes" },
-        { fichier: "Armure en Fer Usée.jpg", titre: "Fer Usé" },
-        { fichier: "Armure en Fer Usée à Bandes.jpg", titre: "Fer Usé à Bandes" }
+        { fichier: "Fer-Armure.jpg", titre: "Fer Classique" },
+        { fichier: "Fer-Armure à Bandes.jpg", titre: "Fer Classique à Bandes" },
+        { fichier: "Fer-Armure2.jpg", titre: "Fer II" },
+        { fichier: "Fer-Armure Lourde.jpg", titre: "Fer Lourd" },
+        { fichier: "Fer-Armure Nordique.jpg", titre: "Fer Nordique" },
+        { fichier: "Fer-Armure Nordique à Bandes.jpg", titre: "Fer Nordique à Bandes" },
+        { fichier: "Fer-Armure Robuste.jpg", titre: "Fer Robuste" },
+        { fichier: "Fer-Armure Robuste à Bandes.jpg", titre: "Fer Robuste à Bandes" },
+        { fichier: "Fer-Armure Runique.jpg", titre: "Fer Runique" },
+        { fichier: "Fer-Armure Runique à Bandes.jpg", titre: "Fer Runique à Bandes" },
+        { fichier: "Fer-Armure Forgée.jpg", titre: "Fer Forgé" },
+        { fichier: "Fer-Armure Forgée à Bandes.jpg", titre: "Fer Forgé à Bandes" },
+        { fichier: "Fer-Armure Tabard.jpg", titre: "Fer & Tabard" }
     ],
     commun: [
-        { fichier: "Armure Commune Brigandine.jpg", titre: "Brigandine" },
-        { fichier: "Armure Commune de Gambison.jpg", titre: "Gambison" },
-        { fichier: "Armure Commune Lamellaire.jpg", titre: "Lamellaire" },
-        { fichier: "Armure Commune de Maille.jpg", titre: "Maille" }
+        { fichier: "Commun-Hoqueton.jpg", titre: "Hoqueton" },
+        { fichier: "Commun-Brigandine.jpg", titre: "Brigandine" },
+        { fichier: "Commun-Gambison.jpg", titre: "Gambison" },
+        { fichier: "Commun-Armure Rembourrée.jpg", titre: "Rembourée" },
+        { fichier: "Commun-Armure Lamellaire.jpg", titre: "Tunique Lamellaire" },
+        { fichier: "Commun-Armure Lamellaire2.jpg", titre: "Armure Lamellaire" },
+        { fichier: "Commun-Cotte de Mailles.jpg", titre: "Cotte de Maille" },
+        { fichier: "Commun-Tunique de Mailles.jpg", titre: "Tunique de Maille" }
     ],
     cuir: [
-        { fichier: "Armure en Cuir Maillé.jpg", titre: "Cuir Maillé" },
-        { fichier: "Armure en Cuir Nordique.jpg", titre: "Cuir Nordique" }
+        { fichier: "Cuir-Armure.jpg", titre: "Cuir Classique" },
+        { fichier: "Cuir-Armure Légère.jpg", titre: "Cuir Léger" },
+        { fichier: "Cuir-Armure Nordique.jpg", titre: "Cuir Nordique" },
+        { fichier: "Cuir-Armure Robuste.jpg", titre: "Cuir Robuste" }
     ],
     peau: [
-        { fichier: "Armure en Peau Nordique1.jpg", titre: "Peau Nordique I" },
-        { fichier: "Armure en Peau Nordique2.jpg", titre: "Peau Nordique II" }
+        { fichier: "Peau-Armure de Rôdeur.jpg", titre: "Rôdeur I" },
+        { fichier: "Peau-Armure de Rôdeur2.jpg", titre: "Rôdeur II" },
+        { fichier: "Peau-Armure Nordique.jpg", titre: "Peau Nordique" },
+        { fichier: "Peau-Armure Nordique Cloutée.jpg", titre: "Peau Nordique Clouté" },
+        { fichier: "Peau-Armure en Peau.jpg", titre: "Peau Classique" },
+        { fichier: "Peau-Armure Cloutée.jpg", titre: "Peau Cloutée" },
+        { fichier: "Peau-Armure Écaillée.jpg", titre: "Peau à Écailles" },
+        { fichier: "Tenue d'Aprenti Aventurier.jpg", titre: "Apprenti Aventurier" }
     ],
     fourrure: [
-        { fichier: "Armure en Fourrure de Chasseur.jpg", titre: "Fourrure de Chasseur" },
-        { fichier: "Armure en Fourrure Nordique.jpg", titre: "Fourrure Nordique" }
+        { fichier: "Fourrure-Kilt.jpg", titre: "Fourrure I" },
+        { fichier: "Fourrure-Kilt et Cape.jpg", titre: "Fourrure II" },
+        { fichier: "Fourrure-Armure1.jpg", titre: "Fourrure III" },
+        { fichier: "Fourrure-Armure2.jpg", titre: "Fourrure IV" },
+        { fichier: "Fourrure-Armure de Chasseur.jpg", titre: "Chasseur" },
+        { fichier: "Fourrure-Armure Nordique1.jpg", titre: "Nordique I" },
+        { fichier: "Fourrure-Armure Nordique2.jpg", titre: "Nordique II" },
+        { fichier: "Fourrure-Armure Nordique3.jpg", titre: "Nordique III" }
     ],
     verre: [
-        { fichier: "", titre: "Verre I" },
-        { fichier: "", titre: "Verre II" }
+        { fichier: "Verre-Armure.jpg", titre: "Verre Classique" },
+        { fichier: "Verre-Armure de Vvardenfell.jpg", titre: "Verre de Vvardenfell" }
     ],
     ébonite: [
-        { fichier: "Armure d'Ebonite Mer.jpg", titre: "Ebonite Mer" },
-        { fichier: "Armure d'Ebonite Nordique.jpg", titre: "Ebonite Nordique" },
-        { fichier: "Armure d'Ebonite Mer.jpg", titre: "Ebonite Mer Dorée" },
-        { fichier: "Armure d'Ebonite Nordique Dorée.jpg", titre: "Ebonite Nordique Dorée" }
+        { fichier: "Ebonite-Armure.jpg", titre: "Ebonite Classique" },
+        { fichier: "Ebonite-Armure Dorée.jpg", titre: "Ebonite Dorée" },
+        { fichier: "Ebonite-Armure Noble.jpg", titre: "Ebonite Noble" },
+        { fichier: "Ebonite-Armure Noble Dorée.jpg", titre: "Ebonite Noble Dorée" }
     ]
 
 };

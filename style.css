@@ -497,7 +497,7 @@ input, textarea {
     border: 1px solid var(--border) !important;
     border-radius: 4px;
     box-sizing: border-box;
-    -moz-appearance: textfield;
+    //*-moz-appearance: textfield;*/
 }
 
 /* Vitrine et bannières Morthal */
@@ -565,7 +565,7 @@ input, textarea {
 
 @media (min-width: 768px) {
     .armor-previews-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
