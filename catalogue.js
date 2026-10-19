@@ -1126,14 +1126,6 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Ensemble Voleur",
-        "revente": 60,
-        "cout": 0,
-        "ing": ""
-    },
-    {
-        "cat": "Couture",
-        "mat": "tissu",
         "nom": "Cape Ours Noir",
         "revente": 100,
         "cout": 18.2,
@@ -1182,7 +1174,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Masquue Simple",
+        "nom": "Masque Simple",
         "revente": 10,
         "cout": 3,
         "ing": "1 Lin"
@@ -1190,7 +1182,7 @@ const CATALOGUE_INITIAL = [
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Masquue Complet",
+        "nom": "Masque Complet",
         "revente": 15,
         "cout": 6,
         "ing": "2 Lin"
