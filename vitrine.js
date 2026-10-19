@@ -9,21 +9,64 @@ const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'te
 const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
-// Ordre de tri prioritaire unifié pour les sous-catégories (Armes & Armures)
-//const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'dwemer', 'orichalque', 'bosmer', 'altmer', 'verre', 'ébonite'];
 const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
 
+const BANNIERES_ARMURES = {
+    acier: [
+        { fichier: "Armure en Acier Nordique1.jpg", titre: "Acier Nordique I" },
+        { fichier: "Armure en Acier Nordique2.jpg", titre: "Acier Nordique II" },
+        { fichier: "Armure en Acier Laminé.jpg", titre: "Acier Laminé" },
+        { fichier: "Armure en Plaques d'Acier.jpg", titre: "Plaques d'Acier" }
+    ],
+    fer: [
+        { fichier: "Armure en Fer Nordique.jpg", titre: "Fer Nordique" },
+        { fichier: "Armure en Fer Nordique à Bandes.jpg", titre: "Fer Nordique à Bandes" },
+        { fichier: "Armure en Fer Robuste.jpg", titre: "Fer Robuste" },
+        { fichier: "Armure en Fer Robuste à Bandes.jpg", titre: "Fer Robuste à Bandes" },
+        { fichier: "Armure en Fer Runique.jpg", titre: "Fer Runique" },
+        { fichier: "Armure en Fer Runique à Bandes.jpg", titre: "Fer Runique à Bandes" },
+        { fichier: "Armure en Fer Usée.jpg", titre: "Fer Usé" },
+        { fichier: "Armure en Fer Usée à Bandes.jpg", titre: "Fer Usé à Bandes" }
+    ],
+    commun: [
+        { fichier: "Armure Commune Brigandine.jpg", titre: "Brigandine" },
+        { fichier: "Armure Commune de Gambison.jpg", titre: "Gambison" },
+        { fichier: "Armure Commune Lamellaire.jpg", titre: "Lamellaire" },
+        { fichier: "Armure Commune de Maille.jpg", titre: "Maille" }
+    ],
+    cuir: [
+        { fichier: "Armure en Cuir Maillé.jpg", titre: "Cuir Maillé" },
+        { fichier: "Armure en Cuir Nordique.jpg", titre: "Cuir Nordique" }
+    ],
+    peau: [
+        { fichier: "Armure en Peau Nordique1.jpg", titre: "Peau Nordique I" },
+        { fichier: "Armure en Peau Nordique2.jpg", titre: "Peau Nordique II" }
+    ],
+    fourrure: [
+        { fichier: "Armure en Fourrure de Chasseur.jpg", titre: "Fourrure de Chasseur" },
+        { fichier: "Armure en Fourrure Nordique.jpg", titre: "Fourrure Nordique" }
+    ],
+    verre: [
+        { fichier: "", titre: "Verre I" },
+        { fichier: "", titre: "Verre II" }
+    ],
+    ébonite: [
+        { fichier: "Armure d'Ebonite Mer.jpg", titre: "Ebonite Mer" },
+        { fichier: "Armure d'Ebonite Nordique.jpg", titre: "Ebonite Nordique" },
+        { fichier: "Armure d'Ebonite Mer.jpg", titre: "Ebonite Mer Dorée" },
+        { fichier: "Armure d'Ebonite Nordique Dorée.jpg", titre: "Ebonite Nordique Dorée" }
+    ]
+
+};
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', applyAllFilters);
     
-    // Initialisation et gestion intelligente des filtres principaux
     const mainButtons = document.querySelectorAll('#main-filter-row .filter-btn');
     mainButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const cat = btn.getAttribute('data-cat');
             currentMainCategory = cat;
             
-            // LOGIQUE DE SÉLECTION AUTOMATIQUE DE LA DEUXIÈME OPTION
             if (cat === 'Matériaux') {
                 currentSubMaterial = 'minerais';
             } else if (cat === 'Arme' || cat === 'Armure') {
@@ -42,14 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // CONFIGURATION DE L'AFFICHAGE PAR DÉFAUT AU CHARGEMENT (Matériaux > Minerais)
     const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
     if (btnToutAfficher) btnToutAfficher.classList.remove('active');
 
     const btnMateriaux = document.querySelector('#main-filter-row .filter-btn[data-cat="Matériaux"]');
     if (btnMateriaux) btnMateriaux.classList.add('active');
 
-    // Construit la barre de boutons et allume directement "Minerais"
     renderSubFilters('Matériaux');
     applyAllFilters();
 });
@@ -98,7 +139,7 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="diadèmes">👑 Diadèmes</button>
             <button class="filter-btn" data-sub="gemmes">✨ Gemmes</button>
         `;
-        } else if (cat === 'Arme') {
+    } else if (cat === 'Arme') {
         subRow.style.display = 'flex';
         subRow.innerHTML = `
             <button class="filter-btn" data-sub="tous">Tous</button>
@@ -109,9 +150,6 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
-        /*<button class="filter-btn" data-sub="dwemer">Dwemer</button>
-            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
-            <button class="filter-btn" data-sub="altmer">Altmer</button>*/
     } else if (cat === 'Armure') {
         subRow.style.display = 'flex';
         subRow.innerHTML = `
@@ -125,28 +163,20 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
-        /*<button class="filter-btn" data-sub="dwemer">Dwemer</button>
-            <button class="filter-btn" data-sub="orichalque">Orsimer</button>
-            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
-            <button class="filter-btn" data-sub="altmer">Altmer</button>*/
-
     } else {
         subRow.style.display = 'none';
         subRow.innerHTML = '';
         return;
     }
 
-    // ALLUMAGE DYNAMIQUE DU BON SOUS-BOUTON
     const subButtons = subRow.querySelectorAll('.filter-btn');
     subButtons.forEach(subBtn => {
         const subValue = subBtn.getAttribute('data-sub');
-        
         if (subValue === currentSubMaterial) {
             subBtn.classList.add('active');
         } else {
             subBtn.classList.remove('active');
         }
-
         subBtn.addEventListener('click', () => {
             currentSubMaterial = subValue;
             subButtons.forEach(b => b.classList.remove('active'));
@@ -170,33 +200,21 @@ function applyAllFilters() {
         }
     }
     
-        filtered.sort((a, b) => {
+    filtered.sort((a, b) => {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
-        // 1. SI les deux objets sont des Armes ou des Armures, on applique l'ordre des matériaux personnalisé
-        // 1. SI les deux objets sont des Armes ou des Armures
         const isEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
         if (isEquipement(a) && isEquipement(b)) {
-            
-            // NOUVEAU : Si on affiche "Tout", on sépare d'abord les Armes des Armures
-            if (a.cat !== b.cat) {
-                return a.cat.localeCompare(b.cat); // Range les Armes ensemble, puis les Armures
-            }
+            if (a.cat !== b.cat) return a.cat.localeCompare(b.cat);
 
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
-
-            // Si le matériau n'est pas trouvé, sécurité à la fin
             if (indexMatA === -1) indexMatA = materialOrder.length + 100;
             if (indexMatB === -1) indexMatB = materialOrder.length + 100;
 
-            // Si les matériaux sont différents, tri selon la progression (materialOrder)
-            if (indexMatA !== indexMatB) {
-                return indexMatA - indexMatB;
-            }
+            if (indexMatA !== indexMatB) return indexMatA - indexMatB;
 
-            // Si le matériau est identique, tri par type spécifique (ex: Dague avant Épée)
             if (a.cat === 'Arme' && b.cat === 'Arme') {
                 let indexTypeA = weaponOrder.length, indexTypeB = weaponOrder.length;
                 for (let i = 0; i < weaponOrder.length; i++) { if (nameA.includes(weaponOrder[i])) { indexTypeA = i; break; } }
@@ -211,41 +229,60 @@ function applyAllFilters() {
             }
         }
 
-        // 2. Tri thématique existant pour les Matériaux / Ressources brutes
-                // 2. Tri thématique pour les Matériaux / Minerais / Lingots / Ressources
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
-            // A. Si ce sont des minerais
             if (a.mat === 'minerais' && b.mat === 'minerais') {
-                let indexA = oreOrder.indexOf(nameA);
-                let indexB = oreOrder.indexOf(nameB);
-                if (indexA === -1) indexA = oreOrder.length + 1;
-                if (indexB === -1) indexB = oreOrder.length + 1;
+                let indexA = oreOrder.indexOf(nameA); let indexB = oreOrder.indexOf(nameB);
+                if (indexA === -1) indexA = oreOrder.length + 1; if (indexB === -1) indexB = oreOrder.length + 1;
                 return indexA - indexB;
             }
-            
-            // B. Si ce sont des lingots
             if (a.mat === 'lingot' && b.mat === 'lingot') {
-                let indexA = ingotOrder.indexOf(nameA);
-                let indexB = ingotOrder.indexOf(nameB);
-                if (indexA === -1) indexA = ingotOrder.length + 1;
-                if (indexB === -1) indexB = ingotOrder.length + 1;
+                let indexA = ingotOrder.indexOf(nameA); let indexB = ingotOrder.indexOf(nameB);
+                if (indexA === -1) indexA = ingotOrder.length + 1; if (indexB === -1) indexB = ingotOrder.length + 1;
                 return indexA - indexB;
             }
-
-            // C. Reste des ressources brutes et outils (Logique d'origine)
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
             for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
             return resIndexA - resIndexB || nameA.localeCompare(nameB);
         }
-
-        
-        // Par défaut pour le reste (Bijoux, Couture...)
         return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
     });
 
+    updateArmorPreviewGlobal();
     displayItems(filtered);
 }
+// Fonction de génération automatique de la galerie d'armures avec gestion des dossiers
+function updateArmorPreviewGlobal() {
+    const previewContainer = document.getElementById('armor-preview-container');
+    const previewsGrid = document.getElementById('armor-previews-grid');
+    
+    if (!previewContainer || !previewsGrid) return;
+
+    // On vérifie si on est dans l'onglet Armure et si des images existent pour ce matériau
+    if (currentMainCategory === 'Armure' && BANNIERES_ARMURES[currentSubMaterial] && BANNIERES_ARMURES[currentSubMaterial].length > 0) {
+        
+        let htmlGenere = '';
+        
+        // Boucle automatique sur chaque image déclarée dans la configuration
+        BANNIERES_ARMURES[currentSubMaterial].forEach(set => {
+            // Le script va chercher dans "images/nom-du-materiau/nom-du-fichier.jpg"
+            htmlGenere += `
+                <div class="armor-set-card">
+                    <img src="images/${currentSubMaterial}/${set.fichier}" alt="${set.titre}">
+                    <div class="armor-set-title">${set.titre}</div>
+                </div>
+            `;
+        });
+        
+        previewsGrid.innerHTML = htmlGenere;
+        previewContainer.style.display = 'block';
+    } else {
+        // Cache tout si aucune image n'est configurée pour ce matériau ou cet onglet
+        previewsGrid.innerHTML = '';
+        previewContainer.style.display = 'none';
+    }
+}
+
 
 function displayItems(arr) {
     const tbody = document.getElementById('table-body');
