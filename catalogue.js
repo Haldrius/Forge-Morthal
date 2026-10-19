@@ -7,7 +7,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Minerai de fer",
-        "revente": 0.6,
+        "revente": 1,
         "cout": 0.4,
         "ing": ""
     },
@@ -15,7 +15,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Corindon brut",
-        "revente": 0.6,
+        "revente": 1,
         "cout": 0.4,
         "ing": ""
     },
@@ -23,7 +23,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Minerai d'argent",
-        "revente": 1.5,
+        "revente": 2,
         "cout": 0.8,
         "ing": ""
     },
@@ -31,7 +31,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Minerai d'or",
-        "revente": 1.5,
+        "revente": 2,
         "cout": 0.8,
         "ing": ""
     },
@@ -39,7 +39,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Minerai d'orichalque",
-        "revente": 10,
+        "revente": 15,
         "cout": 6,
         "ing": ""
     },
@@ -47,7 +47,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "minerais",
         "nom": "Pierre de lune brute",
-        "revente": 35,
+        "revente": 30,
         "cout": 13,
         "ing": ""
     },
@@ -79,7 +79,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot de Fer",
-        "revente": 10,
+        "revente": 15,
         "cout": 6.6,
         "ing": "6 Minerai de fer + 6 Charbon Pauvre"
     },
@@ -87,7 +87,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Acier",
-        "revente": 15,
+        "revente": 25,
         "cout": 10.8,
         "ing": "3 Corindon brut + 3 Minerai de fer + 6 Charbon"
     },
@@ -95,7 +95,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot de Corindon",
-        "revente": 12,
+        "revente": 20,
         "cout": 8.8,
         "ing": "8 Corindon brut + 8 Charbon Pauvre"
     },
@@ -103,7 +103,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Argent",
-        "revente": 17,
+        "revente": 30,
         "cout": 13.2,
         "ing": "6 Minerai d'argent + 6 Charbon"
     },
@@ -111,7 +111,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Or",
-        "revente": 20,
+        "revente": 30,
         "cout": 13.2,
         "ing": "6 Minerai d'or + 6 Charbon"
     },
@@ -119,7 +119,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot d'Orichalque",
-        "revente": 75,
+        "revente": 100,
         "cout": 44.4,
         "ing": "6 Minerai d'orichalque + 6 Briquettes de charbon"
     },
@@ -127,7 +127,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot de Pierre de lune",
-        "revente": 135,
+        "revente": 200,
         "cout": 86.4,
         "ing": "6 Pierre de lune brut + 6 Briquettes de charbon"
     },
@@ -135,7 +135,7 @@ const CATALOGUE_INITIAL = [
         "cat": "Matériaux",
         "mat": "lingot",
         "nom": "Lingot de Vif-Argent",
-        "revente": 160,
+        "revente": 300,
         "cout": 133.2,
         "ing": "6 Vif Argent brut + 6 Coke de Charbon"
     },
