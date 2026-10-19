@@ -1,6 +1,6 @@
 // Configuration de l'état initial intelligent (Vitrine)
-let currentMainCategory = 'Matériaux'; // Active Matériaux de base
-let currentSubMaterial = 'minerais';   // Active Minerais de base
+let currentMainCategory = 'Armure'; // Active Matériaux de base
+let currentSubMaterial = 'acier';   // Active Minerais de base
 const data = CATALOGUE_INITIAL;
 
 // Ordres de tri thématiques de la forge
@@ -116,10 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
     if (btnToutAfficher) btnToutAfficher.classList.remove('active');
 
-    const btnMateriaux = document.querySelector('#main-filter-row .filter-btn[data-cat="Matériaux"]');
-    if (btnMateriaux) btnMateriaux.classList.add('active');
+    // Modification ici : Cible Armure au lieu de Matériaux
+    const btnArmure = document.querySelector('#main-filter-row .filter-btn[data-cat="Armure"]');
+    if (btnArmure) btnArmure.classList.add('active');
 
-    renderSubFilters('Matériaux');
+    // Modification ici : Initialise les sous-filtres des armures
+    renderSubFilters('Armure');
     applyAllFilters();
 });
 
