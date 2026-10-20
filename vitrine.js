@@ -1,7 +1,7 @@
 // Configuration de l'état initial intelligent (Vitrine)
 let currentMainCategory = 'Armure'; // Active Matériaux de base
 let currentSubMaterial = 'acier';   // Active Minerais de base
-const data = CATALOGUE_INITIAL;
+const data = [];
 
 // Ordres de tri thématiques de la forge
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
@@ -95,7 +95,50 @@ const BANNIERES_ARMURES = {
     ]
 
 };
-document.addEventListener('DOMContentLoaded', () => {
+async function chargerCatalogueDepuisGithub() {
+    // Remplacez ces variables par vos informations réelles
+    const owner = "Haldrius";
+    const repo = "Forge-Morthal";
+    const path = "catalogue.js.json"; // Conseil : Utilisez un format .json pur sur GitHub
+    
+    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    
+    try {
+        const headers = {
+            'Accept': 'application/vnd.github.v3.raw' // Force GitHub à renvoyer le contenu brut du fichier directement
+        };
+
+        // EN CAS DE DÉPÔT PRIVÉ : Décommentez la ligne ci-dessous (Attention à la sécurité du token !)
+        // headers['Authorization'] = `token VOTRE_TOKEN_GITHUB`;
+
+        const response = await fetch(url, { headers: headers });
+        
+        if (!response.ok) {
+            throw new Error(`Erreur GitHub: ${response.status} ${response.statusText}`);
+        }
+
+        // Si votre fichier sur GitHub est un .json valide (ex: [ {"cat": "Matériaux", ...}, ... ])
+        data = await response.json();
+        
+        console.log("Catalogue mis à jour avec succès depuis GitHub !", data);
+
+    } catch (erreur) {
+        console.error("Impossible de récupérer le catalogue distant, chargement du catalogue de secours...", erreur);
+        // Optionnel : Définir un catalogue de secours vide ou local si GitHub est inaccessible
+        data = []; 
+    }
+}
+
+// 2. ADAPTATION DU DOMCONTENTLOADED (Rendu Asynchrone)
+document.addEventListener('DOMContentLoaded', async () => {
+    
+    // On affiche un message d'attente dans le tableau pendant le chargement
+    const tbody = document.getElementById('table-body');
+    if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:#888;padding:15px;">Chargement du catalogue en cours...</td></tr>';
+
+    // On attend la récupération des données GitHub avant de continuer
+    await chargerCatalogueDepuisGithub();
+
     document.getElementById('search').addEventListener('input', applyAllFilters);
     
     const mainButtons = document.querySelectorAll('#main-filter-row .filter-btn');
@@ -125,13 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
     if (btnToutAfficher) btnToutAfficher.classList.remove('active');
 
-    // Modification ici : Cible Armure au lieu de Matériaux
     const btnArmure = document.querySelector('#main-filter-row .filter-btn[data-cat="Armure"]');
     if (btnArmure) btnArmure.classList.add('active');
 
-    // Modification ici : Initialise les sous-filtres des armures
     renderSubFilters('Armure');
-    applyAllFilters();
+    applyAllFilters(); // Génère le tableau maintenant que "data" est rempli
 });
 
 function getPreciseIcon(name) {
