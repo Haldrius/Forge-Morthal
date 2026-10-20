@@ -2,7 +2,7 @@
 let currentMainCategory = 'Armure'; // Active Matériaux de base
 let currentSubMaterial = 'acier';   // Active Minerais de base
 let data = [];
-let currentGender = Math.random() < 0.5 ? 'Masculin' : 'Feminin'; // Prendra la valeur 'Masculin' ou 'Feminin' (sans accent pour correspondre à vos dossiers)
+let currentGender = Math.random() < 0.5 ? 'Masculin' : 'Féminin'; // Prendra la valeur 'Masculin' ou 'Féminin'
 
 // Ordres de tri thématiques de la forge
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
@@ -354,10 +354,10 @@ function updateArmorPreviewGlobal() {
             toggleWrapper.innerHTML = `
                 <span class="gender-label-text ${currentGender === 'Masculin' ? 'active-text' : ''}">Masculin</span>
                 <label class="switch">
-                    <input type="checkbox" id="gender-checkbox" ${currentGender === 'Feminin' ? 'checked' : ''}>
+                    <input type="checkbox" id="gender-checkbox" ${currentGender === 'Féminin' ? 'checked' : ''}>
                     <span class="slider round"></span>
                 </label>
-                <span class="gender-label-text ${currentGender === 'Feminin' ? 'active-text' : ''}">Féminin</span>
+                <span class="gender-label-text ${currentGender === 'Féminin' ? 'active-text' : ''}">Féminin</span>
             `;
             
             if (titleNode) {
@@ -369,13 +369,13 @@ function updateArmorPreviewGlobal() {
             // Écouteur d'événement sur la case à cocher invisible de l'interrupteur
             const checkbox = document.getElementById('gender-checkbox');
             checkbox.addEventListener('change', () => {
-                // Si la case est cochée -> Feminin, sinon -> Masculin
-                currentGender = checkbox.checked ? 'Feminin' : 'Masculin';
+                // Si la case est cochée -> Féminin, sinon -> Masculin
+                currentGender = checkbox.checked ? 'Féminin' : 'Masculin';
                 
                 // Met à jour la surbrillance des textes à gauche et à droite
                 const labels = toggleWrapper.querySelectorAll('.gender-label-text');
                 labels[0].classList.toggle('active-text', currentGender === 'Masculin');
-                labels[1].classList.toggle('active-text', currentGender === 'Feminin');
+                labels[1].classList.toggle('active-text', currentGender === 'Féminin');
                 
                 // Recharge immédiatement la galerie d'images avec le nouveau chemin
                 updateArmorPreviewGlobal();
