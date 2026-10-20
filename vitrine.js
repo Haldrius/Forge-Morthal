@@ -41,7 +41,7 @@ const BANNIERES_ARMURES = {
     ],
     commun: [
         { fichier: "Commun-Hoqueton.jpg", titre: "Hoqueton" },
-        { fichier: "Commun-Brigandine.jpg", titre: "Brigandine" },
+        { fichier: "Commun-Brigandin.jpg", titre: "Brigandine" },
         { fichier: "Commun-Gambison.jpg", titre: "Gambison" },
         { fichier: "Commun-Armure Rembourrée.jpg", titre: "Rembourée" },
         { fichier: "Commun-Armure Lamellaire.jpg", titre: "Tunique Lamellaire" },
@@ -53,16 +53,17 @@ const BANNIERES_ARMURES = {
         { fichier: "Cuir-Armure.jpg", titre: "Cuir Classique" },
         { fichier: "Cuir-Armure Légère.jpg", titre: "Cuir Léger" },
         { fichier: "Cuir-Armure Nordique.jpg", titre: "Cuir Nordique" },
-        { fichier: "Cuir-Armure Robuste.jpg", titre: "Cuir Robuste" }
+        { fichier: "Cuir-Armure Robuste.jpg", titre: "Cuir Robuste" },
+        { fichier: "Cuir-Armure Bouillie.jpg", titre: "Cuir Bouilli" }
     ],
     maille:[
-        { fichier: "Impérial-Surcot en Maille.jpg", titre: "Surcot en Maille" },
+        { fichier: "Impérial-Tunique en Maille.jpg", titre: "Tunique & Maille" },
         { fichier: "Impérial-Haubert en Maille Huilée.jpg", titre: "Haubert en Maille Huilée" },
         { fichier: "Impérial-Cuir & Maille.jpg", titre: "Armure en Cuir & Maille" },
         { fichier: "Impérial-Cuir & Maille Huilée.jpg", titre: "Armure en Cuir & Maille Huilée" },
         { fichier: "Impérial-Veste en Maille.jpg", titre: "Veste en Maille" },
         { fichier: "Impérial-Veste en Maille Huilée.jpg", titre: "Veste en Maille Huilée" },
-        { fichier: "Impérial-Tunique en Maille.jpg", titre: "Tunique & Maille" }
+        { fichier: "Impérial-Surcot en Maille.jpg", titre: "Surcot en Maille" }
     ],
     peau: [
         { fichier: "Peau-Armure de Rôdeur.jpg", titre: "Rôdeur I" },
@@ -71,7 +72,7 @@ const BANNIERES_ARMURES = {
         { fichier: "Peau-Armure Nordique Cloutée.jpg", titre: "Peau Nordique Clouté" },
         { fichier: "Peau-Armure en Peau.jpg", titre: "Peau Classique" },
         { fichier: "Peau-Armure Cloutée.jpg", titre: "Peau Cloutée" },
-        { fichier: "Peau-Armure Écaillée.jpg", titre: "Peau à Écailles" },
+        { fichier: "Peau-Armure en Fer Écaillé.jpg", titre: "Peau et Fer à Écailles" },
         { fichier: "Tenue d'Aprenti Aventurier.jpg", titre: "Apprenti Aventurier" }
     ],
     fourrure: [
@@ -82,7 +83,9 @@ const BANNIERES_ARMURES = {
         { fichier: "Fourrure-Armure de Chasseur.jpg", titre: "Chasseur" },
         { fichier: "Fourrure-Armure Nordique1.jpg", titre: "Nordique I" },
         { fichier: "Fourrure-Armure Nordique2.jpg", titre: "Nordique II" },
-        { fichier: "Fourrure-Armure Nordique3.jpg", titre: "Nordique III" }
+        { fichier: "Fourrure-Armure Nordique3.jpg", titre: "Nordique III" },
+        { fichier: "Fourrure-Armure Colovienne1.jpg", titre: "Colovienne I" },
+        { fichier: "Fourrure-Armure Colovienne2.jpg", titre: "Colovienne II" }
     ],
     verre: [
         { fichier: "Verre-Armure.jpg", titre: "Verre Classique" },
