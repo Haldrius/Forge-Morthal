@@ -607,4 +607,62 @@ input, textarea {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     width: 100%;
-}/*Test*/
+}
+/* Conteneur et textes du genre */
+.gender-label-text {
+    color: #666; /* Couleur estompée par défaut */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.gender-label-text.active-text {
+    color: var(--accent, #1abc9c); /* Couleur active (prend votre variable principale ou une couleur par défaut) */
+}
+
+/* Base de l'interrupteur (Ovale extérieur réduit) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;    /* Surchargé de 60px à 42px */
+    height: 22px;   /* Surchargé de 34px à 22px */
+}
+
+/* Cache la case à cocher HTML par défaut */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Dessin de la glissière ovale gris foncé */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #3a3a3a;
+    transition: .3s;
+}
+
+/* Dessin du rond blanc mobile (Taille ajustée pour l'ovale plus petit) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;   /* Réduit de 26px à 16px */
+    width: 16px;    /* Réduit de 26px à 16px */
+    left: 3px;      /* Centrage horizontal à l'arrêt */
+    bottom: 3px;    /* Centrage vertical à l'arrêt */
+    background-color: white;
+    transition: .3s;
+}
+
+/* Maintien des formes parfaitement arrondies */
+.slider.round {
+    border-radius: 22px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Animation : Déplacement proportionnel de la bille blanche vers la droite */
+input:checked + .slider:before {
+    transform: translateX(20px); /* Ajusté de 26px à 20px pour le nouvel entraxe */
+}

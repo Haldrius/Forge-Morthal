@@ -2,6 +2,7 @@
 let currentMainCategory = 'Armure'; // Active Matériaux de base
 let currentSubMaterial = 'acier';   // Active Minerais de base
 let data = [];
+let currentGender = Math.random() < 0.5 ? 'Masculin' : 'Feminin'; // Prendra la valeur 'Masculin' ou 'Feminin' (sans accent pour correspondre à vos dossiers)
 
 // Ordres de tri thématiques de la forge
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
@@ -339,17 +340,54 @@ function updateArmorPreviewGlobal() {
     
     if (!previewContainer || !previewsGrid) return;
 
-    // On vérifie si on est dans l'onglet Armure et si des images existent pour ce matériau
+    // 1. On vérifie si on est dans l'onglet Armure et si des images existent pour ce matériau
     if (currentMainCategory === 'Armure' && BANNIERES_ARMURES[currentSubMaterial] && BANNIERES_ARMURES[currentSubMaterial].length > 0) {
         
+        // 2. Création et insertion du bouton à bascule (Toggle Switch) s'il n'existe pas encore
+        let titleNode = previewContainer.querySelector('h2, h3');
+        if (!document.getElementById('gender-toggle-wrapper')) {
+            const toggleWrapper = document.createElement('div');
+            toggleWrapper.id = 'gender-toggle-wrapper';
+            toggleWrapper.style.cssText = "display: flex; justify-content: center; align-items: center; gap: 12px; margin: 15px 0; font-weight: bold;";
+            
+            // Structure HTML de l'interrupteur
+            toggleWrapper.innerHTML = `
+                <span class="gender-label-text ${currentGender === 'Masculin' ? 'active-text' : ''}">Masculin</span>
+                <label class="switch">
+                    <input type="checkbox" id="gender-checkbox" ${currentGender === 'Feminin' ? 'checked' : ''}>
+                    <span class="slider round"></span>
+                </label>
+                <span class="gender-label-text ${currentGender === 'Feminin' ? 'active-text' : ''}">Féminin</span>
+            `;
+            
+            if (titleNode) {
+                titleNode.insertAdjacentElement('afterend', toggleWrapper);
+            } else {
+                previewContainer.insertBefore(toggleWrapper, previewsGrid);
+            }
+
+            // Écouteur d'événement sur la case à cocher invisible de l'interrupteur
+            const checkbox = document.getElementById('gender-checkbox');
+            checkbox.addEventListener('change', () => {
+                // Si la case est cochée -> Feminin, sinon -> Masculin
+                currentGender = checkbox.checked ? 'Feminin' : 'Masculin';
+                
+                // Met à jour la surbrillance des textes à gauche et à droite
+                const labels = toggleWrapper.querySelectorAll('.gender-label-text');
+                labels[0].classList.toggle('active-text', currentGender === 'Masculin');
+                labels[1].classList.toggle('active-text', currentGender === 'Feminin');
+                
+                // Recharge immédiatement la galerie d'images avec le nouveau chemin
+                updateArmorPreviewGlobal();
+            });
+        }
+
+        // 3. Génération de la galerie avec le chemin dynamique vers vos sous-dossiers
         let htmlGenere = '';
-        
-        // Boucle automatique sur chaque image déclarée dans la configuration
         BANNIERES_ARMURES[currentSubMaterial].forEach(set => {
-            // Le script va chercher dans "images/nom-du-materiau/nom-du-fichier.jpg"
             htmlGenere += `
                 <div class="armor-set-card">
-                    <img src="images/${currentSubMaterial}/${set.fichier}" alt="${set.titre}">
+                    <img src="images/${currentGender}/${currentSubMaterial}/${set.fichier}" alt="${set.titre}">
                     <div class="armor-set-title">${set.titre}</div>
                 </div>
             `;
@@ -358,11 +396,16 @@ function updateArmorPreviewGlobal() {
         previewsGrid.innerHTML = htmlGenere;
         previewContainer.style.display = 'block';
     } else {
-        // Cache tout si aucune image n'est configurée pour ce matériau ou cet onglet
+        // Nettoyage complet du conteneur si on change d'onglet principal (Armes, Outils...)
+        const existingToggle = document.getElementById('gender-toggle-wrapper');
+        if (existingToggle) existingToggle.remove();
+        
         previewsGrid.innerHTML = '';
         previewContainer.style.display = 'none';
     }
 }
+
+
 
 
 function displayItems(arr) {
