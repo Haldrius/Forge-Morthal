@@ -124,7 +124,7 @@
         "mat": "lingot",
         "nom": "Lingot de Pierre de lune",
         "revente": 200,
-        "cout": 86.4,
+        "cout": 92.4,
         "ing": "6 Pierre de lune brut + 6 Briquettes de charbon"
     },
     {
@@ -196,7 +196,7 @@
         "mat": "ressources",
         "nom": "Cuir",
         "revente": 7,
-        "cout": 2,
+        "cout": 4,
         "ing": ""
     },
     {
@@ -291,7 +291,7 @@
         "cat": "Matériaux",
         "mat": "outils",
         "nom": "Clé",
-        "revente": 40,
+        "revente": 25,
         "cout": 15.9,
         "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
     },
@@ -700,7 +700,7 @@
         "mat": "verre",
         "nom": "Arc de verre",
         "revente": 7000,
-        "cout": 1313,
+        "cout": 1314,
         "ing": "1 Pierre de lune + 2 Malachite"
     },
     {
@@ -708,7 +708,7 @@
         "mat": "verre",
         "nom": "Dague de verre",
         "revente": 4500,
-        "cout": 663.5,
+        "cout": 664.5,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
@@ -716,7 +716,7 @@
         "mat": "verre",
         "nom": "Espadon de verre",
         "revente": 9000,
-        "cout": 1327.5,
+        "cout": 1329.5,
         "ing": "2 Pierre de lune + 2 Malachite + 3 Bandes de cuir"
     },
     {
@@ -732,7 +732,7 @@
         "mat": "verre",
         "nom": "Hache a 2 mains de Verre",
         "revente": 9000,
-        "cout": 1327,
+        "cout": 1329,
         "ing": "2 Pierre de lune + 2 Malachite + 2 Bandes de cuir"
     },
     {
@@ -740,7 +740,7 @@
         "mat": "verre",
         "nom": "Hache de verre",
         "revente": 4500,
-        "cout": 664,
+        "cout": 665,
         "ing": "1 Pierre de lune + 1 Malachite + 2 Bandes de cuir"
     },
     {
@@ -748,7 +748,7 @@
         "mat": "verre",
         "nom": "Marteau de verre",
         "revente": 10000,
-        "cout": 1977.5,
+        "cout": 1979.5,
         "ing": "2 Pierre de lune + 3 Malachite + 3 Bandes de cuir"
     },
     {
@@ -756,7 +756,7 @@
         "mat": "verre",
         "nom": "Masse de verre",
         "revente": 7000,
-        "cout": 1313.5,
+        "cout": 1314.5,
         "ing": "1 Pierre de lune + 2 Malachite + 1 Bande de cuir"
     },
     {
@@ -764,7 +764,7 @@
         "mat": "verre",
         "nom": "Épée de verre",
         "revente": 7500,
-        "cout": 663.5,
+        "cout": 664.5,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
@@ -1268,7 +1268,7 @@
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": 15000,
-        "cout": 1315.5,
+        "cout": 1316.5,
         "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
     },
     {
@@ -1276,7 +1276,7 @@
         "mat": "verre",
         "nom": "Armure en Verre",
         "revente": 25000,
-        "cout": 2629.5,
+        "cout": 2631.5,
         "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
     },
     {
@@ -1284,7 +1284,7 @@
         "mat": "verre",
         "nom": "Gants en Verre",
         "revente": 15000,
-        "cout": 666,
+        "cout": 667,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
     },
     {
@@ -1292,7 +1292,7 @@
         "mat": "verre",
         "nom": "Bottes en Verre",
         "revente": 15000,
-        "cout": 1316,
+        "cout": 1317,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Malachite"
     },
     {
@@ -1300,7 +1300,7 @@
         "mat": "verre",
         "nom": "Bouclier en Verre",
         "revente": 25000,
-        "cout": 2614,
+        "cout": 2615,
         "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Malachite"
     },
     {
@@ -1604,7 +1604,7 @@
         "mat": "diadèmes",
         "nom": "Diadème 2 ARGENT + PIERRE DE LUNE",
         "revente": 400,
-        "cout": 39.4,
+        "cout": 40.4,
         "ing": "2 Lingots d'Argent + 1 Pierre de lune"
     },
     {
@@ -1652,7 +1652,7 @@
         "mat": "diadèmes",
         "nom": "Diadème CORINDON + PIERRE DE LUNE",
         "revente": 500,
-        "cout": 30.6,
+        "cout": 31.6,
         "ing": "2 Lingots de Corindon + 1 Pierre de lune"
     },
     {
