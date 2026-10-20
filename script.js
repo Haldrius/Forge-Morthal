@@ -720,7 +720,7 @@ function initCatalogForm() {
         });
     }
 
-        catalogForm.addEventListener('submit', async (e) => {
+    catalogForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const rows = document.querySelectorAll('#editor-table-body tr');
         const updatedData = [];
@@ -762,40 +762,57 @@ function initCatalogForm() {
 
         const owner = "Haldrius";
         const repo = "Forge-Morthal";
-        const path = "catalogue.json"; // Cible le format JSON épuré
+        const path = "catalogue.json";
         const finalFileContent = JSON.stringify(data, null, 4);
 
         try {
-            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?t=${Date.now()}`;
+            
+            // ÉTAPE 1 : Récupérer les métadonnées (Pour obtenir le SHA correct)
             const getResponse = await fetch(apiUrl, {
                 method: "GET",
-                headers: { "Authorization": `token ${token}`, "Accept": "application/vnd.github.v3+json" }
+                headers: { 
+                    "Authorization": `token ${token}`, 
+                    "Accept": "application/vnd.github.v3+json" 
+                }
             });
 
-            if (!getResponse.ok) throw new Error("Impossible d'accéder au fichier sur GitHub. Vérifiez vos droits d'accès.");
+            if (!getResponse.ok) throw new Error("Impossible d'accéder au fichier sur GitHub. Vérifiez votre clé.");
             const fileData = await getResponse.json();
 
+            if (!fileData.sha) {
+                throw new Error("Impossible de récupérer l'identifiant SHA du fichier GitHub.");
+            }
+
+            // ÉTAPE 2 : Mettre à jour avec l'encodage moderne et le SHA valide
             const putResponse = await fetch(apiUrl, {
                 method: "PUT",
-                headers: { "Authorization": `token ${token}`, "Content-Type": "application/json", "Accept": "application/vnd.github.v3+json" },
+                headers: { 
+                    "Authorization": `token ${token}`, 
+                    "Content-Type": "application/json", 
+                    "Accept": "application/vnd.github.v3+json" 
+                },
                 body: JSON.stringify({
                     message: "⚔️ Mise à jour du catalogue depuis l'interface d'administration",
                     content: btoa(String.fromCharCode(...new TextEncoder().encode(finalFileContent))),
-                    sha: fileData.sha // Écrase le fichier existant à l'aide de son identifiant SHA unique
+                    sha: fileData.sha
                 })
             });
 
             if (putResponse.ok) {
                 alert("🚀 Succès ! Le catalogue en ligne (catalogue.json) a été mis à jour.");
-                if (ghTokenInput) ghTokenInput.value = ""; // Efface la clé du champ par mesure de sécurité
+                if (ghTokenInput) ghTokenInput.value = ""; 
             } else {
-                alert("❌ Échec de la mise à jour GitHub.");
+                const errorData = await putResponse.json();
+                console.error("Détails de l'erreur GitHub :", errorData);
+                alert(`❌ Échec de la mise à jour GitHub : ${errorData.message}`);
             }
         } catch (error) {
             alert(`💥 Erreur : ${error.message}`);
         }
     });
 }
+
 
 function filterEditorRows() {
     const query = document.getElementById('search-editor').value.toLowerCase().trim();
