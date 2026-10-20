@@ -2,7 +2,7 @@
 // CATALOGUE DES ARTICLES - FORGE DE MORTHAL
 // =========================================================================
 
-const CATALOGUE_INITIAL = [
+[
     {
         "cat": "Matériaux",
         "mat": "minerais",
