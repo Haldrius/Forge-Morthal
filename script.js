@@ -780,7 +780,7 @@ function initCatalogForm() {
                 headers: { "Authorization": `token ${token}`, "Content-Type": "application/json", "Accept": "application/vnd.github.v3+json" },
                 body: JSON.stringify({
                     message: "⚔️ Mise à jour du catalogue depuis l'interface d'administration",
-                    content: btoa(unescape(encodeURIComponent(finalFileContent))),
+                    content: btoa(String.fromCharCode(...new TextEncoder().encode(finalFileContent))),
                     sha: fileData.sha // Écrase le fichier existant à l'aide de son identifiant SHA unique
                 })
             });
