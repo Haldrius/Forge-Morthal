@@ -194,7 +194,7 @@
     {
         "cat": "Matériaux",
         "mat": "ressources",
-        "nom": "Cuir (transformé)",
+        "nom": "Cuir",
         "revente": 7,
         "cout": 2,
         "ing": ""
@@ -204,7 +204,7 @@
         "mat": "ressources",
         "nom": "Bande de cuir",
         "revente": 3,
-        "cout": 0.75,
+        "cout": 0.5,
         "ing": "0.25 Cuir"
     },
     {
@@ -292,7 +292,7 @@
         "mat": "outils",
         "nom": "Clé",
         "revente": 40,
-        "cout": 16.15,
+        "cout": 15.9,
         "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
     },
     {
@@ -316,7 +316,7 @@
         "mat": "fer",
         "nom": "Arc en Fer",
         "revente": 20,
-        "cout": 5.3,
+        "cout": 3.8,
         "ing": "8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
     {
@@ -324,7 +324,7 @@
         "mat": "fer",
         "nom": "Dague en Fer",
         "revente": 20,
-        "cout": 7.35,
+        "cout": 7.1,
         "ing": "1 Lingot de Fer + 1 Bandes de cuir"
     },
     {
@@ -332,7 +332,7 @@
         "mat": "fer",
         "nom": "Espadon en Fer",
         "revente": 65,
-        "cout": 27.9,
+        "cout": 27.4,
         "ing": "4 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -348,7 +348,7 @@
         "mat": "fer",
         "nom": "Hache d'arme en Fer",
         "revente": 65,
-        "cout": 27.9,
+        "cout": 27.4,
         "ing": "4 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -356,7 +356,7 @@
         "mat": "fer",
         "nom": "Hache en Fer",
         "revente": 40,
-        "cout": 14.7,
+        "cout": 14.2,
         "ing": "2 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -364,7 +364,7 @@
         "mat": "fer",
         "nom": "Marteau en Fer",
         "revente": 70,
-        "cout": 28.65,
+        "cout": 27.9,
         "ing": "4 Lingots de Fer + 3 Bandes de Cuir"
     },
     {
@@ -372,7 +372,7 @@
         "mat": "fer",
         "nom": "Masse en Fer",
         "revente": 50,
-        "cout": 21.299999999999997,
+        "cout": 20.799999999999997,
         "ing": "3 Lingots de Fer + 2 Bandes de Cuir"
     },
     {
@@ -380,7 +380,7 @@
         "mat": "fer",
         "nom": "Épée en Fer",
         "revente": 40,
-        "cout": 13.95,
+        "cout": 13.7,
         "ing": "2 Lingots de Fer + 1 Bandes de cuir"
     },
     {
@@ -388,7 +388,7 @@
         "mat": "acier",
         "nom": "Arc en Acier",
         "revente": 65,
-        "cout": 26.9,
+        "cout": 25.4,
         "ing": "2 Lingots d'acier + 8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
     {
@@ -396,7 +396,7 @@
         "mat": "acier",
         "nom": "Dague en Acier",
         "revente": 45,
-        "cout": 18.15,
+        "cout": 17.9,
         "ing": "1 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -404,7 +404,7 @@
         "mat": "acier",
         "nom": "Espadon en Acier",
         "revente": 130,
-        "cout": 58.64999999999999,
+        "cout": 57.89999999999999,
         "ing": "4 Lingot d'Acier + 3 Bandes de Cuir + 2 Lingot de Fer"
     },
     {
@@ -420,7 +420,7 @@
         "mat": "acier",
         "nom": "Hache en Acier",
         "revente": 70,
-        "cout": 29.699999999999996,
+        "cout": 29.199999999999996,
         "ing": "2 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -428,7 +428,7 @@
         "mat": "acier",
         "nom": "Hache de guerre en Acier",
         "revente": 110,
-        "cout": 51.3,
+        "cout": 50.8,
         "ing": "4 Lingot d'Acier + 2 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -436,7 +436,7 @@
         "mat": "acier",
         "nom": "Marteau en Acier",
         "revente": 120,
-        "cout": 52.05,
+        "cout": 51.3,
         "ing": "4 Lingot d'Acier + 3 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -444,7 +444,7 @@
         "mat": "acier",
         "nom": "Masse en Acier",
         "revente": 85,
-        "cout": 39.75,
+        "cout": 39.5,
         "ing": "3 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -452,7 +452,7 @@
         "mat": "acier",
         "nom": "Épée en Acier",
         "revente": 70,
-        "cout": 28.949999999999996,
+        "cout": 28.699999999999996,
         "ing": "2 Lingot d'Acier + 1 Bandes de Cuir + 1 Lingot de Fer"
     },
     {
@@ -460,7 +460,7 @@
         "mat": "commun",
         "nom": "Arc Commun",
         "revente": 80,
-        "cout": 33.15,
+        "cout": 32.9,
         "ing": "3 Lingots acier + 1 Bande de cuir"
     },
     {
@@ -468,7 +468,7 @@
         "mat": "commun",
         "nom": "Dague Commun",
         "revente": 45,
-        "cout": 16.15,
+        "cout": 15.9,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -476,7 +476,7 @@
         "mat": "commun",
         "nom": "Hache d'arme Commun",
         "revente": 70,
-        "cout": 30.099999999999998,
+        "cout": 29.599999999999998,
         "ing": "3 Lingots fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
@@ -484,7 +484,7 @@
         "mat": "commun",
         "nom": "Hache Commun",
         "revente": 45,
-        "cout": 16.9,
+        "cout": 16.4,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
     {
@@ -492,7 +492,7 @@
         "mat": "commun",
         "nom": "Masse Commun",
         "revente": 45,
-        "cout": 16.15,
+        "cout": 15.9,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -500,7 +500,7 @@
         "mat": "commun",
         "nom": "Épée Commun",
         "revente": 45,
-        "cout": 16.15,
+        "cout": 15.9,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
     {
@@ -516,7 +516,7 @@
         "mat": "orichalque",
         "nom": "Dague Orc",
         "revente": "À définir",
-        "cout": 51.75,
+        "cout": 51.5,
         "ing": "1 Lingot fer + 1 Lingot d'orichalque + 1 Bande de cuir"
     },
     {
@@ -524,7 +524,7 @@
         "mat": "orichalque",
         "nom": "Espadon Orc",
         "revente": "À définir",
-        "cout": 193.04999999999998,
+        "cout": 192.29999999999998,
         "ing": "2 Lingots fer + 4 Lingots d'orichalque + 3 Bandes de cuir"
     },
     {
@@ -540,7 +540,7 @@
         "mat": "orichalque",
         "nom": "Hache d'arme Orc",
         "revente": "À définir",
-        "cout": 185.7,
+        "cout": 185.2,
         "ing": "1 Lingot fer + 4 Lingots d'orichalque + 2 Bandes de cuir"
     },
     {
@@ -548,7 +548,7 @@
         "mat": "orichalque",
         "nom": "Hache de guerre Orc",
         "revente": "À définir",
-        "cout": 96.89999999999999,
+        "cout": 96.39999999999999,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 2 Bandes de cuir"
     },
     {
@@ -556,7 +556,7 @@
         "mat": "orichalque",
         "nom": "Marteau Orc",
         "revente": "À définir",
-        "cout": 186.45,
+        "cout": 185.7,
         "ing": "1 Lingot fer + 4 Lingots d'orichalque + 3 Bandes de cuir"
     },
     {
@@ -564,7 +564,7 @@
         "mat": "orichalque",
         "nom": "Masse Orc",
         "revente": "À définir",
-        "cout": 140.54999999999998,
+        "cout": 140.29999999999998,
         "ing": "1 Lingot fer + 3 Lingots d'orichalque + 1 Bande de cuir"
     },
     {
@@ -572,7 +572,7 @@
         "mat": "orichalque",
         "nom": "Épée Orc",
         "revente": "À définir",
-        "cout": 96.14999999999999,
+        "cout": 95.89999999999999,
         "ing": "1 Lingot fer + 2 Lingots d'orichalque + 1 Bande de cuir"
     },
     {
@@ -588,7 +588,7 @@
         "mat": "ébonite",
         "nom": "Dague d'ébonite",
         "revente": "Sur commande",
-        "cout": 40009.15,
+        "cout": 40008.9,
         "ing": "1 Lingot d' Ébonite + 1 Bande de cuir"
     },
     {
@@ -596,7 +596,7 @@
         "mat": "ébonite",
         "nom": "Espadon d'ébonite",
         "revente": "Sur commande",
-        "cout": 200044.25,
+        "cout": 200043.5,
         "ing": "5 Lingots d' Ébonite + 3 Bandes de cuir"
     },
     {
@@ -612,7 +612,7 @@
         "mat": "ébonite",
         "nom": "Hache d'armes d'ébonite",
         "revente": "Sur commande",
-        "cout": 200043.5,
+        "cout": 200043,
         "ing": "5 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
@@ -620,7 +620,7 @@
         "mat": "ébonite",
         "nom": "Hache d'ébonite",
         "revente": "Sur commande",
-        "cout": 80018.3,
+        "cout": 80017.8,
         "ing": "2 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
@@ -628,7 +628,7 @@
         "mat": "ébonite",
         "nom": "Marteau d'ébonite",
         "revente": "Sur commande",
-        "cout": 200044.25,
+        "cout": 200043.5,
         "ing": "5 Lingots d'Ébonite + 3 Bandes de cuir"
     },
     {
@@ -636,7 +636,7 @@
         "mat": "ébonite",
         "nom": "Masse d'ébonite",
         "revente": "Sur commande",
-        "cout": 120025.95000000001,
+        "cout": 120025.70000000001,
         "ing": "3 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
@@ -644,7 +644,7 @@
         "mat": "ébonite",
         "nom": "Épée d'ébonite",
         "revente": "Sur commande",
-        "cout": 80017.55,
+        "cout": 80017.3,
         "ing": "2 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
@@ -652,7 +652,7 @@
         "mat": "ébonite",
         "nom": "Hache d'Armes en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 200043.9,
+        "cout": 200043.4,
         "ing": "5 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -660,7 +660,7 @@
         "mat": "ébonite",
         "nom": "Dague en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 40009.55,
+        "cout": 40009.3,
         "ing": "1 Lingot d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -668,7 +668,7 @@
         "mat": "ébonite",
         "nom": "Espadon en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 200044.65,
+        "cout": 200043.9,
         "ing": "5 Lingots d'Ébonite + 1 Or + 3 Bandes de cuir"
     },
     {
@@ -676,7 +676,7 @@
         "mat": "ébonite",
         "nom": "Masse en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 120026.35,
+        "cout": 120026.1,
         "ing": "3 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -684,7 +684,7 @@
         "mat": "ébonite",
         "nom": "Épée en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 80017.95,
+        "cout": 80017.7,
         "ing": "2 Lingots d'Ébonite + 1 Or + 1 Bande de cuir"
     },
     {
@@ -692,7 +692,7 @@
         "mat": "ébonite",
         "nom": "Hache en Ébonite dorée",
         "revente": "Sur commande",
-        "cout": 80018.7,
+        "cout": 80018.2,
         "ing": "2 Lingots d'Ébonite + 1 Or + 2 Bandes de cuir"
     },
     {
@@ -708,7 +708,7 @@
         "mat": "verre",
         "nom": "Dague de verre",
         "revente": 4500,
-        "cout": 663.75,
+        "cout": 663.5,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
@@ -716,7 +716,7 @@
         "mat": "verre",
         "nom": "Espadon de verre",
         "revente": 9000,
-        "cout": 1328.25,
+        "cout": 1327.5,
         "ing": "2 Pierre de lune + 2 Malachite + 3 Bandes de cuir"
     },
     {
@@ -732,7 +732,7 @@
         "mat": "verre",
         "nom": "Hache a 2 mains de Verre",
         "revente": 9000,
-        "cout": 1327.5,
+        "cout": 1327,
         "ing": "2 Pierre de lune + 2 Malachite + 2 Bandes de cuir"
     },
     {
@@ -740,7 +740,7 @@
         "mat": "verre",
         "nom": "Hache de verre",
         "revente": 4500,
-        "cout": 664.5,
+        "cout": 664,
         "ing": "1 Pierre de lune + 1 Malachite + 2 Bandes de cuir"
     },
     {
@@ -748,7 +748,7 @@
         "mat": "verre",
         "nom": "Marteau de verre",
         "revente": 10000,
-        "cout": 1978.25,
+        "cout": 1977.5,
         "ing": "2 Pierre de lune + 3 Malachite + 3 Bandes de cuir"
     },
     {
@@ -756,7 +756,7 @@
         "mat": "verre",
         "nom": "Masse de verre",
         "revente": 7000,
-        "cout": 1313.75,
+        "cout": 1313.5,
         "ing": "1 Pierre de lune + 2 Malachite + 1 Bande de cuir"
     },
     {
@@ -764,7 +764,7 @@
         "mat": "verre",
         "nom": "Épée de verre",
         "revente": 7500,
-        "cout": 663.75,
+        "cout": 663.5,
         "ing": "1 Pierre de lune + 1 Malachite + 1 Bande de cuir"
     },
     {
@@ -772,7 +772,7 @@
         "mat": "peau",
         "nom": "Casque en Peau",
         "revente": 20,
-        "cout": 6.75,
+        "cout": 4.5,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
@@ -780,7 +780,7 @@
         "mat": "peau",
         "nom": "Armure en Peau",
         "revente": 40,
-        "cout": 14.25,
+        "cout": 9.5,
         "ing": "4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -788,7 +788,7 @@
         "mat": "peau",
         "nom": "Gantelets en Peau",
         "revente": 20,
-        "cout": 4.5,
+        "cout": 3,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
     {
@@ -796,7 +796,7 @@
         "mat": "peau",
         "nom": "Bottes en Peau",
         "revente": 25,
-        "cout": 7.5,
+        "cout": 5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
     {
@@ -804,7 +804,7 @@
         "mat": "peau",
         "nom": "Bouclier en Peau",
         "revente": 40,
-        "cout": 13.5,
+        "cout": 9,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
     {
@@ -812,7 +812,7 @@
         "mat": "peau",
         "nom": "Armure Cloutée",
         "revente": 60,
-        "cout": 20.85,
+        "cout": 16.1,
         "ing": "1 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -820,7 +820,7 @@
         "mat": "peau",
         "nom": "Armure à Écailles",
         "revente": 80,
-        "cout": 34.05,
+        "cout": 29.299999999999997,
         "ing": "3 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -828,7 +828,7 @@
         "mat": "fourrure",
         "nom": "Casque en Fourrure",
         "revente": 20,
-        "cout": 6.75,
+        "cout": 4.5,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
@@ -836,7 +836,7 @@
         "mat": "fourrure",
         "nom": "Armure en Fourrure",
         "revente": 45,
-        "cout": 17.25,
+        "cout": 11.5,
         "ing": "5 Cuir + 3 Bandes de cuir"
     },
     {
@@ -844,7 +844,7 @@
         "mat": "fourrure",
         "nom": "Gantelets en Fourrure",
         "revente": 20,
-        "cout": 4.5,
+        "cout": 3,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
     {
@@ -852,7 +852,7 @@
         "mat": "fourrure",
         "nom": "Bottes en Fourrure",
         "revente": 25,
-        "cout": 7.5,
+        "cout": 5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
     {
@@ -860,7 +860,7 @@
         "mat": "fourrure",
         "nom": "Bouclier en Fourrure",
         "revente": 40,
-        "cout": 13.5,
+        "cout": 9,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
     {
@@ -868,7 +868,7 @@
         "mat": "fourrure",
         "nom": "Col en Fourrure",
         "revente": 20,
-        "cout": 6.75,
+        "cout": 4.5,
         "ing": "2 Cuir + 1 Bandes de cuir"
     },
     {
@@ -876,7 +876,7 @@
         "mat": "cuir",
         "nom": "Casque en Cuir",
         "revente": 30,
-        "cout": 6.75,
+        "cout": 4.5,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
     {
@@ -884,7 +884,7 @@
         "mat": "cuir",
         "nom": "Armure en Cuir",
         "revente": 50,
-        "cout": 14.25,
+        "cout": 9.5,
         "ing": "4 Cuir + 3 Bandes de cuir"
     },
     {
@@ -892,7 +892,7 @@
         "mat": "cuir",
         "nom": "Gantelets en Cuir",
         "revente": 35,
-        "cout": 4.5,
+        "cout": 3,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
     {
@@ -900,7 +900,7 @@
         "mat": "cuir",
         "nom": "Bottes en Cuir",
         "revente": 35,
-        "cout": 7.5,
+        "cout": 5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
     {
@@ -908,7 +908,7 @@
         "mat": "cuir",
         "nom": "Bouclier en Cuir",
         "revente": 50,
-        "cout": 13.5,
+        "cout": 9,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
     {
@@ -916,7 +916,7 @@
         "mat": "cuir",
         "nom": "Armure en Cuir Bouilli",
         "revente": 100,
-        "cout": 17.65,
+        "cout": 11.9,
         "ing": "1 Armure en cuir + 4 Bandes de cuir + 1 Fer"
     },
     {
@@ -924,7 +924,7 @@
         "mat": "commun",
         "nom": "Armure en Maille Commune",
         "revente": 90,
-        "cout": 35.25,
+        "cout": 34.5,
         "ing": "5 Lingots de fer + 3 Bandes de cuir"
     },
     {
@@ -932,7 +932,7 @@
         "mat": "commun",
         "nom": "Armure Commune",
         "revente": 40,
-        "cout": 14.25,
+        "cout": 9.5,
         "ing": "3 Bandes de cuir + 4 Cuirs"
     },
     {
@@ -940,7 +940,7 @@
         "mat": "commun",
         "nom": "Gants Communs",
         "revente": 25,
-        "cout": 4.5,
+        "cout": 3,
         "ing": "2 Bandes de cuir + 1 Cuir"
     },
     {
@@ -948,7 +948,7 @@
         "mat": "commun",
         "nom": "Bottes Communes",
         "revente": 25,
-        "cout": 7.5,
+        "cout": 5,
         "ing": "2 Bandes de cuir + 2 Cuir"
     },
     {
@@ -956,7 +956,7 @@
         "mat": "fer",
         "nom": "Casque en Fer",
         "revente": 50,
-        "cout": 21.299999999999997,
+        "cout": 20.799999999999997,
         "ing": "3 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -964,7 +964,7 @@
         "mat": "fer",
         "nom": "Armure en Fer",
         "revente": 90,
-        "cout": 35.25,
+        "cout": 34.5,
         "ing": "5 Lingots fer + 3 Bandes de cuir"
     },
     {
@@ -972,7 +972,7 @@
         "mat": "fer",
         "nom": "Armure en Fer à Bandes",
         "revente": 100,
-        "cout": 44.05,
+        "cout": 43.3,
         "ing": "5 Lingots fer +  1 Lingot de Corindon + 3 Bandes de cuir"
     },
     {
@@ -980,7 +980,7 @@
         "mat": "fer",
         "nom": "Gants en Fer",
         "revente": 40,
-        "cout": 14.7,
+        "cout": 14.2,
         "ing": "2 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -988,7 +988,7 @@
         "mat": "fer",
         "nom": "Bottes en Fer",
         "revente": 50,
-        "cout": 21.299999999999997,
+        "cout": 20.799999999999997,
         "ing": "3 Lingots fer + 2 Bandes de cuir"
     },
     {
@@ -996,7 +996,7 @@
         "mat": "fer",
         "nom": "Bouclier en Fer",
         "revente": 60,
-        "cout": 27.15,
+        "cout": 26.9,
         "ing": "4 Lingots fer + 1 Bande de cuir"
     },
     {
@@ -1004,7 +1004,7 @@
         "mat": "acier",
         "nom": "Casque en Acier",
         "revente": 70,
-        "cout": 29.699999999999996,
+        "cout": 29.199999999999996,
         "ing": "1 Lingot fer + 2 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1012,7 +1012,7 @@
         "mat": "acier",
         "nom": "Armure en Acier",
         "revente": 120,
-        "cout": 52.05,
+        "cout": 51.3,
         "ing": "1 Lingot fer + 4 Lingots acier + 3 Bandes de cuir"
     },
     {
@@ -1020,7 +1020,7 @@
         "mat": "acier",
         "nom": "Gants en Acier",
         "revente": 70,
-        "cout": 29.699999999999996,
+        "cout": 29.199999999999996,
         "ing": "1 Lingot fer + 2 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1028,7 +1028,7 @@
         "mat": "acier",
         "nom": "Bottes en Acier",
         "revente": 80,
-        "cout": 40.5,
+        "cout": 40,
         "ing": "1 Lingot fer + 3 Lingots acier + 2 Bandes de cuir"
     },
     {
@@ -1036,7 +1036,7 @@
         "mat": "acier",
         "nom": "Bouclier en Acier",
         "revente": 100,
-        "cout": 39.75,
+        "cout": 39.5,
         "ing": "1 Lingots fer + 3 Lingots d'acier + 1 Bande de cuir"
     },
     {
@@ -1044,7 +1044,7 @@
         "mat": "maille",
         "nom": "Veste en Maille",
         "revente": 60,
-        "cout": 19.2,
+        "cout": 18.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
@@ -1052,7 +1052,7 @@
         "mat": "maille",
         "nom": "Surcot en Maille",
         "revente": 60,
-        "cout": 19.2,
+        "cout": 18.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
@@ -1060,7 +1060,7 @@
         "mat": "maille",
         "nom": "Tunique & Maille",
         "revente": 60,
-        "cout": 19.2,
+        "cout": 18.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
@@ -1068,7 +1068,7 @@
         "mat": "maille",
         "nom": "Armure en Cuir & Maille",
         "revente": 90,
-        "cout": 30.45,
+        "cout": 24.7,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
     {
@@ -1076,7 +1076,7 @@
         "mat": "maille",
         "nom": "Veste en Maille Huilée",
         "revente": 60,
-        "cout": 19.2,
+        "cout": 18.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
@@ -1084,7 +1084,7 @@
         "mat": "maille",
         "nom": "Haubert en Maille Huilée",
         "revente": 60,
-        "cout": 19.2,
+        "cout": 18.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
@@ -1092,7 +1092,7 @@
         "mat": "maille",
         "nom": "Armure en Cuir & Maille Huilée",
         "revente": 90,
-        "cout": 30.45,
+        "cout": 24.7,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
     {
@@ -1100,7 +1100,7 @@
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": 15000,
-        "cout": 1316.75,
+        "cout": 1315.5,
         "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Malachite"
     },
     {
@@ -1108,7 +1108,7 @@
         "mat": "verre",
         "nom": "Armure en Verre",
         "revente": 25000,
-        "cout": 2631.25,
+        "cout": 2629.5,
         "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Malachite"
     },
     {
@@ -1116,7 +1116,7 @@
         "mat": "verre",
         "nom": "Gants en Verre",
         "revente": 15000,
-        "cout": 667.5,
+        "cout": 666,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Malachite"
     },
     {
@@ -1124,7 +1124,7 @@
         "mat": "verre",
         "nom": "Bottes en Verre",
         "revente": 15000,
-        "cout": 1317.5,
+        "cout": 1316,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Malachite"
     },
     {
@@ -1132,7 +1132,7 @@
         "mat": "verre",
         "nom": "Bouclier en Verre",
         "revente": 25000,
-        "cout": 2614.5,
+        "cout": 2614,
         "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Malachite"
     },
     {
@@ -1140,7 +1140,7 @@
         "mat": "ébonite",
         "nom": "Casque en Ébonite",
         "revente": "Sur commande",
-        "cout": 60001.5,
+        "cout": 60001,
         "ing": "3 Ébonite + 2 Bandes de cuir"
     },
     {
@@ -1148,7 +1148,7 @@
         "mat": "ébonite",
         "nom": "Armure en Ébonite",
         "revente": "Sur commande",
-        "cout": 100002.25,
+        "cout": 100001.5,
         "ing": "5 Ébonite + 3 Bandes de cuir"
     },
     {
@@ -1156,7 +1156,7 @@
         "mat": "ébonite",
         "nom": "Gantelets en Ébonite",
         "revente": "Sur commande",
-        "cout": 40001.5,
+        "cout": 40001,
         "ing": "2 Ébonite + 2 Bandes de cuir"
     },
     {
@@ -1164,7 +1164,7 @@
         "mat": "ébonite",
         "nom": "Bottes en Ébonite",
         "revente": "Sur commande",
-        "cout": 60001.5,
+        "cout": 60001,
         "ing": "3 Ébonite + 2 Bandes de cuir"
     },
     {
@@ -1172,7 +1172,7 @@
         "mat": "ébonite",
         "nom": "Bouclier en Ébonite",
         "revente": "Sur commande",
-        "cout": 80000.75,
+        "cout": 80000.5,
         "ing": "4 Ébonite + 1 Bande de cuir"
     },
     {
@@ -1244,7 +1244,7 @@
         "mat": "tissu",
         "nom": "Cape cuir",
         "revente": 20,
-        "cout": 6,
+        "cout": 4,
         "ing": "2 Cuirs"
     },
     {
