@@ -666,3 +666,37 @@ input, textarea {
 input:checked + .slider:before {
     transform: translateX(20px); /* Ajusté de 26px à 20px pour le nouvel entraxe */
 }
+/* Conteneur de l'image pour gérer la superposition */
+/* Conteneur fluide de l'image (Pas de hauteur fixe bloquante) */
+.armor-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Vos images reprennent leur comportement d'origine (Entières et respectées) */
+.armor-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Le bloc Prochainement reste caché tant qu'il n'y a pas d'erreur */
+.armor-image-wrapper .coming-soon-placeholder {
+    display: none;
+}
+
+/* Dès que l'image plante, le conteneur prend la classe 'has-error' et affiche un bloc gris propre */
+.armor-image-wrapper.has-error .coming-soon-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 290px; /* Hauteur par défaut de la carte grise uniquement pour le 'Prochainement' */
+    background-color: #242424;
+    color: #888;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px dashed #3a3a3a;
+    border-radius: 4px;
+}

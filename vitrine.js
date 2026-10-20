@@ -382,16 +382,30 @@ function updateArmorPreviewGlobal() {
             });
         }
 
-        // 3. Génération de la galerie avec le chemin dynamique vers vos sous-dossiers
+        // 3. Génération de la galerie avec gestion propre des erreurs
         let htmlGenere = '';
         BANNIERES_ARMURES[currentSubMaterial].forEach(set => {
             htmlGenere += `
                 <div class="armor-set-card">
-                    <img src="images/${currentGender}/${currentSubMaterial}/${set.fichier}" alt="${set.titre}">
+                    <div class="armor-image-wrapper">
+                        <img src="images/${currentGender}/${currentSubMaterial}/${set.fichier}" 
+                             alt="${set.titre}" 
+                             onerror="this.style.display='none'; this.closest('.armor-image-wrapper').classList.add('has-error');">
+                        <div class="coming-soon-placeholder">
+                            <span>⏳ Prochainement...</span>
+                        </div>
+                    </div>
                     <div class="armor-set-title">${set.titre}</div>
                 </div>
             `;
         });
+        
+        previewsGrid.innerHTML = htmlGenere;
+        previewContainer.style.display = 'block';
+
+        
+        previewsGrid.innerHTML = htmlGenere;
+        previewContainer.style.display = 'block';
         
         previewsGrid.innerHTML = htmlGenere;
         previewContainer.style.display = 'block';
