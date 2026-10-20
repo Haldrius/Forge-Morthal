@@ -1097,6 +1097,174 @@
     },
     {
         "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Armure Elfique",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Armure Dorée",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer +  1 Lingot de vif-argent + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Bottes Elfique",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Casque Elfique",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Gantelets Elfique",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "altmer",
+        "nom": "Bouclier Elfique",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de Pierre de Lune + 1 Lingot de fer + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Armure Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer +  1 Cuir + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Bottes Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Capuche Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Masque Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "1 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Cape Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Cape Bosmer à Épaule",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Gants Bosmer",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Armure Bosmer en Plate",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Bottes Bosmer en Plate",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Casque Bosmer en Plate",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Gants Bosmer en Plate",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Armure Bosmer de la Chasse Sauvage",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "4 Lingots de pierre de Lune + 4 Lingots de malachite +  1 Cuir + 3 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Bottes Bosmer de la Chasse Sauvage",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 2 Lingots de malachite + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Casque Bosmer de la Chasse Sauvage",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "2 Lingots de Pierre de Lune + 1 Lingot de malachite + 1 Cuir + 1 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
+        "mat": "bosmer",
+        "nom": "Gants Bosmer de la Chasse Sauvage",
+        "revente": 90,
+        "cout": 24.7,
+        "ing": "1 Lingots de Pierre de Lune + 2 Lingots de malachite + 1 Cuir + 2 Bandes de cuir"
+    },
+    {
+        "cat": "Armure",
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": 15000,
