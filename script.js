@@ -18,7 +18,7 @@ const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "li
 // Ordre de tri prioritaire unifié pour les sous-catégories (Armes & Armures)
 const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'maille','peau', 'fourrure','orichalque', 'verre', 'ébonite'];
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // 1. Initialisation des composants graphiques de base
     initTabs();
     initFilters();
@@ -29,12 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', applyAllFilters);
     document.getElementById('search-editor').addEventListener('input', filterEditorRows);
 
-    // 3. CHARGEMENT DYNAMIQUE DES DONNÉES
-    data = CATALOGUE_INITIAL;
+    // 3. CHARGEMENT DYNAMIQUE DES DONNÉES EN LIGNE
+    const owner = "Haldrius";
+    const repo = "Forge-Morthal";
+    const path = "catalogue.json";
     
-    // Synchronisation localStorage
+    try {
+        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+            headers: { "Accept": "application/vnd.github.v3.raw" }
+        });
+        if (response.ok) {
+            data = await response.json();
+        } else {
+            throw new Error("Erreur de réponse API");
+        }
+    } catch (e) {
+        console.warn("Échec GitHub, chargement de secours via le stockage local...", e);
+        data = JSON.parse(localStorage.getItem('forge_raw_catalog')) || [];
+    }
+    
     localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
-
     // 4. CONFIGURATION DE L'AFFICHAGE PAR DÉFAUT (Matériaux > Minerais)
     const btnToutAfficher = document.querySelector('#main-filter-row .filter-btn[data-cat="tous"]');
     if (btnToutAfficher) btnToutAfficher.classList.remove('active');
@@ -706,7 +720,7 @@ function initCatalogForm() {
         });
     }
 
-    catalogForm.addEventListener('submit', async (e) => {
+        catalogForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const rows = document.querySelectorAll('#editor-table-body tr');
         const updatedData = [];
@@ -740,17 +754,16 @@ function initCatalogForm() {
 
         const ghTokenInput = document.getElementById('gh-token');
         const token = ghTokenInput ? ghTokenInput.value.trim() : '';
-        if (token) { localStorage.setItem('forge_gh_token', token); }
 
         if (!token) {
-            alert("⚔️ Catalogue mis à jour localement sur le navigateur !");
+            alert("⚔️ Catalogue mis à jour localement sur le navigateur ! Saisissez votre clé GitHub pour synchroniser en ligne.");
             return;
         }
 
         const owner = "Haldrius";
         const repo = "Forge-Morthal";
-        const path = "catalogue.js";
-        const finalFileContent = "// =========================================================================\n// CATALOGUE DES ARTICLES - FORGE DE MORTHAL\n// =========================================================================\n\nconst CATALOGUE_INITIAL = " + JSON.stringify(data, null, 4) + ";\n";
+        const path = "catalogue.json"; // Cible le format JSON épuré
+        const finalFileContent = JSON.stringify(data, null, 4);
 
         try {
             const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
@@ -759,7 +772,7 @@ function initCatalogForm() {
                 headers: { "Authorization": `token ${token}`, "Accept": "application/vnd.github.v3+json" }
             });
 
-            if (!getResponse.ok) throw new Error("Impossible d'accéder au fichier sur GitHub.");
+            if (!getResponse.ok) throw new Error("Impossible d'accéder au fichier sur GitHub. Vérifiez vos droits d'accès.");
             const fileData = await getResponse.json();
 
             const putResponse = await fetch(apiUrl, {
@@ -768,12 +781,16 @@ function initCatalogForm() {
                 body: JSON.stringify({
                     message: "⚔️ Mise à jour du catalogue depuis l'interface d'administration",
                     content: btoa(unescape(encodeURIComponent(finalFileContent))),
-                    sha: fileData.sha
+                    sha: fileData.sha // Écrase le fichier existant à l'aide de son identifiant SHA unique
                 })
             });
 
-            if (putResponse.ok) alert("🚀 Succès ! Synchronisation en ligne effectuée.");
-            else alert("❌ Échec de la mise à jour GitHub.");
+            if (putResponse.ok) {
+                alert("🚀 Succès ! Le catalogue en ligne (catalogue.json) a été mis à jour.");
+                if (ghTokenInput) ghTokenInput.value = ""; // Efface la clé du champ par mesure de sécurité
+            } else {
+                alert("❌ Échec de la mise à jour GitHub.");
+            }
         } catch (error) {
             alert(`💥 Erreur : ${error.message}`);
         }

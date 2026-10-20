@@ -1,7 +1,7 @@
 // Configuration de l'état initial intelligent (Vitrine)
 let currentMainCategory = 'Armure'; // Active Matériaux de base
 let currentSubMaterial = 'acier';   // Active Minerais de base
-const data = [];
+let data = [];
 
 // Ordres de tri thématiques de la forge
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
@@ -99,7 +99,7 @@ async function chargerCatalogueDepuisGithub() {
     // Remplacez ces variables par vos informations réelles
     const owner = "Haldrius";
     const repo = "Forge-Morthal";
-    const path = "catalogue.js.json"; // Conseil : Utilisez un format .json pur sur GitHub
+    const path = "catalogue.json"; // Conseil : Utilisez un format .json pur sur GitHub
     
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
     
@@ -120,7 +120,7 @@ async function chargerCatalogueDepuisGithub() {
         // Si votre fichier sur GitHub est un .json valide (ex: [ {"cat": "Matériaux", ...}, ... ])
         data = await response.json();
         
-        console.log("Catalogue mis à jour avec succès depuis GitHub !", data);
+        console.log("Catalogue mis à jour avec succès depuis GitHub !");
 
     } catch (erreur) {
         console.error("Impossible de récupérer le catalogue distant, chargement du catalogue de secours...", erreur);
