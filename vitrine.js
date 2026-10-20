@@ -9,7 +9,7 @@ const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'te
 const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
-const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
+const materialOrder = ['acier', 'fer', 'commun', 'cuir','maille' ,'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
 
 const BANNIERES_ARMURES = {
     acier: [
@@ -53,6 +53,15 @@ const BANNIERES_ARMURES = {
         { fichier: "Cuir-Armure Légère.jpg", titre: "Cuir Léger" },
         { fichier: "Cuir-Armure Nordique.jpg", titre: "Cuir Nordique" },
         { fichier: "Cuir-Armure Robuste.jpg", titre: "Cuir Robuste" }
+    ],
+    maille:[
+        { fichier: "Impérial-Surcot en Maille.jpg", titre: "Surcot en Maille" },
+        { fichier: "Impérial-Haubert en Maille Huilée.jpg", titre: "Haubert en Maille Huilée" },
+        { fichier: "Impérial-Cuir & Maille.jpg", titre: "Armure en Cuir & Maille" },
+        { fichier: "Impérial-Cuir & Maille Huilée.jpg", titre: "Armure en Cuir & Maille Huilée" },
+        { fichier: "Impérial-Veste en Maille.jpg", titre: "Veste en Maille" },
+        { fichier: "Impérial-Veste en Maille Huilée.jpg", titre: "Veste en Maille Huilée" },
+        { fichier: "Impérial-Tunique en Maille.jpg", titre: "Tunique & Maille" }
     ],
     peau: [
         { fichier: "Peau-Armure de Rôdeur.jpg", titre: "Rôdeur I" },
@@ -188,6 +197,7 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="fer">Fer</button>
             <button class="filter-btn" data-sub="commun">Commun</button>
             <button class="filter-btn" data-sub="cuir">Cuir</button>
+            <button class="filter-btn" data-sub="maille">Mailles</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
