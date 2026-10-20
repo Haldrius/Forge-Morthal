@@ -692,8 +692,9 @@ function renderCatalogEditor() {
             </td>
             <td class="cell-cout">
                 <label class="mobile-label">Coût (sep.) :</label>
-                <input type="number" step="any" class="${inputClass}" data-index="${index}" value="${Number(parseFloat(item.cout || 0).toFixed(2))}" ${readonlyAttr}>
+                <input type="number" step="0.01" class="${inputClass}" data-index="${index}" value="${parseFloat(item.cout || 0)}" ${readonlyAttr}>
             </td>
+
             <td class="cell-ing">
                 <label class="mobile-label">Recette / Ingrédients :</label>
                 <input type="text" class="edit-ing" data-index="${index}" value="${escapedIng}" placeholder="Ex: 1 Lingot de Fer...">
@@ -836,17 +837,23 @@ function calculerCoutRecette(ingText) {
     let totalCout = 0;
     const composants = ingText.split(/[++]| et /);
     
+    console.group(`%c🛠️ ANALYSE RECETTE : "${ingText}"`, "color: #1abc9c; font-weight: bold;");
+
     composants.forEach(comp => {
         let cleanComp = comp.trim();
         if (cleanComp === "") return;
+        
         let qte = 1;
         let nomComposant = cleanComp;
-        const matchQty = cleanComp.match(/^(\d+)\s*(?:x|X|[\s-])*\s*(.+)/);
+        
+        // NOUVELLE REGEX : Capture les entiers OU les décimaux (ex: 1, 14, 0.25, 0,25)
+        const matchQty = cleanComp.match(/^(\d+(?:[.,]\d+)?)\s*(?:x|X|[\s-])*\s*(.+)/);
         
         if (matchQty) {
-            qte = parseInt(matchQty[1]) || 1;
+            // On remplace la virgule éventuelle par un point pour que JavaScript comprenne le décimal
+            qte = parseFloat(matchQty[1].replace(',', '.')) || 1;
             nomComposant = matchQty[2].trim();
-        }
+        } 
         
         const normaliserTexte = (texte) => {
             if (!texte) return "";
@@ -859,16 +866,24 @@ function calculerCoutRecette(ingText) {
         };
 
         const nomRechercheNormalise = normaliserTexte(nomComposant);
+        
+        // Recherche de l'ingrédient dans la base de données globale
         let itemTrouve = data.find(item => normaliserTexte(item.nom) === nomRechercheNormalise);
         if (!itemTrouve) itemTrouve = data.find(item => normaliserTexte(item.nom).includes(nomRechercheNormalise));
         if (!itemTrouve) itemTrouve = data.find(item => nomRechercheNormalise.includes(normaliserTexte(item.nom)));
         
         if (itemTrouve) {
-            totalCout += qte * (itemTrouve.ing && itemTrouve.ing.trim() !== "" ? calculerCoutRecette(itemTrouve.ing) : (parseFloat(itemTrouve.cout) || 0));
+            // Si l'ingrédient trouvé a lui-même une sous-recette, on la calcule récursivement, sinon on prend son coût fixe
+            let coutUnitaire = (itemTrouve.ing && itemTrouve.ing.trim() !== "") ? calculerCoutRecette(itemTrouve.ing) : (parseFloat(itemTrouve.cout) || 0);
+            let sousTotal = qte * coutUnitaire;
+            totalCout += sousTotal;
+            
         }
     });
+
     return totalCout;
 }
+
 
 function addLiveCostRecalculation() {
     const rows = document.querySelectorAll('.editor-row');
