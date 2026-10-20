@@ -663,6 +663,7 @@ function renderCatalogEditor() {
     data.forEach((item, index) => {
         const tr = document.createElement('tr');
         tr.className = "editor-row";
+        tr.setAttribute('data-original-name', item.nom); // <- AJOUT COMPORTEMENT UNIQUE
         
         const escapedName = item.nom.replace(/"/g, '&quot;');
         const escapedIng = (item.ing || '').replace(/"/g, '&quot;');
@@ -722,36 +723,44 @@ function initCatalogForm() {
     }
 
     catalogForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const rows = document.querySelectorAll('#editor-table-body tr');
-        const updatedData = [];
+    e.preventDefault();
+    const rows = document.querySelectorAll('#editor-table-body tr');
+    const updatedData = [];
 
-        rows.forEach((row, index) => {
-            const nomInput = row.querySelector('.edit-nom');
-            const reventeInput = row.querySelector('.edit-revente');
-            const coutInput = row.querySelector('.edit-cout');
-            const ingInput = row.querySelector('.edit-ing');
-            const originalItem = data[index];
+    rows.forEach((row) => {
+        const nomInput = row.querySelector('.edit-nom');
+        const reventeInput = row.querySelector('.edit-revente');
+        const coutInput = row.querySelector('.edit-cout');
+        const ingInput = row.querySelector('.edit-ing');
+        
+        // On récupère le nom d'origine stocké sur la ligne pour retrouver le bon item dans data
+        const originalName = row.getAttribute('data-original-name');
+        const originalItem = data.find(item => item.nom === originalName);
 
-            let reventeValue = reventeInput.value.trim();
-            if (reventeValue.toLowerCase() !== 'à définir' && reventeValue !== '—' && reventeValue !== '') {
-                const parsed = parseFloat(reventeValue);
-                if (!isNaN(parsed)) reventeValue = parsed;
-            }
+        if (!originalItem) return; // Sécurité si l'item n'est pas trouvé
 
-            updatedData.push({
-                cat: originalItem.cat,
-                mat: originalItem.mat,
-                nom: nomInput.value.trim(),
-                revente: reventeValue,
-                cout: parseFloat(coutInput.value) || 0,
-                ing: ingInput.value.trim()
-            });
+        let reventeValue = reventeInput.value.trim();
+        if (reventeValue.toLowerCase() !== 'à définir' && reventeValue !== '—' && reventeValue !== '') {
+            const parsed = parseFloat(reventeValue);
+            if (!isNaN(parsed)) reventeValue = parsed;
+        }
+
+        updatedData.push({
+            cat: originalItem.cat,
+            mat: originalItem.mat,
+            nom: nomInput.value.trim(),
+            revente: reventeValue,
+            cout: parseFloat(coutInput.value) || 0,
+            ing: ingInput.value.trim()
         });
+    });
 
-        data = updatedData;
-        localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
-        applyAllFilters();
+    data = updatedData;
+    localStorage.setItem('forge_raw_catalog', JSON.stringify(data));
+    applyAllFilters();
+
+    // ... (Laissez le reste du code GitHub inchangé en dessous)
+
 
         const ghTokenInput = document.getElementById('gh-token');
         const token = ghTokenInput ? ghTokenInput.value.trim() : '';
