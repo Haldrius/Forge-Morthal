@@ -14,7 +14,16 @@ const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'te
 const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
-
+// Ordre de tri spécifique pour la famille d'équipements Bosmer
+// Définition stricte et ordonnée (1=Premier affiché, 5=Dernier affiché tout en bas)
+const bosmerPriorities = {
+    'bosmer de la chasse sauvage': 3,
+    'bosmer en plate': 2,
+    'capuche bosmer': 1,
+    'masque bosmer': 4,
+    'cape bosmer': 5,
+    'bosmer': 1 // Placé en dernier pour ne pas intercepter les chaînes plus précises au-dessus
+};
 // Ordre de tri prioritaire unifié pour les sous-catégories (Armes & Armures)
 const materialOrder = ['acier', 'fer', 'commun', 'cuir', 'maille', 'peau', 'fourrure', 'orichalque', 'altmer', 'bosmer', 'verre', 'ébonite'];
 
@@ -168,8 +177,8 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="maille">Maille</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
-            <button class="filter-btn" data-sub="orichalque">Altmer</button>
-            <button class="filter-btn" data-sub="orichalque">Bosmer</button>
+            <button class="filter-btn" data-sub="altmer">Altmer</button>
+            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
@@ -240,21 +249,55 @@ function applyAllFilters() {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
+        // ─── REGLE SPECIALE : FAMILLE BOSMER ───
+        const isBosmerA = nameA.includes('bosmer') || nameA.includes('capuche') || nameA.includes('masque') || nameA.includes('cape');
+        const isBosmerB = nameB.includes('bosmer') || nameB.includes('capuche') || nameB.includes('masque') || nameB.includes('cape');
+
+        if (isBosmerA && isBosmerB) {
+            let prioA = 99;
+            for (const [key, val] of Object.entries(bosmerPriorities)) {
+                if (nameA.includes(key)) { prioA = val; break; }
+            }
+            let prioB = 99;
+            for (const [key, val] of Object.entries(bosmerPriorities)) {
+                if (nameB.includes(key)) { prioB = val; break; }
+            }
+
+            if (prioA !== prioB) {
+                return prioA - prioB;
+            }
+
+            // Si c'est le même groupe, on trie par type de pièce d'armure
+            let checkNameA = nameA.includes('capuche bosmer') ? 'casque' : nameA;
+            let checkNameB = nameB.includes('capuche bosmer') ? 'casque' : nameB;
+
+            let indexPieceA = armorOrder.length, indexPieceB = armorOrder.length;
+            for (let k = 0; k < armorOrder.length; k++) { if (checkNameA.includes(armorOrder[k])) { indexPieceA = k; break; } }
+            for (let l = 0; l < armorOrder.length; l++) { if (checkNameB.includes(armorOrder[l])) { indexPieceB = l; break; } }
+            
+            return indexPieceA - indexPieceB || nameA.localeCompare(nameB);
+        }
+
+        // Si l'un des deux seulement est un équipement Bosmer, on force son placement
+        if (isBosmerA !== isBosmerB) {
+            // Si on compare un objet Bosmer avec un autre matériau (ex: Fer, Acier)
+            // On conserve la logique de placement global par rapport au reste du catalogue
+            let indexMatA = materialOrder.indexOf(matA);
+            let indexMatB = materialOrder.indexOf(matB);
+            if (indexMatA === -1) indexMatA = materialOrder.length + 100;
+            if (indexMatB === -1) indexMatB = materialOrder.length + 100;
+            if (indexMatA !== indexMatB) return indexMatA - indexMatB;
+        }
         const isEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
         if (isEquipement(a) && isEquipement(b)) {
-            if (a.cat !== b.cat) {
-                return a.cat.localeCompare(b.cat);
-            }
+            if (a.cat !== b.cat) return a.cat.localeCompare(b.cat);
 
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
-
             if (indexMatA === -1) indexMatA = materialOrder.length + 100;
             if (indexMatB === -1) indexMatB = materialOrder.length + 100;
 
-            if (indexMatA !== indexMatB) {
-                return indexMatA - indexMatB;
-            }
+            if (indexMatA !== indexMatB) return indexMatA - indexMatB;
 
             if (a.cat === 'Arme' && b.cat === 'Arme') {
                 let indexTypeA = weaponOrder.length, indexTypeB = weaponOrder.length;
@@ -272,21 +315,13 @@ function applyAllFilters() {
 
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
             if (a.mat === 'minerais' && b.mat === 'minerais') {
-                let indexA = oreOrder.indexOf(nameA);
-                let indexB = oreOrder.indexOf(nameB);
-                if (indexA === -1) indexA = oreOrder.length + 1;
-                if (indexB === -1) indexB = oreOrder.length + 1;
+                let indexA = oreOrder.indexOf(nameA); let indexB = oreOrder.indexOf(nameB);
                 return indexA - indexB;
             }
-            
             if (a.mat === 'lingot' && b.mat === 'lingot') {
-                let indexA = ingotOrder.indexOf(nameA);
-                let indexB = ingotOrder.indexOf(nameB);
-                if (indexA === -1) indexA = ingotOrder.length + 1;
-                if (indexB === -1) indexB = ingotOrder.length + 1;
+                let indexA = ingotOrder.indexOf(nameA); let indexB = ingotOrder.indexOf(nameB);
                 return indexA - indexB;
             }
-
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
             for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
@@ -295,6 +330,7 @@ function applyAllFilters() {
 
         return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
     });
+
 
     displayItems(filtered);
 }
@@ -665,16 +701,19 @@ function renderCatalogEditor() {
     data.forEach((item, index) => {
         const tr = document.createElement('tr');
         tr.className = "editor-row";
-        tr.setAttribute('data-original-name', item.nom); // <- AJOUT COMPORTEMENT UNIQUE
+        tr.setAttribute('data-original-name', item.nom);
         
         const escapedName = item.nom.replace(/"/g, '&quot;');
         const escapedIng = (item.ing || '').replace(/"/g, '&quot;');
         
-        const aUneRecette = item.ing && item.ing.trim() !== "";
-        if (aUneRecette) {
+        if (item.ing && item.ing.trim() !== "") {
             item.cout = calculerCoutRecette(item.ing);
         }
 
+        // --- CORRECTIF ICI : Force l'affichage initial propre à 2 décimales max ---
+        const coutNettoye = item.cout ? Number(parseFloat(item.cout).toFixed(2)) : 0;
+
+        const aUneRecette = item.ing && item.ing.trim() !== "";
         const inputClass = aUneRecette ? 'edit-cout disabled-cost-input' : 'edit-cout';
         const readonlyAttr = aUneRecette ? 'readonly' : '';
 
@@ -695,7 +734,7 @@ function renderCatalogEditor() {
             </td>
             <td class="cell-cout">
                 <label class="mobile-label">Coût (sep.) :</label>
-                <input type="number" step="0.01" class="${inputClass}" data-index="${index}" value="${parseFloat(item.cout || 0)}" ${readonlyAttr}>
+                <input type="number" step="0.01" class="${inputClass}" data-index="${index}" value="${coutNettoye}" ${readonlyAttr}>
             </td>
 
             <td class="cell-ing">
@@ -910,7 +949,11 @@ function addLiveCostRecalculation() {
                 } else {
                     coutInput.readOnly = true;
                     coutInput.classList.add('disabled-cost-input');
-                    coutInput.value = Number(calculerCoutRecette(txt).toFixed(2)); 
+                    
+                    // On calcule le coût en direct
+                    const coutBrut = calculerCoutRecette(txt);
+                    // On force l'arrondi propre à 2 décimales max en retirant les zéros superflus
+                    coutInput.value = Number(parseFloat(coutBrut).toFixed(2)); 
                 }
             });
         }
