@@ -1047,56 +1047,56 @@ const CATALOGUE_INITIAL = [
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 60,
+        "cout": 24.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Surcot en Maille",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 60,
+        "cout": 24.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Tunique & Maille",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 60,
+        "cout": 24.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 90,
+        "cout": 39.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille Huilée",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 60,
+        "cout": 24.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Haubert en Maille Huilée",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 60,
+        "cout": 24.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille Huilée",
-        "revente": 1,
-        "cout": 55.8,
+        "revente": 90,
+        "cout": 39.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
     {
