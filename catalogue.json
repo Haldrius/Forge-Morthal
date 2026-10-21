@@ -577,6 +577,22 @@
     },
     {
         "cat": "Arme",
+        "mat": "bosmer",
+        "nom": "Arc Bosmer",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent"
+    },
+    {
+        "cat": "Arme",
+        "mat": "bosmer",
+        "nom": "Lame Bosmer",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
         "mat": "orichalque",
         "nom": "Arc Orc",
         "revente": "À définir",
