@@ -1450,7 +1450,7 @@
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Cape Smilodon Marron",
+        "nom": "Cape Smilodon",
         "revente": 80,
         "cout": 18.2,
         "ing": "1 Peau de Smilodon + 1 Lingot d'or"
@@ -1458,7 +1458,7 @@
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Cape Smilodon Gris",
+        "nom": "Cape Smilodon Blanc",
         "revente": 100,
         "cout": 18.2,
         "ing": "1 Peau de Smilodon Blanc + 1 Lingot d'or"
@@ -1466,7 +1466,7 @@
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Cape Smilodon Gris 2",
+        "nom": "Cape Smilodon des Vallées",
         "revente": 150,
         "cout": 18.2,
         "ing": "1 Peau de Smilodon des vallées+ 1 Lingot d'or"
@@ -1498,7 +1498,7 @@
     {
         "cat": "Couture",
         "mat": "tissu",
-        "nom": "Cape cuir",
+        "nom": "Cape en cuir",
         "revente": 20,
         "cout": 6,
         "ing": "2 Cuirs"
