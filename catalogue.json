@@ -413,7 +413,7 @@
         "nom": "Flèche en Acier x80",
         "revente": 15,
         "cout": 10.9,
-        "ing": "Petit Bois + 1 Lingot d'Acier"
+        "ing": "1 Petit Bois + 1 Lingot d'Acier"
     },
     {
         "cat": "Arme",
@@ -501,7 +501,79 @@
         "nom": "Épée Commun",
         "revente": 45,
         "cout": 16.15,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
+        "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Arc Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Flèches Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": " 1 Petit bois + 1 Lingots de pierre de Lune"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Dague Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Épée Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Espadon Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 3 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Hache Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 2 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Hache de guerre Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 2 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Masse Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
+    },
+    {
+        "cat": "Arme",
+        "mat": "altmer",
+        "nom": "Marteau Elfique",
+        "revente": 45,
+        "cout": 16.15,
+        "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 3 Bande de cuir"
     },
     {
         "cat": "Arme",

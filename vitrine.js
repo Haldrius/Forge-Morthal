@@ -11,6 +11,14 @@ const resourceOrder = ["kit d'arme", "kit d'armure", 'petit bois', 'charbon pauv
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
 const materialOrder = ['acier', 'fer', 'commun', 'cuir','maille' ,'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
+const bosmerPriorities = {
+    'bosmer de la chasse sauvage': 3,
+    'bosmer en plate': 2,
+    'capuche bosmer': 1,
+    'masque bosmer': 4,
+    'cape bosmer': 5,
+    'bosmer': 1 // Placé en dernier pour ne pas intercepter les chaînes plus précises au-dessus
+};
 
 const BANNIERES_ARMURES = {
     acier: [
@@ -86,6 +94,14 @@ const BANNIERES_ARMURES = {
         { fichier: "Fourrure-Armure Nordique3.jpg", titre: "Nordique III" },
         { fichier: "Fourrure-Armure Colovienne1.jpg", titre: "Colovienne I" },
         { fichier: "Fourrure-Armure Colovienne2.jpg", titre: "Colovienne II" }
+    ],
+    altmer:[
+        { fichier: "Altmer-Armure Elfique.jpg", titre: "Elfique" },
+    ],
+    bosmer: [
+        { fichier: "Bosmer-Armure.jpg", titre: "Bosmer" },
+        { fichier: "Bosmer-Armure de Plate.jpg", titre: "Plate Bosmer" },
+        { fichier: "Bosmer-Chasse Sauvage.jpg", titre: "Chasse Sauvage" }
     ],
     verre: [
         { fichier: "Verre-Armure.jpg", titre: "Verre Classique" },
@@ -245,6 +261,8 @@ function renderSubFilters(cat) {
             <button class="filter-btn" data-sub="maille">Mailles</button>
             <button class="filter-btn" data-sub="peau">Peau</button>
             <button class="filter-btn" data-sub="fourrure">Fourrure</button>
+            <button class="filter-btn" data-sub="altmer">Altmer</button>
+            <button class="filter-btn" data-sub="bosmer">Bosmer</button>
             <button class="filter-btn" data-sub="verre">Verre</button>
             <button class="filter-btn" data-sub="ébonite">Ébonite</button>
         `;
@@ -285,10 +303,49 @@ function applyAllFilters() {
         }
     }
     
-    filtered.sort((a, b) => {
+        filtered.sort((a, b) => {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
+        // ─── REGLE SPECIALE : FAMILLE BOSMER ───
+        const isBosmerA = nameA.includes('bosmer') || nameA.includes('capuche') || nameA.includes('masque') || nameA.includes('cape');
+        const isBosmerB = nameB.includes('bosmer') || nameB.includes('capuche') || nameB.includes('masque') || nameB.includes('cape');
+
+        if (isBosmerA && isBosmerB) {
+            let prioA = 99;
+            for (const [key, val] of Object.entries(bosmerPriorities)) {
+                if (nameA.includes(key)) { prioA = val; break; }
+            }
+            let prioB = 99;
+            for (const [key, val] of Object.entries(bosmerPriorities)) {
+                if (nameB.includes(key)) { prioB = val; break; }
+            }
+
+            if (prioA !== prioB) {
+                return prioA - prioB;
+            }
+
+            // Si c'est le même groupe, on trie par type de pièce d'armure
+            let checkNameA = nameA.includes('capuche bosmer') ? 'casque' : nameA;
+            let checkNameB = nameB.includes('capuche bosmer') ? 'casque' : nameB;
+
+            let indexPieceA = armorOrder.length, indexPieceB = armorOrder.length;
+            for (let k = 0; k < armorOrder.length; k++) { if (checkNameA.includes(armorOrder[k])) { indexPieceA = k; break; } }
+            for (let l = 0; l < armorOrder.length; l++) { if (checkNameB.includes(armorOrder[l])) { indexPieceB = l; break; } }
+            
+            return indexPieceA - indexPieceB || nameA.localeCompare(nameB);
+        }
+
+        // Si l'un des deux seulement est un équipement Bosmer, on force son placement
+        if (isBosmerA !== isBosmerB) {
+            // Si on compare un objet Bosmer avec un autre matériau (ex: Fer, Acier)
+            // On conserve la logique de placement global par rapport au reste du catalogue
+            let indexMatA = materialOrder.indexOf(matA);
+            let indexMatB = materialOrder.indexOf(matB);
+            if (indexMatA === -1) indexMatA = materialOrder.length + 100;
+            if (indexMatB === -1) indexMatB = materialOrder.length + 100;
+            if (indexMatA !== indexMatB) return indexMatA - indexMatB;
+        }
         const isEquipement = (item) => item.cat === 'Arme' || item.cat === 'Armure';
         if (isEquipement(a) && isEquipement(b)) {
             if (a.cat !== b.cat) return a.cat.localeCompare(b.cat);
