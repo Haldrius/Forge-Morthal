@@ -1555,7 +1555,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Or",
-        "revente": 60,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or"
     },
@@ -1563,7 +1563,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Or et de Diamant",
-        "revente": 500,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Diamant"
     },
@@ -1571,7 +1571,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Or et de Rubis",
-        "revente": 300,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Rubis"
     },
@@ -1579,7 +1579,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Or et d'Améthystes",
-        "revente": 200,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 2 Améthystes"
     },
@@ -1587,7 +1587,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Argent",
-        "revente": 30,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent"
     },
@@ -1595,7 +1595,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Argent et d'Améthyste",
-        "revente": 100,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Améthyste"
     },
@@ -1603,7 +1603,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Argent et de Saphir",
-        "revente": 250,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Saphir"
     },
@@ -1611,7 +1611,7 @@
         "cat": "Bijou",
         "mat": "colliers",
         "nom": "Collier d'Argent et de Grenats",
-        "revente": 150,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 2 Grenats"
     },
@@ -1619,7 +1619,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Argent",
-        "revente": 30,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent"
     },
@@ -1627,7 +1627,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Argent et d'Améthyste",
-        "revente": 60,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Améthyste"
     },
@@ -1635,7 +1635,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Argent et de Grenat",
-        "revente": 80,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Grenat"
     },
@@ -1643,7 +1643,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'argent et de Rubis",
-        "revente": 100,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Rubis"
     },
@@ -1651,7 +1651,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Or",
-        "revente": 60,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or"
     },
@@ -1659,7 +1659,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Or et d'Émeraude",
-        "revente": 300,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Émeraude"
     },
@@ -1667,7 +1667,7 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Or et de Diamant",
-        "revente": 500,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Diamant"
     },
@@ -1675,15 +1675,15 @@
         "cat": "Bijou",
         "mat": "anneaux",
         "nom": "Bagues d'Or et de Saphir",
-        "revente": 120,
+        "revente": "À définir",
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Saphir"
     },
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème d'Argent et de Saphirs",
-        "revente": 250,
+        "nom": "Diadème d'Argent et de Saphir",
+        "revente": "À définir",
         "cout": 26.4,
         "ing": "2 Lingots d'Argent + 1 Saphir"
     },
@@ -1691,7 +1691,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème d'Argent et de Pierre de Lune",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 40.4,
         "ing": "2 Lingots d'Argent + 1 Pierre de lune"
     },
@@ -1699,7 +1699,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème d'Or et de Rubis",
-        "revente": 200,
+        "revente": "À définir",
         "cout": 26.4,
         "ing": "2 Lingots d'Or + 1 Rubis"
     },
@@ -1707,7 +1707,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème d'Or et d'Émeraude",
-        "revente": 180,
+        "revente": "À définir",
         "cout": 26.4,
         "ing": "2 Lingots d'Or + 1 Émeraude"
     },
@@ -1715,7 +1715,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Corindon",
-        "revente": 30,
+        "revente": "À définir",
         "cout": 17.6,
         "ing": "2 Lingots de Corindon"
     },
@@ -1723,7 +1723,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Rubis",
-        "revente": 60,
+        "revente": "À définir",
         "cout": 17.6,
         "ing": "2 Lingots de Corindon + 1 Rubis"
     },
@@ -1731,7 +1731,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Saphir",
-        "revente": 80,
+        "revente": "À définir",
         "cout": 17.6,
         "ing": "2 Lingots de Corindon + 1 Saphir"
     },
@@ -1739,7 +1739,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Pierre de Lune",
-        "revente": 500,
+        "revente": "À définir",
         "cout": 31.6,
         "ing": "2 Lingots de Corindon + 1 Pierre de lune"
     },
@@ -1747,7 +1747,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et de Saphir",
-        "revente": 1500,
+        "revente": "Sur commande",
         "cout": 7850.4,
         "ing": "2 Lingots de Malachite + 1 Saphir"
     },
@@ -1755,7 +1755,7 @@
         "cat": "Bijou",
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et d'Émeraude",
-        "revente": 1000,
+        "revente": "Sur commande",
         "cout": 7850.4,
         "ing": "2 Lingots de Malachite + 1 Émeraude"
     }
