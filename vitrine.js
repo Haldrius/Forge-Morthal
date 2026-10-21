@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             currentMainCategory = cat;
             
             if (cat === 'Matériaux') {
-                currentSubMaterial = 'minerais';
+                currentSubMaterial = 'outils';
             } else if (cat === 'Arme' || cat === 'Armure') {
                 currentSubMaterial = 'acier';
             } else if (cat === 'Bijou') {
