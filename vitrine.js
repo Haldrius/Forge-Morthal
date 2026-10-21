@@ -225,10 +225,10 @@ function renderSubFilters(cat) {
         subRow.style.display = 'flex';
         subRow.innerHTML = `
             <button class="filter-btn" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="outils">🛠️ Outils</button>
             <button class="filter-btn" data-sub="minerais">💎 Minerais</button>
             <button class="filter-btn" data-sub="lingot">🧱 Lingots</button>
             <button class="filter-btn" data-sub="ressources">📜 Ressources</button>
-            <button class="filter-btn" data-sub="outils">🛠️ Outils</button>
         `;
     } else if (cat === 'Bijou') {
         subRow.style.display = 'flex';
