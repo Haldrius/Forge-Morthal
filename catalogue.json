@@ -1553,72 +1553,8 @@
     },
     {
         "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier en Or",
-        "revente": 60,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Or"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Or",
-        "revente": 500,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Or + 1 Diamant"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Or et de Rubis",
-        "revente": 300,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Or + 1 Rubis"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Or et d'Améthystes",
-        "revente": 200,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Or + 2 Améthystes"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Argent",
-        "revente": 30,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Argent"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Argent et d'Améthyste",
-        "revente": 100,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 1 Améthyste"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Argent et de Saphir",
-        "revente": 250,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 1 Saphir"
-    },
-    {
-        "cat": "Bijou",
-        "mat": "colliers",
-        "nom": "Collier d'Argent et de Grenats",
-        "revente": 150,
-        "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 2 Grenats"
-    },
-    {
-        "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues ARGENT",
+        "nom": "Bagues d'Argent",
         "revente": 30,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent"
@@ -1626,7 +1562,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues ARGENT + AMETHYSTE",
+        "nom": "Bagues d'Argent et d'Améthyste",
         "revente": 60,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Améthyste"
@@ -1634,7 +1570,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues ARGENT + GRENAT",
+        "nom": "Bagues d'Argent et de Grenat",
         "revente": 80,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Grenat"
@@ -1642,7 +1578,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues ARGENT + RUBIS",
+        "nom": "Bagues d'argent et de Rubis",
         "revente": 100,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Rubis"
@@ -1650,7 +1586,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues OR",
+        "nom": "Bagues d'Or",
         "revente": 60,
         "cout": 13.2,
         "ing": "1 Lingot d'Or"
@@ -1658,7 +1594,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues OR + EMERAUDE",
+        "nom": "Bagues d'Or et d'Émeraude",
         "revente": 300,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Émeraude"
@@ -1666,7 +1602,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues OR + DIAMANT",
+        "nom": "Bagues d'Or et de Diamant",
         "revente": 500,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Diamant"
@@ -1674,7 +1610,7 @@
     {
         "cat": "Bijou",
         "mat": "anneaux",
-        "nom": "Bagues OR + SAPHIR",
+        "nom": "Bagues d'Or et de Saphir",
         "revente": 120,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Saphir"
