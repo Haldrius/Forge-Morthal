@@ -1682,7 +1682,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème 2 ARGENT + SAPHIR",
+        "nom": "Diadème d'Argent et de Saphirs",
         "revente": 250,
         "cout": 26.4,
         "ing": "2 Lingots d'Argent + 1 Saphir"
@@ -1690,7 +1690,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème 2 ARGENT + PIERRE DE LUNE",
+        "nom": "Diadème d'Argent et de Pierre de Lune",
         "revente": 400,
         "cout": 40.4,
         "ing": "2 Lingots d'Argent + 1 Pierre de lune"
@@ -1698,7 +1698,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème 2 OR + RUBIS",
+        "nom": "Diadème d'Or et de Rubis",
         "revente": 200,
         "cout": 26.4,
         "ing": "2 Lingots d'Or + 1 Rubis"
@@ -1706,7 +1706,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème 2 OR + EMERAUDE",
+        "nom": "Diadème d'Or et d'Émeraude",
         "revente": 180,
         "cout": 26.4,
         "ing": "2 Lingots d'Or + 1 Émeraude"
@@ -1714,7 +1714,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème CORINDON",
+        "nom": "Diadème de Corindon",
         "revente": 30,
         "cout": 17.6,
         "ing": "2 Lingots de Corindon"
@@ -1722,7 +1722,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème CORINDON + RUBIS",
+        "nom": "Diadème de Corindon et de Rubis",
         "revente": 60,
         "cout": 17.6,
         "ing": "2 Lingots de Corindon + 1 Rubis"
@@ -1730,7 +1730,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème CORINDON + SAPHIR",
+        "nom": "Diadème de Corindon et de Saphir",
         "revente": 80,
         "cout": 17.6,
         "ing": "2 Lingots de Corindon + 1 Saphir"
@@ -1738,7 +1738,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème CORINDON + PIERRE DE LUNE",
+        "nom": "Diadème de Corindon et de Pierre de Lune",
         "revente": 500,
         "cout": 31.6,
         "ing": "2 Lingots de Corindon + 1 Pierre de lune"
@@ -1746,7 +1746,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème MALACHITE + SAPHIR",
+        "nom": "Diadème de Malachite et de Saphir",
         "revente": 1500,
         "cout": 7850.4,
         "ing": "2 Lingots de Malachite + 1 Saphir"
@@ -1754,7 +1754,7 @@
     {
         "cat": "Bijou",
         "mat": "diadèmes",
-        "nom": "Diadème MALACHITE + EMERAUDE",
+        "nom": "Diadème de Malachite et d'Émeraude",
         "revente": 1000,
         "cout": 7850.4,
         "ing": "2 Lingots de Malachite + 1 Émeraude"
