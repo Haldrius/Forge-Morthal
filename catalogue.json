@@ -1507,96 +1507,96 @@
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Améthyste",
-        "revente": 10,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Rubis",
-        "revente": 15,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Diamant",
-        "revente": 40,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Grenat",
-        "revente": 10,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Saphir",
-        "revente": 30,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Émeraude",
-        "revente": 30,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 20,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Améthyste Parfaite",
-        "revente": 10,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Rubis Parfait",
-        "revente": 15,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Diamant Parfait",
-        "revente": 40,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Grenat Parfait",
-        "revente": 10,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Saphir Parfait",
-        "revente": 30,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
         "cat": "Bijou",
         "mat": "gemmes",
         "nom": "Émeraude Parfaitee",
-        "revente": 30,
-        "cout": 0,
+        "revente": "À définir",
+        "cout": 60,
         "ing": ""
     },
     {
@@ -1613,7 +1613,7 @@
         "nom": "Collier d'Or et de Diamant",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Or + 1 Diamant"
+        "ing": "1 Lingot d'Or + 1 Diamant Parfait"
     },
     {
         "cat": "Bijou",
@@ -1621,7 +1621,7 @@
         "nom": "Collier d'Or et de Rubis",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Or + 1 Rubis"
+        "ing": "1 Lingot d'Or + 1 Rubis Parfait"
     },
     {
         "cat": "Bijou",
@@ -1629,7 +1629,7 @@
         "nom": "Collier d'Or et d'Améthystes",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Or + 2 Améthystes"
+        "ing": "1 Lingot d'Or + 2 Améthystes Parfaites"
     },
     {
         "cat": "Bijou",
@@ -1645,7 +1645,7 @@
         "nom": "Collier d'Argent et d'Améthyste",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 1 Améthyste"
+        "ing": "1 Lingot d'Argent + 1 Améthyste Parfait"
     },
     {
         "cat": "Bijou",
@@ -1653,7 +1653,7 @@
         "nom": "Collier d'Argent et de Saphir",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 1 Saphir"
+        "ing": "1 Lingot d'Argent + 1 Saphir Parfait"
     },
     {
         "cat": "Bijou",
@@ -1661,7 +1661,7 @@
         "nom": "Collier d'Argent et de Grenats",
         "revente": "À définir",
         "cout": 13.2,
-        "ing": "1 Lingot d'Argent + 2 Grenats"
+        "ing": "1 Lingot d'Argent + 2 Grenats Parfaits"
     },
     {
         "cat": "Bijou",
