@@ -507,88 +507,88 @@
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Arc Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 318,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Flèches Elfique",
-        "revente": 45,
-        "cout": 16.15,
-        "ing": " 1 Petit bois + 1 Lingots de pierre de Lune"
+        "revente": "À définir",
+        "cout": 92.5,
+        "ing": "1 Petit bois + 1 Lingots de pierre de Lune"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Dague Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 232.95,
         "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Épée Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 232.95,
         "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Espadon Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 333.45,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 3 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Hache Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 233.7,
         "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 2 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Hache de guerre Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 332.7,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 2 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Masse Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 325.35,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "altmer",
         "nom": "Marteau Elfique",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 333.45,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent + 2 Lingot de fer + 3 Bande de cuir"
     },
     {
         "cat": "Arme",
         "mat": "bosmer",
         "nom": "Arc Bosmer",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 318,
         "ing": "2 Lingots de pierre de Lune + 1 Lingot de vif-argent"
     },
     {
         "cat": "Arme",
         "mat": "bosmer",
         "nom": "Lame Bosmer",
-        "revente": 45,
-        "cout": 16.15,
+        "revente": "À définir",
+        "cout": 232.95,
         "ing": "1 Lingots de pierre de Lune + 1 Lingot de vif-argent + 1 Lingot de fer + 1 Bande de cuir"
     },
     {
@@ -1187,7 +1187,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Armure Elfique",
-        "revente": 800,
+        "revente": "À définir",
         "cout": 381.45,
         "ing": "4 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 3 Bandes de cuir"
     },
@@ -1195,7 +1195,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Armure Dorée",
-        "revente": 90,
+        "revente": "À définir",
         "cout": 511.65,
         "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer +  1 Lingot de vif-argent + 3 Bandes de cuir"
     },
@@ -1203,7 +1203,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Bottes Elfique",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 195.9,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
     },
@@ -1211,7 +1211,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Casque Elfique",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 195.15,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 1 Bandes de cuir"
     },
@@ -1219,7 +1219,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Gantelets Elfique",
-        "revente": 250,
+        "revente": "À définir",
         "cout": 103.5,
         "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
     },
@@ -1227,7 +1227,7 @@
         "cat": "Armure",
         "mat": "altmer",
         "nom": "Bouclier Elfique",
-        "revente": 800,
+        "revente": "À définir",
         "cout": 377.7,
         "ing": "4 Lingots de Pierre de Lune + 1 Lingot de fer + 2 Bandes de cuir"
     },
@@ -1235,7 +1235,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Armure Bosmer",
-        "revente": 800,
+        "revente": "À définir",
         "cout": 381.45,
         "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer +  1 Cuir + 3 Bandes de cuir"
     },
@@ -1243,7 +1243,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Bottes Bosmer",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 195.9,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
     },
@@ -1251,7 +1251,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Capuche Bosmer",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 195.15,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 1 Bandes de cuir"
     },
@@ -1259,7 +1259,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Masque Bosmer",
-        "revente": 10,
+        "revente": "À définir",
         "cout": 3.75,
         "ing": "1 Cuir + 1 Bandes de cuir"
     },
@@ -1267,7 +1267,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Cape Bosmer",
-        "revente": 20,
+        "revente": "À définir",
         "cout": 7.5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -1275,7 +1275,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Cape Bosmer à Épaule",
-        "revente": 15,
+        "revente": "À définir",
         "cout": 6.75,
         "ing": "2 Cuir + 1 Bandes de cuir"
     },
@@ -1283,7 +1283,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Gants Bosmer",
-        "revente": 250,
+        "revente": "À définir",
         "cout": 103.5,
         "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Cuir + 2 Bandes de cuir"
     },
@@ -1291,7 +1291,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Armure Bosmer en Plate",
-        "revente": 800,
+        "revente": "À définir",
         "cout": 390.25,
         "ing": "4 Lingots de pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 3 Bandes de cuir"
     },
@@ -1299,7 +1299,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Bottes Bosmer en Plate",
-        "revente": 400,
+        "revente": "À définir",
         "cout": 204.7,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 2 Bandes de cuir"
     },
@@ -1307,7 +1307,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Casque Bosmer en Plate",
-        "revente": 450,
+        "revente": "À définir",
         "cout": 203.95,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 1 Bandes de cuir"
     },
@@ -1315,7 +1315,7 @@
         "cat": "Armure",
         "mat": "bosmer",
         "nom": "Gants Bosmer en Plate",
-        "revente": 250,
+        "revente": "À définir",
         "cout": 112.3,
         "ing": "1 Lingots de Pierre de Lune + 1 Lingot de fer + 1 Lingot de Corindon + 1 Cuir + 2 Bandes de cuir"
     },
