@@ -1554,7 +1554,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier OR",
+        "nom": "Collier en Or",
         "revente": 60,
         "cout": 13.2,
         "ing": "1 Lingot d'Or"
@@ -1562,7 +1562,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier OR + DIAMANT",
+        "nom": "Collier d'Or",
         "revente": 500,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Diamant"
@@ -1570,7 +1570,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier OR + RUBIS",
+        "nom": "Collier d'Or et de Rubis",
         "revente": 300,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 1 Rubis"
@@ -1578,7 +1578,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier OR + 2 AMETHYSTE",
+        "nom": "Collier d'Or et d'Améthystes",
         "revente": 200,
         "cout": 13.2,
         "ing": "1 Lingot d'Or + 2 Améthystes"
@@ -1586,7 +1586,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier ARGENT",
+        "nom": "Collier d'Argent",
         "revente": 30,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent"
@@ -1594,7 +1594,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier ARGENT + AMETHYSTE",
+        "nom": "Collier d'Argent et d'Améthyste",
         "revente": 100,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Améthyste"
@@ -1602,7 +1602,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier ARGENT + SAPHIR",
+        "nom": "Collier d'Argent et de Saphir",
         "revente": 250,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 1 Saphir"
@@ -1610,7 +1610,7 @@
     {
         "cat": "Bijou",
         "mat": "colliers",
-        "nom": "Collier ARGENT + 2 GRENAT",
+        "nom": "Collier d'Argent et de Grenats",
         "revente": 150,
         "cout": 13.2,
         "ing": "1 Lingot d'Argent + 2 Grenats"
