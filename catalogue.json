@@ -1139,7 +1139,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille",
-        "revente": 50,
+        "revente": 75,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1147,7 +1147,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Surcot en Maille",
-        "revente": 50,
+        "revente": 45,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1163,7 +1163,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille",
-        "revente": 80,
+        "revente": 65,
         "cout": 30.45,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
@@ -1171,7 +1171,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille Huilée",
-        "revente": 50,
+        "revente": 80,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1179,7 +1179,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Haubert en Maille Huilée",
-        "revente": 50,
+        "revente": 55,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1187,7 +1187,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille Huilée",
-        "revente": 80,
+        "revente": 70,
         "cout": 30.45,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
