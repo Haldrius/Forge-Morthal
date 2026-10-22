@@ -859,7 +859,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Casque en Peau",
-        "revente": 20,
+        "revente": 15,
         "cout": 6.75,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
@@ -867,7 +867,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure en Peau",
-        "revente": 40,
+        "revente": 35,
         "cout": 14.25,
         "ing": "4 Cuir + 3 Bandes de cuir"
     },
@@ -875,7 +875,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Gantelets en Peau",
-        "revente": 20,
+        "revente": 10,
         "cout": 4.5,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
@@ -883,7 +883,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Bottes en Peau",
-        "revente": 25,
+        "revente": 15,
         "cout": 7.5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -891,7 +891,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Bouclier en Peau",
-        "revente": 40,
+        "revente": 35,
         "cout": 13.5,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
@@ -899,7 +899,7 @@
         "cat": "Armure",
         "mat": "peau",
         "nom": "Armure Cloutée",
-        "revente": 60,
+        "revente": 50,
         "cout": 20.85,
         "ing": "1 Lingot fer + 4 Cuir + 3 Bandes de cuir"
     },
@@ -923,7 +923,7 @@
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Armure en Fourrure",
-        "revente": 45,
+        "revente": 40,
         "cout": 17.25,
         "ing": "5 Cuir + 3 Bandes de cuir"
     },
@@ -931,7 +931,7 @@
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Gantelets en Fourrure",
-        "revente": 20,
+        "revente": 15,
         "cout": 4.5,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
@@ -939,7 +939,7 @@
         "cat": "Armure",
         "mat": "fourrure",
         "nom": "Bottes en Fourrure",
-        "revente": 25,
+        "revente": 20,
         "cout": 7.5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -963,7 +963,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Casque en Cuir",
-        "revente": 30,
+        "revente": 25,
         "cout": 6.75,
         "ing": "2 Cuir + 1 Bande de cuir"
     },
@@ -971,7 +971,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Armure en Cuir",
-        "revente": 50,
+        "revente": 45,
         "cout": 14.25,
         "ing": "4 Cuir + 3 Bandes de cuir"
     },
@@ -979,7 +979,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Gantelets en Cuir",
-        "revente": 35,
+        "revente": 20,
         "cout": 4.5,
         "ing": "1 Cuir + 2 Bandes de cuir"
     },
@@ -987,7 +987,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Bottes en Cuir",
-        "revente": 35,
+        "revente": 25,
         "cout": 7.5,
         "ing": "2 Cuir + 2 Bandes de cuir"
     },
@@ -995,7 +995,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Bouclier en Cuir",
-        "revente": 50,
+        "revente": 45,
         "cout": 13.5,
         "ing": "4 Cuir + 2 Bandes de cuir"
     },
