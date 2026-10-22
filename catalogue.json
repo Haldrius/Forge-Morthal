@@ -1011,7 +1011,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Doublet en Cuir",
-        "revente": 60,
+        "revente": 40,
         "cout": 17.25,
         "ing": "1 Armure en cuir + 1 Lin"
     },
