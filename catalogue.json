@@ -1003,7 +1003,7 @@
         "cat": "Armure",
         "mat": "cuir",
         "nom": "Armure en Cuir Bouilli",
-        "revente": 100,
+        "revente": 60,
         "cout": 17.65,
         "ing": "1 Armure en cuir + 4 Bandes de cuir + 1 Fer"
     },
