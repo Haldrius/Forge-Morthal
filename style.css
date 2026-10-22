@@ -700,3 +700,60 @@ input:checked + .slider:before {
     border: 1px dashed #3a3a3a;
     border-radius: 4px;
 }
+/* =========================================================================
+   6. CONFIGURATION SPÉCIFIQUE - SÉLECTEUR DE COLORIS ACIER & TABARD
+   ========================================================================= */
+
+/* La carte reprend sa taille normale (1 colonne dans la grille comme les autres) */
+.tabard-special-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+}
+
+/* Conteneur horizontal interne (Image + Colonne) sans étirement */
+.tabard-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligne les éléments (image et carrés) pile par le haut */
+    justify-content: center;
+    gap: 8px; /* Espace discret entre l'image et la colonne */
+    width: 100%;
+}
+
+/* L'image s'adapte à l'espace restant à côté des carrés */
+.tabard-flex-container .armor-image-wrapper {
+    flex: 1; 
+    max-width: calc(100% - 22px); /* Laisse la place exacte pour la colonne de carrés sans forcer de marge vide */
+}
+
+/* Colonne unique alignée verticalement accrochée en haut */
+.tabard-color-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Écartement entre les carrés */
+    padding-top: 2px; /* Ajustement pour aligner le premier carré au millimètre avec le haut du casque */
+}
+
+/* Le carré de couleur individuel version "mini" */
+.color-square {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid #3a3a3c;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet au survol */
+.color-square:hover {
+    transform: scale(1.25);
+    border-color: var(--accent-light, #00b347);
+    box-shadow: 0 0 6px var(--accent-light, #00b347);
+}
+
+/* Carré sélectionné (Bordure émeraude fixe) */
+.color-square.active-color {
+    border-color: var(--accent-light, #00b347) !important;
+    transform: scale(1.1);
+}

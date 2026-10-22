@@ -30,7 +30,7 @@ const BANNIERES_ARMURES = {
         { fichier: "Acier-Armure à Capuche2.jpg", titre: "Acier à Capuche II" },
         { fichier: "Acier-Armure Nordique.jpg", titre: "Acier Nordique" },
         { fichier: "Acier-Armure Robuste.jpg", titre: "Plaques Robuste" },
-        { fichier: "Acier-Armure Tabard.jpg", titre: "Acier & Tabard" }
+        { fichier: "Acier-Armure Tabard1.jpg", titre: "Acier & Tabard" }
     ],
     fer: [
         { fichier: "Fer-Armure.jpg", titre: "Fer Classique" },
@@ -45,7 +45,7 @@ const BANNIERES_ARMURES = {
         { fichier: "Fer-Armure Runique à Bandes.jpg", titre: "Fer Runique à Bandes" },
         { fichier: "Fer-Armure Forgée.jpg", titre: "Fer Forgé" },
         { fichier: "Fer-Armure Forgée à Bandes.jpg", titre: "Fer Forgé à Bandes" },
-        { fichier: "Fer-Armure Tabard.jpg", titre: "Fer & Tabard" }
+        { fichier: "Fer-Armure Tabard1.jpg", titre: "Fer & Tabard" }
     ],
     commun: [
         { fichier: "Commun-Hoqueton.jpg", titre: "Hoqueton" },
@@ -62,6 +62,8 @@ const BANNIERES_ARMURES = {
         { fichier: "Cuir-Armure Légère.jpg", titre: "Cuir Léger" },
         { fichier: "Cuir-Armure Nordique.jpg", titre: "Cuir Nordique" },
         { fichier: "Cuir-Armure Robuste.jpg", titre: "Cuir Robuste" },
+        { fichier: "Cuir-Doublet1.jpg", titre: "Doublet en Cuir I" },
+        { fichier: "Cuir-Doublet2.jpg", titre: "Doublet en Cuir II" },
         { fichier: "Cuir-Armure Bouillie.jpg", titre: "Cuir Bouilli" }
     ],
     maille:[
@@ -402,7 +404,6 @@ function updateArmorPreviewGlobal() {
     
     if (!previewContainer || !previewsGrid) return;
 
-    // 1. On vérifie si on est dans l'onglet Armure et si des images existent pour ce matériau
     if (currentMainCategory === 'Armure' && BANNIERES_ARMURES[currentSubMaterial] && BANNIERES_ARMURES[currentSubMaterial].length > 0) {
         
         // 2. Création et insertion du bouton à bascule (Toggle Switch) s'il n'existe pas encore
@@ -412,7 +413,6 @@ function updateArmorPreviewGlobal() {
             toggleWrapper.id = 'gender-toggle-wrapper';
             toggleWrapper.style.cssText = "display: flex; justify-content: center; align-items: center; gap: 12px; margin: 15px 0; font-weight: bold;";
             
-            // Structure HTML de l'interrupteur
             toggleWrapper.innerHTML = `
                 <span class="gender-label-text ${currentGender === 'Masculin' ? 'active-text' : ''}">Masculin</span>
                 <label class="switch">
@@ -428,51 +428,110 @@ function updateArmorPreviewGlobal() {
                 previewContainer.insertBefore(toggleWrapper, previewsGrid);
             }
 
-            // Écouteur d'événement sur la case à cocher invisible de l'interrupteur
             const checkbox = document.getElementById('gender-checkbox');
             checkbox.addEventListener('change', () => {
-                // Si la case est cochée -> Féminin, sinon -> Masculin
                 currentGender = checkbox.checked ? 'Féminin' : 'Masculin';
-                
-                // Met à jour la surbrillance des textes à gauche et à droite
                 const labels = toggleWrapper.querySelectorAll('.gender-label-text');
                 labels[0].classList.toggle('active-text', currentGender === 'Masculin');
                 labels[1].classList.toggle('active-text', currentGender === 'Féminin');
-                
-                // Recharge immédiatement la galerie d'images avec le nouveau chemin
                 updateArmorPreviewGlobal();
             });
         }
 
-        // 3. Génération de la galerie avec gestion propre des erreurs
-        let htmlGenere = '';
-        BANNIERES_ARMURES[currentSubMaterial].forEach(set => {
-            htmlGenere += `
-                <div class="armor-set-card">
+        // 3. Génération de la galerie
+        previewsGrid.innerHTML = ''; 
+
+        BANNIERES_ARMURES[currentSubMaterial].forEach((set, index) => {
+            const card = document.createElement('div');
+            card.className = 'armor-set-card';
+            
+            // Détection des deux types de fiches à Tabards (Acier et Fer)
+            const estAcierTabard = (set.titre === "Acier & Tabard");
+            const estFerTabard = (set.titre === "Fer & Tabard"); 
+
+            if (estAcierTabard || estFerTabard) {
+                card.classList.add('tabard-special-card'); // Réutilise les styles CSS d'agencement
+                
+                card.innerHTML = `
+                    <div class="tabard-flex-container">
+                        <div class="armor-image-wrapper">
+                            <img src="images/${currentGender}/${currentSubMaterial}/${set.fichier}" 
+                                alt="${set.titre}" 
+                                id="armor-img-${index}"
+                                onerror="this.style.display='none'; this.closest('.armor-image-wrapper').classList.add('has-error');">
+                            <div class="coming-soon-placeholder">
+                                <span>⏳ Prochainement...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="armor-set-title">${set.titre}</div>
+                `;
+
+                const colorWrapper = document.createElement('div');
+                colorWrapper.className = 'tabard-color-selector';
+                
+                // Définition dynamique du préfixe selon la fiche sélectionnée
+                const prefixeFichier = estAcierTabard ? "Acier-Armure Tabard" : "Fer-Armure Tabard";
+                
+                // Les 9 coloris partagés
+                const coloris = [
+                    { nom: 'Noir', code: '#1a1a1a', numero: '1' },
+                    { nom: 'Gris', code: '#504f4d', numero: '2' },
+                    { nom: 'Blanc', code: '#8b8b83', numero: '3' },
+                    { nom: 'Violet', code: '#6a3b66', numero: '4' },
+                    { nom: 'Rouge', code: '#753635', numero: '5' },
+                    { nom: 'Brun', code: '#644335', numero: '6' },
+                    { nom: 'Vert clair', code: '#52502e', numero: '7' },
+                    { nom: 'Vert foncé', code: '#3e5636', numero: '8' },
+                    { nom: 'Bleu', code: '#4b476c', numero: '9' }
+                ];
+                
+                coloris.forEach((couleur, idx) => {
+                    const colorBox = document.createElement('div');
+                    colorBox.className = 'color-square';
+                    colorBox.style.backgroundColor = couleur.code;
+                    colorBox.title = couleur.nom;
+                    
+                    if (idx === 0) colorBox.classList.add('active-color');
+                    
+                    colorBox.addEventListener('click', () => {
+                        const imageElement = card.querySelector(`#armor-img-${index}`);
+                        card.querySelector('.armor-image-wrapper').classList.remove('has-error');
+                        imageElement.style.display = 'block';
+                        
+                        // Concatène correctement le préfixe (Acier ou Fer) avec le numéro
+                        imageElement.src = `images/${currentGender}/${currentSubMaterial}/${prefixeFichier}${couleur.numero}.jpg`;
+                        
+                        colorWrapper.querySelectorAll('.color-square').forEach(box => box.classList.remove('active-color'));
+                        colorBox.classList.add('active-color');
+                    });
+                    
+                    colorWrapper.appendChild(colorBox);
+                });
+                
+                card.querySelector('.tabard-flex-container').appendChild(colorWrapper);
+
+            } else {
+                // Structure standard pour toutes les autres armures du catalogue
+                card.innerHTML = `
                     <div class="armor-image-wrapper">
                         <img src="images/${currentGender}/${currentSubMaterial}/${set.fichier}" 
-                             alt="${set.titre}" 
-                             onerror="this.style.display='none'; this.closest('.armor-image-wrapper').classList.add('has-error');">
+                            alt="${set.titre}" 
+                            id="armor-img-${index}"
+                            onerror="this.style.display='none'; this.closest('.armor-image-wrapper').classList.add('has-error');">
                         <div class="coming-soon-placeholder">
                             <span>⏳ Prochainement...</span>
                         </div>
                     </div>
                     <div class="armor-set-title">${set.titre}</div>
-                </div>
-            `;
-        });
-        
-        previewsGrid.innerHTML = htmlGenere;
-        previewContainer.style.display = 'block';
+                `;
+            }
 
-        
-        previewsGrid.innerHTML = htmlGenere;
-        previewContainer.style.display = 'block';
-        
-        previewsGrid.innerHTML = htmlGenere;
+            previewsGrid.appendChild(card);
+        });
+
         previewContainer.style.display = 'block';
     } else {
-        // Nettoyage complet du conteneur si on change d'onglet principal (Armes, Outils...)
         const existingToggle = document.getElementById('gender-toggle-wrapper');
         if (existingToggle) existingToggle.remove();
         
