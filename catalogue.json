@@ -1009,6 +1009,14 @@
     },
     {
         "cat": "Armure",
+        "mat": "cuir",
+        "nom": "Doublet en Cuir",
+        "revente": 60,
+        "cout": 14.25,
+        "ing": "1 Armure en cuir + 1 Lin"
+    },
+    {
+        "cat": "Armure",
         "mat": "commun",
         "nom": "Armure en Maille Commune",
         "revente": 90,
