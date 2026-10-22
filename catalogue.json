@@ -156,7 +156,7 @@
         "mat": "lingot",
         "nom": "Lingot de Malachite",
         "revente": 5500,
-        "cout": 3925.2,
+        "cout": 4525.2,
         "ing": "6 Malachite brut + 6 Coke de Charbon"
     },
     {
@@ -788,7 +788,7 @@
         "mat": "verre",
         "nom": "Arc de verre",
         "revente": "À définir",
-        "cout": 7864.4,
+        "cout": 9064.4,
         "ing": "1 Pierre de lune + 2 Lingot de Malachite"
     },
     {
@@ -796,7 +796,7 @@
         "mat": "verre",
         "nom": "Dague de verre",
         "revente": "À définir",
-        "cout": 3939.95,
+        "cout": 4539.95,
         "ing": "1 Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -804,7 +804,7 @@
         "mat": "verre",
         "nom": "Espadon de verre",
         "revente": "À définir",
-        "cout": 7880.65,
+        "cout": 9080.65,
         "ing": "2 Pierre de lune + 2 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
@@ -812,7 +812,7 @@
         "mat": "verre",
         "nom": "Flèche de verre x20",
         "revente": "À définir",
-        "cout": 650.1,
+        "cout": 750.1,
         "ing": "1 Malachite + 1 Petit bois"
     },
     {
@@ -820,7 +820,7 @@
         "mat": "verre",
         "nom": "Hache a 2 mains de Verre",
         "revente": "À définir",
-        "cout": 7879.9,
+        "cout": 9079.9,
         "ing": "2 Pierre de lune + 2 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
@@ -828,7 +828,7 @@
         "mat": "verre",
         "nom": "Hache de verre",
         "revente": "À définir",
-        "cout": 3940.7,
+        "cout": 4540.7,
         "ing": "1 Pierre de lune + 1 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
@@ -836,7 +836,7 @@
         "mat": "verre",
         "nom": "Marteau de verre",
         "revente": "À définir",
-        "cout": 11805.85,
+        "cout": 13605.85,
         "ing": "2 Pierre de lune + 3 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
@@ -844,7 +844,7 @@
         "mat": "verre",
         "nom": "Masse de verre",
         "revente": "À définir",
-        "cout": 7865.15,
+        "cout": 9065.15,
         "ing": "1 Pierre de lune + 2 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -852,7 +852,7 @@
         "mat": "verre",
         "nom": "Épée de verre",
         "revente": "À définir",
-        "cout": 3939.95,
+        "cout": 4539.95,
         "ing": "1 Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -1012,14 +1012,14 @@
         "mat": "cuir",
         "nom": "Doublet en Cuir",
         "revente": 60,
-        "cout": 14.25,
+        "cout": 17.25,
         "ing": "1 Armure en cuir + 1 Lin"
     },
     {
         "cat": "Armure",
         "mat": "commun",
         "nom": "Armure en Maille Commune",
-        "revente": 90,
+        "revente": 80,
         "cout": 35.25,
         "ing": "5 Lingots de fer + 3 Bandes de cuir"
     },
@@ -1139,7 +1139,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille",
-        "revente": 60,
+        "revente": 50,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1147,7 +1147,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Surcot en Maille",
-        "revente": 60,
+        "revente": 50,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1155,7 +1155,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Tunique & Maille",
-        "revente": 60,
+        "revente": 50,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1163,7 +1163,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille",
-        "revente": 90,
+        "revente": 80,
         "cout": 30.45,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
@@ -1171,7 +1171,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Veste en Maille Huilée",
-        "revente": 60,
+        "revente": 50,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1179,7 +1179,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Haubert en Maille Huilée",
-        "revente": 60,
+        "revente": 50,
         "cout": 19.2,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Lin"
     },
@@ -1187,7 +1187,7 @@
         "cat": "Armure",
         "mat": "maille",
         "nom": "Armure en Cuir & Maille Huilée",
-        "revente": 90,
+        "revente": 80,
         "cout": 30.45,
         "ing": "2 Lingots de fer + 4 Bandes de cuir + 1 Armure en Peau"
     },
@@ -1332,7 +1332,7 @@
         "mat": "bosmer",
         "nom": "Armure Bosmer de la Chasse Sauvage",
         "revente": "Sur commande",
-        "cout": 16075.65,
+        "cout": 18475.65,
         "ing": "4 Lingots de pierre de Lune + 4 Lingots de malachite +  1 Cuir + 3 Bandes de cuir"
     },
     {
@@ -1340,7 +1340,7 @@
         "mat": "bosmer",
         "nom": "Bottes Bosmer de la Chasse Sauvage",
         "revente": "Sur commande",
-        "cout": 8039.7,
+        "cout": 9239.7,
         "ing": "2 Lingots de Pierre de Lune + 2 Lingots de malachite + 1 Cuir + 2 Bandes de cuir"
     },
     {
@@ -1348,7 +1348,7 @@
         "mat": "bosmer",
         "nom": "Casque Bosmer de la Chasse Sauvage",
         "revente": "Sur commande",
-        "cout": 4113.75,
+        "cout": 4713.75,
         "ing": "2 Lingots de Pierre de Lune + 1 Lingot de malachite + 1 Cuir + 1 Bandes de cuir"
     },
     {
@@ -1356,7 +1356,7 @@
         "mat": "bosmer",
         "nom": "Gants Bosmer de la Chasse Sauvage",
         "revente": "Sur commande",
-        "cout": 7947.3,
+        "cout": 9147.3,
         "ing": "1 Lingots de Pierre de Lune + 2 Lingots de malachite + 1 Cuir + 2 Bandes de cuir"
     },
     {
@@ -1364,7 +1364,7 @@
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": "À définir",
-        "cout": 7868.15,
+        "cout": 9068.15,
         "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Lingot de Malachite"
     },
     {
@@ -1372,7 +1372,7 @@
         "mat": "verre",
         "nom": "Armure en Verre",
         "revente": "À définir",
-        "cout": 15734.05,
+        "cout": 18134.05,
         "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
@@ -1380,7 +1380,7 @@
         "mat": "verre",
         "nom": "Gants en Verre",
         "revente": "À définir",
-        "cout": 3943.7,
+        "cout": 4543.7,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Lingot de  Malachite"
     },
     {
@@ -1388,7 +1388,7 @@
         "mat": "verre",
         "nom": "Bottes en Verre",
         "revente": "À définir",
-        "cout": 7868.9,
+        "cout": 9068.9,
         "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Lingot de Malachite"
     },
     {
@@ -1396,7 +1396,7 @@
         "mat": "verre",
         "nom": "Bouclier en Verre",
         "revente": "À définir",
-        "cout": 15716.3,
+        "cout": 18116.3,
         "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
@@ -1804,7 +1804,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et de Saphir",
         "revente": "Sur commande",
-        "cout": 7870.4,
+        "cout": 9070.4,
         "ing": "2 Lingots de Malachite + 1 Saphir"
     },
     {
@@ -1812,7 +1812,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et d'Émeraude",
         "revente": "Sur commande",
-        "cout": 7870.4,
+        "cout": 9070.4,
         "ing": "2 Lingots de Malachite + 1 Émeraude"
     }
 ]
