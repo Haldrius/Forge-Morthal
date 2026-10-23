@@ -7,13 +7,14 @@ let currentSubMaterial = 'minerais';
 let data = []; // Initialisation vide
 let baseOrderPrice = 0;
 let baseOrderCost = 0; // Stocke le coût total de fabrication accumulé
-
+//
 // Ordres de tri thématiques pour le catalogue
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
-const resourceOrder = ["Kit de réparation (à emporter)", "Réparation (sur place)", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
+const resourceOrder = ['petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
+const outilOrder = [ 'Réparation (sur place)','Kit de réparation (à emporter)','Pioche','Hache de bûcheron','Clé']
 // Ordre de tri spécifique pour la famille d'équipements Bosmer
 // Définition stricte et ordonnée (1=Premier affiché, 5=Dernier affiché tout en bas)
 const bosmerPriorities = {
@@ -282,8 +283,6 @@ function applyAllFilters() {
 
         // Si l'un des deux seulement est un équipement Bosmer, on force son placement
         if (isBosmerA !== isBosmerB) {
-            // Si on compare un objet Bosmer avec un autre matériau (ex: Fer, Acier)
-            // On conserve la logique de placement global par rapport au reste du catalogue
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
             if (indexMatA === -1) indexMatA = materialOrder.length + 100;
@@ -315,6 +314,7 @@ function applyAllFilters() {
             }
         }
 
+        // ─── MODIFICATION ICI : SECTION MATÉRIAUX (MINERAIS, LINGOTS, OUTILS, RESSOURCES) ───
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
             if (a.mat === 'minerais' && b.mat === 'minerais') {
                 let indexA = oreOrder.indexOf(nameA); let indexB = oreOrder.indexOf(nameB);
@@ -324,6 +324,15 @@ function applyAllFilters() {
                 let indexA = ingotOrder.indexOf(nameA); let indexB = ingotOrder.indexOf(nameB);
                 return indexA - indexB;
             }
+            // AJOUT DU TRI POUR LES OUTILS
+            if (a.mat === 'outils' && b.mat === 'outils') {
+                let indexA = outilOrder.indexOf(a.nom); let indexB = outilOrder.indexOf(b.nom);
+                if (indexA === -1) indexA = outilOrder.length;
+                if (indexB === -1) indexB = outilOrder.length;
+                return indexA - indexB || nameA.localeCompare(nameB);
+            }
+            // FIN DE L'AJOUT OUTILS
+            
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
             for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
@@ -332,7 +341,6 @@ function applyAllFilters() {
 
         return a.cat.localeCompare(b.cat) || nameA.localeCompare(nameB);
     });
-
 
     displayItems(filtered);
 }

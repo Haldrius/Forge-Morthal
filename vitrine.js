@@ -7,10 +7,11 @@ let currentGender = Math.random() < 0.5 ? 'Masculin' : 'Féminin'; // Prendra la
 // Ordres de tri thématiques de la forge
 const weaponOrder = ['arc', 'flèche', 'dague', 'épée', 'espadon', 'hache', 'hache de guerre', 'masse', 'marteau'];
 const armorOrder = ['casque', 'tête', 'armure', 'torse', 'tunique', 'robe', 'tenue', 'gants', 'gantelets', 'bottes'];
-const resourceOrder = ["Kit de réparation (à emporter)", "Réparation (sur place)", 'petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
+const resourceOrder = ['petit bois', 'charbon pauvre', 'charbon', 'charbon en briquette', 'coke de charbon', 'cuir', 'bande de cuir', 'peau', 'smilodon', 'ours', 'chitine'];
 const oreOrder = ['minerai de fer', 'corindon brut', "minerai d'argent", "minerai d'or", "minerai d'orichalque", 'pierre de lune brute', 'vif argent brut', 'malachite brute', 'ébonite brute'];
 const ingotOrder = ['lingot de fer', 'lingot de corindon', "lingot d'acier", "lingot d'argent", "lingot d'or", "lingot d'orichalque", 'lingot de pierre de lune', 'lingot de vif-argent', 'lingot dwemer', "lingot d'ébonite", 'lingot de malachite'];
 const materialOrder = ['acier', 'fer', 'commun', 'cuir','maille' ,'peau', 'fourrure', 'orichalque','verre', 'ébonite'];
+const outilOrder = [ 'Réparation (sur place)','Kit de réparation (à emporter)','Pioche','Hache de bûcheron','Clé']
 const bosmerPriorities = {
     'bosmer de la chasse sauvage': 3,
     'bosmer en plate': 2,
@@ -297,6 +298,9 @@ function applyAllFilters() {
     const q = document.getElementById('search').value.toLowerCase(); 
     const filtered = [];
     
+    // ORDRE DE TRI SPÉCIFIQUE POUR LES OUTILS (Ajouté pour la cohérence avec le catalogue)
+    const outilOrder = ['Réparation (sur place)', 'Kit de réparation (à emporter)', 'Pioche', 'Hache de bûcheron', 'Clé'];
+
     for (let i = 0; i < data.length; i++) {
         const item = data[i]; 
         const matchMain = (currentMainCategory === 'tous' || item.cat === currentMainCategory);
@@ -307,7 +311,7 @@ function applyAllFilters() {
         }
     }
     
-        filtered.sort((a, b) => {
+    filtered.sort((a, b) => {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
 
@@ -342,8 +346,6 @@ function applyAllFilters() {
 
         // Si l'un des deux seulement est un équipement Bosmer, on force son placement
         if (isBosmerA !== isBosmerB) {
-            // Si on compare un objet Bosmer avec un autre matériau (ex: Fer, Acier)
-            // On conserve la logique de placement global par rapport au reste du catalogue
             let indexMatA = materialOrder.indexOf(matA);
             let indexMatB = materialOrder.indexOf(matB);
             if (indexMatA === -1) indexMatA = materialOrder.length + 100;
@@ -369,12 +371,13 @@ function applyAllFilters() {
             }
             if (a.cat === 'Armure' && b.cat === 'Armure') {
                 let indexTypeA = armorOrder.length, indexTypeB = armorOrder.length;
-                for (let k = 0; k < armorOrder.length; k++) { if (nameA.includes(armorOrder[k])) { indexTypeA = k; break; } }
-                for (let l = 0; l < armorOrder.length; l++) { if (nameB.includes(armorOrder[l])) { indexTypeB = l; break; } }
+                for (let k = 0; k < armorOrder.length; k++) { if (checkNameA.includes(armorOrder[k])) { indexPieceA = k; break; } }
+                for (let l = 0; l < armorOrder.length; l++) { if (checkNameB.includes(armorOrder[l])) { indexPieceB = l; break; } }
                 return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
             }
         }
 
+        // ─── LOGIQUE DE TRI : SECTION MATÉRIAUX ───
         if (a.cat === 'Matériaux' && b.cat === 'Matériaux') {
             if (a.mat === 'minerais' && b.mat === 'minerais') {
                 let indexA = oreOrder.indexOf(nameA); let indexB = oreOrder.indexOf(nameB);
@@ -386,6 +389,16 @@ function applyAllFilters() {
                 if (indexA === -1) indexA = ingotOrder.length + 1; if (indexB === -1) indexB = ingotOrder.length + 1;
                 return indexA - indexB;
             }
+            
+            // ─── INSCRIPTION DE LA LOGIQUE DES OUTILS ICI ───
+            if (a.mat === 'outils' && b.mat === 'outils') {
+                let indexA = outilOrder.indexOf(a.nom); let indexB = outilOrder.indexOf(b.nom);
+                if (indexA === -1) indexA = outilOrder.length;
+                if (indexB === -1) indexB = outilOrder.length;
+                return indexA - indexB || nameA.localeCompare(nameB);
+            }
+            // ────────────────────────────────────────────────
+            
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
             for (let n = 0; n < resourceOrder.length; n++) { if (nameB.includes(resourceOrder[n])) { resIndexB = n; break; } }
@@ -396,7 +409,7 @@ function applyAllFilters() {
 
     updateArmorPreviewGlobal();
     displayItems(filtered);
-}
+}   
 // Fonction de génération automatique de la galerie d'armures avec gestion des dossiers
 function updateArmorPreviewGlobal() {
     const previewContainer = document.getElementById('armor-preview-container');
