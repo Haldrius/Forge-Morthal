@@ -243,8 +243,8 @@
         "cat": "Matériaux",
         "mat": "ressources",
         "nom": "Peau de Smilodon des Vallées",
-        "revente": 20,
-        "cout": 5,
+        "revente": 80,
+        "cout": 35,
         "ing": ""
     },
     {
