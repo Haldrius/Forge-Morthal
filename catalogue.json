@@ -1097,6 +1097,14 @@
     },
     {
         "cat": "Armure",
+        "mat": "fer",
+        "nom": "Bouclier en Fer à Bandes",
+        "revente": 75,
+        "cout": 35.95,
+        "ing": "4 Lingots fer + 1 Lingot de corindon + 1 Bande de cuir"
+    },
+    {
+        "cat": "Armure",
         "mat": "acier",
         "nom": "Casque en Acier",
         "revente": 70,
