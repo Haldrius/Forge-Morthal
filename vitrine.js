@@ -50,7 +50,7 @@ const BANNIERES_ARMURES = {
     ],
     commun: [
         { fichier: "Commun-Hoqueton.jpg", titre: "Hoqueton" },
-        { fichier: "Commun-Brigandin.jpg", titre: "Brigandine" },
+        { fichier: "Commun-Brigandine.jpg", titre: "Brigandine" },
         { fichier: "Commun-Gambison.jpg", titre: "Gambison" },
         { fichier: "Commun-Armure Rembourrée.jpg", titre: "Rembourée" },
         { fichier: "Commun-Armure Lamellaire.jpg", titre: "Tunique Lamellaire" },
@@ -298,7 +298,7 @@ function applyAllFilters() {
     const q = document.getElementById('search').value.toLowerCase(); 
     const filtered = [];
     
-    // ORDRE DE TRI SPÉCIFIQUE POUR LES OUTILS (Ajouté pour la cohérence avec le catalogue)
+    // ORDRE DE TRI SPÉCIFIQUE POUR LES OUTILS
     const outilOrder = ['Réparation (sur place)', 'Kit de réparation (à emporter)', 'Pioche', 'Hache de bûcheron', 'Clé'];
 
     for (let i = 0; i < data.length; i++) {
@@ -314,6 +314,10 @@ function applyAllFilters() {
     filtered.sort((a, b) => {
         const nameA = a.nom.toLowerCase(), nameB = b.nom.toLowerCase();
         const matA = a.mat.toLowerCase(), matB = b.mat.toLowerCase();
+
+        // Pré-nettoyage des chaînes pour standardiser le mot "tête" en "casque" lors du tri par pièce
+        let checkNameA = nameA.includes('capuche bosmer') ? 'casque' : nameA;
+        let checkNameB = nameB.includes('capuche bosmer') ? 'casque' : nameB;
 
         // ─── REGLE SPECIALE : FAMILLE BOSMER ───
         const isBosmerA = nameA.includes('bosmer') || nameA.includes('capuche') || nameA.includes('masque') || nameA.includes('cape');
@@ -332,10 +336,6 @@ function applyAllFilters() {
             if (prioA !== prioB) {
                 return prioA - prioB;
             }
-
-            // Si c'est le même groupe, on trie par type de pièce d'armure
-            let checkNameA = nameA.includes('capuche bosmer') ? 'casque' : nameA;
-            let checkNameB = nameB.includes('capuche bosmer') ? 'casque' : nameB;
 
             let indexPieceA = armorOrder.length, indexPieceB = armorOrder.length;
             for (let k = 0; k < armorOrder.length; k++) { if (checkNameA.includes(armorOrder[k])) { indexPieceA = k; break; } }
@@ -370,10 +370,10 @@ function applyAllFilters() {
                 return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
             }
             if (a.cat === 'Armure' && b.cat === 'Armure') {
-                let indexTypeA = armorOrder.length, indexTypeB = armorOrder.length;
+                let indexPieceA = armorOrder.length, indexPieceB = armorOrder.length;
                 for (let k = 0; k < armorOrder.length; k++) { if (checkNameA.includes(armorOrder[k])) { indexPieceA = k; break; } }
                 for (let l = 0; l < armorOrder.length; l++) { if (checkNameB.includes(armorOrder[l])) { indexPieceB = l; break; } }
-                return indexTypeA - indexTypeB || nameA.localeCompare(nameB);
+                return indexPieceA - indexPieceB || nameA.localeCompare(nameB);
             }
         }
 
@@ -389,15 +389,12 @@ function applyAllFilters() {
                 if (indexA === -1) indexA = ingotOrder.length + 1; if (indexB === -1) indexB = ingotOrder.length + 1;
                 return indexA - indexB;
             }
-            
-            // ─── INSCRIPTION DE LA LOGIQUE DES OUTILS ICI ───
             if (a.mat === 'outils' && b.mat === 'outils') {
                 let indexA = outilOrder.indexOf(a.nom); let indexB = outilOrder.indexOf(b.nom);
                 if (indexA === -1) indexA = outilOrder.length;
                 if (indexB === -1) indexB = outilOrder.length;
                 return indexA - indexB || nameA.localeCompare(nameB);
             }
-            // ────────────────────────────────────────────────
             
             let resIndexA = resourceOrder.length, resIndexB = resourceOrder.length;
             for (let m = 0; m < resourceOrder.length; m++) { if (nameA.includes(resourceOrder[m])) { resIndexA = m; break; } }
@@ -409,7 +406,7 @@ function applyAllFilters() {
 
     updateArmorPreviewGlobal();
     displayItems(filtered);
-}   
+}
 // Fonction de génération automatique de la galerie d'armures avec gestion des dossiers
 function updateArmorPreviewGlobal() {
     const previewContainer = document.getElementById('armor-preview-container');
