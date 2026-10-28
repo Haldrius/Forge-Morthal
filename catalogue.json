@@ -1413,7 +1413,7 @@
         "nom": "Casque en Ébonite",
         "revente": "Sur commande",
         "cout": 60001.5,
-        "ing": "3 Ébonite + 2 Bandes de cuir"
+        "ing": "3 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1421,7 +1421,7 @@
         "nom": "Armure en Ébonite",
         "revente": "Sur commande",
         "cout": 100002.25,
-        "ing": "5 Ébonite + 3 Bandes de cuir"
+        "ing": "5 Lingots d'Ébonite + 3 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1429,7 +1429,7 @@
         "nom": "Gantelets en Ébonite",
         "revente": "Sur commande",
         "cout": 40001.5,
-        "ing": "2 Ébonite + 2 Bandes de cuir"
+        "ing": "2 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1437,7 +1437,7 @@
         "nom": "Bottes en Ébonite",
         "revente": "Sur commande",
         "cout": 60001.5,
-        "ing": "3 Ébonite + 2 Bandes de cuir"
+        "ing": "3 Lingots d'Ébonite + 2 Bandes de cuir"
     },
     {
         "cat": "Armure",
@@ -1445,7 +1445,7 @@
         "nom": "Bouclier en Ébonite",
         "revente": "Sur commande",
         "cout": 80000.75,
-        "ing": "4 Ébonite + 1 Bande de cuir"
+        "ing": "4 Lingots d'Ébonite + 1 Bande de cuir"
     },
     {
         "cat": "Couture",
