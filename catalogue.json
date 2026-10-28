@@ -196,7 +196,7 @@
         "mat": "ressources",
         "nom": "Cuir",
         "revente": 7,
-        "cout": 3,
+        "cout": 2.5,
         "ing": ""
     },
     {
@@ -244,7 +244,7 @@
         "mat": "ressources",
         "nom": "Peau de Smilodon des Vallées",
         "revente": 80,
-        "cout": 35,
+        "cout": 25,
         "ing": ""
     },
     {
@@ -1451,7 +1451,7 @@
         "cat": "Couture",
         "mat": "tissu",
         "nom": "Cape Ours Noir",
-        "revente": 100,
+        "revente": 50,
         "cout": 18.2,
         "ing": "1 Peau d'Ours + 1 Lingot d'or"
     },
@@ -1459,7 +1459,7 @@
         "cat": "Couture",
         "mat": "tissu",
         "nom": "Cape Ours Blanc",
-        "revente": 250,
+        "revente": 50,
         "cout": 18.2,
         "ing": "1 Peau d'Ours Blanc + 1 Lingot d'or"
     },
@@ -1467,7 +1467,7 @@
         "cat": "Couture",
         "mat": "tissu",
         "nom": "Cape Smilodon",
-        "revente": 80,
+        "revente": 50,
         "cout": 18.2,
         "ing": "1 Peau de Smilodon + 1 Lingot d'or"
     },
@@ -1475,7 +1475,7 @@
         "cat": "Couture",
         "mat": "tissu",
         "nom": "Cape Smilodon Blanc",
-        "revente": 100,
+        "revente": 50,
         "cout": 18.2,
         "ing": "1 Peau de Smilodon Blanc + 1 Lingot d'or"
     },
@@ -1483,8 +1483,8 @@
         "cat": "Couture",
         "mat": "tissu",
         "nom": "Cape Smilodon des Vallées",
-        "revente": 150,
-        "cout": 18.2,
+        "revente": 80,
+        "cout": 48.2,
         "ing": "1 Peau de Smilodon des vallées+ 1 Lingot d'or"
     },
     {
