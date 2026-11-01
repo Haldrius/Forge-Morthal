@@ -4,7 +4,7 @@
         "mat": "minerais",
         "nom": "Minerai de fer",
         "revente": 1,
-        "cout": 0.4,
+        "cout": 0.45,
         "ing": ""
     },
     {
@@ -12,7 +12,7 @@
         "mat": "minerais",
         "nom": "Corindon brut",
         "revente": 1,
-        "cout": 0.4,
+        "cout": 0.45,
         "ing": ""
     },
     {
