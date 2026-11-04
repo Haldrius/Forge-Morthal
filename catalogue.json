@@ -1059,7 +1059,7 @@
         "cat": "Armure",
         "mat": "fer",
         "nom": "Armure en Fer",
-        "revente": 90,
+        "revente": 80,
         "cout": 36.75,
         "ing": "5 Lingots fer + 3 Bandes de cuir"
     },
