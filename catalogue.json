@@ -1781,7 +1781,7 @@
         "nom": "Diadème de Corindon",
         "revente": 40,
         "cout": 18.4,
-        "ing": "2 Lingots de Corindon"
+        "ing": "1 Lingots de Corindon"
     },
     {
         "cat": "Bijou",
@@ -1789,7 +1789,7 @@
         "nom": "Diadème de Corindon et de Rubis",
         "revente": "À définir",
         "cout": 38.4,
-        "ing": "2 Lingots de Corindon + 1 Rubis"
+        "ing": "1 Lingots de Corindon + 1 Rubis"
     },
     {
         "cat": "Bijou",
@@ -1797,7 +1797,7 @@
         "nom": "Diadème de Corindon et de Saphir",
         "revente": "À définir",
         "cout": 38.4,
-        "ing": "2 Lingots de Corindon + 1 Saphir"
+        "ing": "1 Lingots de Corindon + 1 Saphir"
     },
     {
         "cat": "Bijou",
@@ -1805,7 +1805,7 @@
         "nom": "Diadème de Corindon et de Pierre de Lune",
         "revente": 75,
         "cout": 32.4,
-        "ing": "2 Lingots de Corindon + 1 Pierre de lune"
+        "ing": "1 Lingots de Corindon + 1 Pierre de lune"
     },
     {
         "cat": "Bijou",
@@ -1813,7 +1813,7 @@
         "nom": "Diadème de Malachite et de Saphir",
         "revente": "Sur commande",
         "cout": 9070.4,
-        "ing": "2 Lingots de Malachite + 1 Saphir"
+        "ing": "1 Lingots de Malachite + 1 Saphir"
     },
     {
         "cat": "Bijou",
@@ -1821,6 +1821,6 @@
         "nom": "Diadème de Malachite et d'Émeraude",
         "revente": "Sur commande",
         "cout": 9070.4,
-        "ing": "2 Lingots de Malachite + 1 Émeraude"
+        "ing": "1 Lingots de Malachite + 1 Émeraude"
     }
 ]
