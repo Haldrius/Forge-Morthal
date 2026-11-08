@@ -789,7 +789,7 @@
         "nom": "Arc de verre",
         "revente": "À définir",
         "cout": 9064.4,
-        "ing": "1 Pierre de lune + 2 Lingot de Malachite"
+        "ing": "1 Lingot de Pierre de lune + 2 Lingot de Malachite"
     },
     {
         "cat": "Arme",
@@ -797,7 +797,7 @@
         "nom": "Dague de verre",
         "revente": "À définir",
         "cout": 4539.95,
-        "ing": "1 Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
+        "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -805,7 +805,7 @@
         "nom": "Espadon de verre",
         "revente": "À définir",
         "cout": 9080.65,
-        "ing": "2 Pierre de lune + 2 Lingot de Malachite + 3 Bandes de cuir"
+        "ing": "2 Lingot de Pierre de lune + 2 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -813,7 +813,7 @@
         "nom": "Flèche de verre x20",
         "revente": "À définir",
         "cout": 750.1,
-        "ing": "1 Malachite + 1 Petit bois"
+        "ing": "1 Lingot de Malachite + 1 Petit bois"
     },
     {
         "cat": "Arme",
@@ -821,7 +821,7 @@
         "nom": "Hache a 2 mains de Verre",
         "revente": "À définir",
         "cout": 9079.9,
-        "ing": "2 Pierre de lune + 2 Lingot de Malachite + 2 Bandes de cuir"
+        "ing": "2 Lingot de Pierre de lune + 2 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -829,7 +829,7 @@
         "nom": "Hache de verre",
         "revente": "À définir",
         "cout": 4540.7,
-        "ing": "1 Pierre de lune + 1 Lingot de Malachite + 2 Bandes de cuir"
+        "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -837,7 +837,7 @@
         "nom": "Marteau de verre",
         "revente": "À définir",
         "cout": 13605.85,
-        "ing": "2 Pierre de lune + 3 Lingot de Malachite + 3 Bandes de cuir"
+        "ing": "2 Lingot de Pierre de lune + 3 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
         "cat": "Arme",
@@ -845,7 +845,7 @@
         "nom": "Masse de verre",
         "revente": "À définir",
         "cout": 9065.15,
-        "ing": "1 Pierre de lune + 2 Lingot de Malachite + 1 Bande de cuir"
+        "ing": "1 Lingot de Pierre de lune + 2 Lingot de Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Arme",
@@ -853,7 +853,7 @@
         "nom": "Épée de verre",
         "revente": "À définir",
         "cout": 4539.95,
-        "ing": "1 Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
+        "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
         "cat": "Armure",
@@ -1373,7 +1373,7 @@
         "nom": "Casque en Verre",
         "revente": "À définir",
         "cout": 9068.15,
-        "ing": "1 Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Lingot de Malachite"
+        "ing": "1 Lingot de Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Lingot de Malachite"
     },
     {
         "cat": "Armure",
@@ -1381,7 +1381,7 @@
         "nom": "Armure en Verre",
         "revente": "À définir",
         "cout": 18134.05,
-        "ing": "2 Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Lingot de Malachite"
+        "ing": "2 Lingot de Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
         "cat": "Armure",
@@ -1389,7 +1389,7 @@
         "nom": "Gants en Verre",
         "revente": "À définir",
         "cout": 4543.7,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Lingot de  Malachite"
+        "ing": "1 Lingot de Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Lingot de  Malachite"
     },
     {
         "cat": "Armure",
@@ -1397,7 +1397,7 @@
         "nom": "Bottes en Verre",
         "revente": "À définir",
         "cout": 9068.9,
-        "ing": "1 Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Lingot de Malachite"
+        "ing": "1 Lingot de Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Lingot de Malachite"
     },
     {
         "cat": "Armure",
@@ -1405,7 +1405,7 @@
         "nom": "Bouclier en Verre",
         "revente": "À définir",
         "cout": 18116.3,
-        "ing": "1 Pierre de lune + 2 Bandes de cuir + 4 Lingot de Malachite"
+        "ing": "1 Lingot de Pierre de lune + 2 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
         "cat": "Armure",
