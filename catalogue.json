@@ -363,7 +363,7 @@
         "cat": "Arme",
         "mat": "fer",
         "nom": "Marteau en Fer",
-        "revente": 70,
+        "revente": 65,
         "cout": 29.85,
         "ing": "4 Lingots de Fer + 3 Bandes de Cuir"
     },
@@ -467,7 +467,7 @@
         "cat": "Arme",
         "mat": "commun",
         "nom": "Dague Commun",
-        "revente": 45,
+        "revente": 40,
         "cout": 16.85,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
@@ -475,7 +475,7 @@
         "cat": "Arme",
         "mat": "commun",
         "nom": "Hache d'arme Commun",
-        "revente": 70,
+        "revente": 80,
         "cout": 31.4,
         "ing": "3 Lingots fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
@@ -483,7 +483,7 @@
         "cat": "Arme",
         "mat": "commun",
         "nom": "Hache Commun",
-        "revente": 45,
+        "revente": 50,
         "cout": 17.6,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 2 Bandes de cuir"
     },
@@ -491,7 +491,7 @@
         "cat": "Arme",
         "mat": "commun",
         "nom": "Masse Commun",
-        "revente": 45,
+        "revente": 50,
         "cout": 16.85,
         "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
     },
@@ -499,7 +499,7 @@
         "cat": "Arme",
         "mat": "commun",
         "nom": "Épée Commun",
-        "revente": 45,
+        "revente": 50,
         "cout": 16.85,
         "ing": "1 Lingot de fer + 1 Lingot de corindon + 1 Bande de cuir"
     },
@@ -788,7 +788,7 @@
         "mat": "verre",
         "nom": "Arc de verre",
         "revente": "À définir",
-        "cout": 9064.4,
+        "cout": 9142.8,
         "ing": "1 Lingot de Pierre de lune + 2 Lingot de Malachite"
     },
     {
@@ -796,7 +796,7 @@
         "mat": "verre",
         "nom": "Dague de verre",
         "revente": "À définir",
-        "cout": 4539.95,
+        "cout": 4618.35,
         "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -804,7 +804,7 @@
         "mat": "verre",
         "nom": "Espadon de verre",
         "revente": "À définir",
-        "cout": 9080.65,
+        "cout": 9237.45,
         "ing": "2 Lingot de Pierre de lune + 2 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
@@ -812,7 +812,7 @@
         "mat": "verre",
         "nom": "Flèche de verre x20",
         "revente": "À définir",
-        "cout": 750.1,
+        "cout": 4525.3,
         "ing": "1 Lingot de Malachite + 1 Petit bois"
     },
     {
@@ -820,7 +820,7 @@
         "mat": "verre",
         "nom": "Hache a 2 mains de Verre",
         "revente": "À définir",
-        "cout": 9079.9,
+        "cout": 9236.7,
         "ing": "2 Lingot de Pierre de lune + 2 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
@@ -828,7 +828,7 @@
         "mat": "verre",
         "nom": "Hache de verre",
         "revente": "À définir",
-        "cout": 4540.7,
+        "cout": 4619.1,
         "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 2 Bandes de cuir"
     },
     {
@@ -836,7 +836,7 @@
         "mat": "verre",
         "nom": "Marteau de verre",
         "revente": "À définir",
-        "cout": 13605.85,
+        "cout": 13762.65,
         "ing": "2 Lingot de Pierre de lune + 3 Lingot de Malachite + 3 Bandes de cuir"
     },
     {
@@ -844,7 +844,7 @@
         "mat": "verre",
         "nom": "Masse de verre",
         "revente": "À définir",
-        "cout": 9065.15,
+        "cout": 9143.55,
         "ing": "1 Lingot de Pierre de lune + 2 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -852,7 +852,7 @@
         "mat": "verre",
         "nom": "Épée de verre",
         "revente": "À définir",
-        "cout": 4539.95,
+        "cout": 4618.35,
         "ing": "1 Lingot de Pierre de lune + 1 Lingot de Malachite + 1 Bande de cuir"
     },
     {
@@ -1372,7 +1372,7 @@
         "mat": "verre",
         "nom": "Casque en Verre",
         "revente": "À définir",
-        "cout": 9068.15,
+        "cout": 9146.55,
         "ing": "1 Lingot de Pierre de lune + 1 Cuir + 1 Bande de cuir + 2 Lingot de Malachite"
     },
     {
@@ -1380,7 +1380,7 @@
         "mat": "verre",
         "nom": "Armure en Verre",
         "revente": "À définir",
-        "cout": 18134.05,
+        "cout": 18290.85,
         "ing": "2 Lingot de Pierre de lune + 1 Cuir + 3 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
@@ -1388,7 +1388,7 @@
         "mat": "verre",
         "nom": "Gants en Verre",
         "revente": "À définir",
-        "cout": 4543.7,
+        "cout": 4622.1,
         "ing": "1 Lingot de Pierre de lune + 1 Cuir + 2 Bandes de cuir + 1 Lingot de  Malachite"
     },
     {
@@ -1396,7 +1396,7 @@
         "mat": "verre",
         "nom": "Bottes en Verre",
         "revente": "À définir",
-        "cout": 9068.9,
+        "cout": 9147.3,
         "ing": "1 Lingot de Pierre de lune + 1 Cuir + 2 Bandes de cuir + 2 Lingot de Malachite"
     },
     {
@@ -1404,7 +1404,7 @@
         "mat": "verre",
         "nom": "Bouclier en Verre",
         "revente": "À définir",
-        "cout": 18116.3,
+        "cout": 18194.7,
         "ing": "1 Lingot de Pierre de lune + 2 Bandes de cuir + 4 Lingot de Malachite"
     },
     {
@@ -1780,7 +1780,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Corindon",
         "revente": 40,
-        "cout": 18.4,
+        "cout": 9.2,
         "ing": "1 Lingots de Corindon"
     },
     {
@@ -1788,7 +1788,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Rubis",
         "revente": "À définir",
-        "cout": 38.4,
+        "cout": 29.2,
         "ing": "1 Lingots de Corindon + 1 Rubis"
     },
     {
@@ -1796,7 +1796,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Saphir",
         "revente": "À définir",
-        "cout": 38.4,
+        "cout": 29.2,
         "ing": "1 Lingots de Corindon + 1 Saphir"
     },
     {
@@ -1804,7 +1804,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Corindon et de Pierre de Lune",
         "revente": 75,
-        "cout": 32.4,
+        "cout": 23.2,
         "ing": "1 Lingots de Corindon + 1 Pierre de lune"
     },
     {
@@ -1812,7 +1812,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et de Saphir",
         "revente": "Sur commande",
-        "cout": 9070.4,
+        "cout": 4545.2,
         "ing": "1 Lingots de Malachite + 1 Saphir"
     },
     {
@@ -1820,7 +1820,7 @@
         "mat": "diadèmes",
         "nom": "Diadème de Malachite et d'Émeraude",
         "revente": "Sur commande",
-        "cout": 9070.4,
+        "cout": 4545.2,
         "ing": "1 Lingots de Malachite + 1 Émeraude"
     }
 ]
