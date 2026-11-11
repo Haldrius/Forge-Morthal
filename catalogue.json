@@ -490,14 +490,6 @@
     {
         "cat": "Arme",
         "mat": "commun",
-        "nom": "Masse Commun",
-        "revente": 50,
-        "cout": 16.85,
-        "ing": "1 Lingot fer + 1 Lingot de Corindon + 1 Bande de cuir"
-    },
-    {
-        "cat": "Arme",
-        "mat": "commun",
         "nom": "Épée Commun",
         "revente": 50,
         "cout": 16.85,
