@@ -3,7 +3,7 @@
 // =========================================================================
 
 let currentMainCategory = 'Matériaux';
-let currentSubMaterial = 'minerais';
+let currentSubMaterial = 'outils';
 let data = []; // Initialisation vide
 let baseOrderPrice = 0;
 let baseOrderCost = 0; // Stocke le coût total de fabrication accumulé
@@ -71,10 +71,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const subRow = document.getElementById('sub-filter-row');
     if (subRow) {
         const btnTousSub = subRow.querySelector('.filter-btn[data-sub="tous"]');
-        const btnMineraisSub = subRow.querySelector('.filter-btn[data-sub="minerais"]');
+        const btnOutilsSub = subRow.querySelector('.filter-btn[data-sub="outils"]');
         
         if (btnTousSub) btnTousSub.classList.remove('active');
-        if (btnMineraisSub) btnMineraisSub.classList.add('active');
+        if (btnOutilsSub) btnOutilsSub.classList.add('active');
     }
     
     renderCatalogEditor();
@@ -116,7 +116,7 @@ function initFilters() {
             currentMainCategory = cat;
             
             if (cat === 'Matériaux') {
-                currentSubMaterial = 'minerais';
+                currentSubMaterial = 'outils';
             } else if (cat === 'Arme' || cat === 'Armure') {
                 currentSubMaterial = 'acier';
             } else if (cat === 'Bijou') {
@@ -142,10 +142,10 @@ function renderSubFilters(cat) {
         subRow.style.display = 'flex';
         subRow.innerHTML = `
             <button class="filter-btn active" data-sub="tous">Tous</button>
+            <button class="filter-btn" data-sub="outils">🛠️ Outils</button>
             <button class="filter-btn" data-sub="minerais">💎 Minerais</button>
             <button class="filter-btn" data-sub="lingot">🧱 Lingots</button>
             <button class="filter-btn" data-sub="ressources">📜 Ressources</button>
-            <button class="filter-btn" data-sub="outils">🛠️ Outils</button>
         `;
     } else if (cat === 'Bijou') {
         subRow.style.display = 'flex';
