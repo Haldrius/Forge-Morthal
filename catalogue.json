@@ -164,7 +164,7 @@
         "mat": "ressources",
         "nom": "Charbon Pauvre",
         "revente": 1.5,
-        "cout": 2.8,
+        "cout": 1.1,
         "ing": ""
     },
     {
@@ -172,7 +172,7 @@
         "mat": "ressources",
         "nom": "Charbon",
         "revente": 3,
-        "cout": 5.6,
+        "cout": 2.1,
         "ing": ""
     },
     {
@@ -180,7 +180,7 @@
         "mat": "ressources",
         "nom": "Charbon en Briquette",
         "revente": 6,
-        "cout": 8.4,
+        "cout": 3.2,
         "ing": ""
     },
     {
@@ -188,7 +188,7 @@
         "mat": "ressources",
         "nom": "Coke de Charbon",
         "revente": 10,
-        "cout": 16.8,
+        "cout": 6.3,
         "ing": ""
     },
     {
@@ -252,7 +252,7 @@
         "mat": "ressources",
         "nom": "Petit bois (unité)",
         "revente": 0.2,
-        "cout": 0.4,
+        "cout": 0.15,
         "ing": ""
     },
     {
@@ -316,7 +316,7 @@
         "mat": "fer",
         "nom": "Arc Long",
         "revente": 20,
-        "cout": 5.3,
+        "cout": 7.7,
         "ing": "8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
     {
@@ -340,7 +340,7 @@
         "mat": "fer",
         "nom": "Flèche en Fer x80",
         "revente": 10,
-        "cout": 19.6,
+        "cout": 19.9,
         "ing": "Petit Bois + 1 Lingot de Fer"
     },
     {
@@ -388,7 +388,7 @@
         "mat": "acier",
         "nom": "Arc de Chasse",
         "revente": 65,
-        "cout": 77.9,
+        "cout": 80.3,
         "ing": "2 Lingots d'acier + 8 Petits Bois + 2 Bandes de Cuir + Cuir"
     },
     {
@@ -412,7 +412,7 @@
         "mat": "acier",
         "nom": "Flèche en Acier x80",
         "revente": 15,
-        "cout": 36.4,
+        "cout": 36.7,
         "ing": "1 Petit Bois + 1 Lingot d'Acier"
     },
     {
@@ -508,7 +508,7 @@
         "mat": "altmer",
         "nom": "Flèches Elfique",
         "revente": 100,
-        "cout": 117.7,
+        "cout": 118,
         "ing": "1 Petit bois + 1 Lingots de pierre de Lune"
     },
     {
@@ -612,7 +612,7 @@
         "mat": "orichalque",
         "nom": "Flèche Orc x20",
         "revente": "À définir",
-        "cout": 69.7,
+        "cout": 70,
         "ing": "1 Lingot d'orichalque + 1 Petit bois"
     },
     {
@@ -684,7 +684,7 @@
         "mat": "ébonite",
         "nom": "Flèche d'ébonite x20",
         "revente": "Sur commande",
-        "cout": 40033.7,
+        "cout": 40034,
         "ing": "1 Lingot d'Ébonite + 1 Petit bois"
     },
     {
@@ -804,7 +804,7 @@
         "mat": "verre",
         "nom": "Flèche de verre x20",
         "revente": "À définir",
-        "cout": 4600.9,
+        "cout": 4601.2,
         "ing": "1 Lingot de Malachite + 1 Petit bois"
     },
     {
