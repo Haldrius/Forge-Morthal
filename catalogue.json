@@ -164,7 +164,7 @@
         "mat": "ressources",
         "nom": "Charbon Pauvre",
         "revente": 1.5,
-        "cout": 0.7,
+        "cout": 2.8,
         "ing": ""
     },
     {
@@ -172,7 +172,7 @@
         "mat": "ressources",
         "nom": "Charbon",
         "revente": 3,
-        "cout": 1.4,
+        "cout": 5.6,
         "ing": ""
     },
     {
@@ -180,7 +180,7 @@
         "mat": "ressources",
         "nom": "Charbon en Briquette",
         "revente": 6,
-        "cout": 2.1,
+        "cout": 8.4,
         "ing": ""
     },
     {
@@ -188,7 +188,7 @@
         "mat": "ressources",
         "nom": "Coke de Charbon",
         "revente": 10,
-        "cout": 4.2,
+        "cout": 16.8,
         "ing": ""
     },
     {
